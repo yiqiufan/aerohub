@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>poly_traj</name>
+  <version>0.0.0</version>
+  <description>Polynomial trajectory library used by RACER trajectory utilities.</description>
+  <maintainer email="codex@example.com">Codex</maintainer>
+  <license>BSD-3-Clause</license>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

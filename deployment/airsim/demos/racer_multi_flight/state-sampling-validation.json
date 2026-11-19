@@ -1,0 +1,120 @@
+{
+  "case": "20261118-state-sampling-01",
+  "full_acceptance_pass": false,
+  "evaluation": {
+    "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+    "pass": false,
+    "checks": {
+      "drone0": true,
+      "drone1": false,
+      "cleanup": true,
+      "flow": false,
+      "native_cooperation": true
+    },
+    "metrics": {
+      "drone0": {
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 473,
+        "tracking_px4_references": 843,
+        "tracking_shared_trajectories": 294,
+        "tracking_wall_s": 20.022409797,
+        "sampled_tracking_min_separation_m": 2.27555777359286,
+        "horizontal_displacement_m": 4.573806060269185
+      },
+      "drone1": {
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 835,
+        "tracking_px4_references": 869,
+        "tracking_shared_trajectories": 294,
+        "tracking_wall_s": 20.024438133,
+        "sampled_tracking_min_separation_m": 2.27555777359286,
+        "horizontal_displacement_m": 1.4651936297258419
+      }
+    },
+    "artifacts_sha256": {
+      "ulog/drone0.ulg": "0da34fb7d98ae1bfee0e70f83289cd895f556b9fe3301fe1d3449ba8e67bd206",
+      "mission/drone0/result.json": "ce787f4ccf42f8c63c8c4ea22bb38b3b2e526b1c3e34844e867771fcb2388d88",
+      "adapter/drone0/adapter-events.jsonl": "c84849a34ecd4b2254a82dc3593e5ae0d1de0eb4370d14c3a71e3c2277bb6de5",
+      "ulog/drone1.ulg": "7a8a88a42ec514cde2d7d80772cb8dda531a9c32605becea9cdf42752acb2255",
+      "mission/drone1/result.json": "e1d2e38f1937f53999c3ff4fa04ce819a1a3a2dfb41506d66873605f0eeb83e3",
+      "adapter/drone1/adapter-events.jsonl": "1cb4b26ac2fdfdf326f2831670733d5622f323c8d883cb3c557b2a87ae03153c",
+      "flow-result.json": "b11799228397eff2d23b40114f7f95acb05dec03b175166b75e646c2927463e5",
+      "runtime-source.json": "9db35fd363dcc2803f637098be4c9f277e4c540753e2bff32a4f600c7f0dc151",
+      "build-manifest.json": "5bce7c194e6df9c4659dd399235ece0b64cc4af3373477a427a0b6efb990953f",
+      "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+      "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+    }
+  },
+  "sampling": {
+    "drone0": {
+      "initial_requests": 9,
+      "initial_age_median_s": 0.0,
+      "initial_age_max_s": 0.018000384,
+      "prior_initial_age_median_s": 0.186003968,
+      "prior_initial_age_max_s": 0.42000896,
+      "action_rejections": 0,
+      "static_solves": 10,
+      "all_static_sample_stamps_distinct": true
+    },
+    "drone1": {
+      "initial_requests": 3,
+      "initial_age_median_s": 0.012000256,
+      "initial_age_max_s": 0.01500032,
+      "prior_initial_age_median_s": 0.0,
+      "prior_initial_age_max_s": 0.0,
+      "action_rejections": 0,
+      "static_solves": 3,
+      "all_static_sample_stamps_distinct": true
+    }
+  },
+  "limitations": [
+    "single flight only",
+    "Land Action timeout remains failed even though ground/disarmed telemetry arrived earlier",
+    "no exact executor callback pose",
+    "no board or four-UAV evidence"
+  ],
+  "cleanup": {
+    "count": 16,
+    "all_stopped": true,
+    "mission_exit_code": 1,
+    "other_container_exit_codes": 0
+  },
+  "landing": {
+    "drone1_landed_feedback_wall_s": 16.101864871,
+    "drone1_disarmed_feedback_wall_s": 18.323595021,
+    "native_action_timeout_s": 30,
+    "original_result": "AS2 land_success timeout",
+    "note": "Actual landed/disarmed preceded timeout; recovery branch invocation does not prove landing was first achieved by recovery."
+  },
+  "user_observation": "User reported collision and failure to descend, then reset UE. Previous collision object is unavailable.",
+  "scene_evidence": "Drone1 rendered position frozen during first ~10s of landing while physics reported movement; final rendered position 0.9353 m above initial. Landed/disarmed is not safe ground landing proof."
+}

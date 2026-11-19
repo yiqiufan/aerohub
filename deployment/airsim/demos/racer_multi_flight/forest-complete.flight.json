@@ -1,0 +1,50 @@
+{
+  "planning_box_enu": [
+    [
+      -6.0,
+      7.0
+    ],
+    [
+      -6.0,
+      4.0
+    ],
+    [
+      0.25,
+      1.5
+    ]
+  ],
+  "execution_box_enu": [
+    [
+      -6.5,
+      7.5
+    ],
+    [
+      -6.5,
+      4.5
+    ],
+    [
+      0.15,
+      1.8
+    ]
+  ],
+  "physical_radius_m": 11.0,
+  "physical_height_during_active_flight_m": [
+    -0.12,
+    2.0
+  ],
+  "peer_min_separation_m": 1.0,
+  "planner_speed_m_s": 0.65,
+  "planner_acceleration_m_s2": 0.9,
+  "execution_max_speed_m_s": 1.5,
+  "explore_wall_seconds": 20.0,
+  "first_active_wait_seconds": 15.0,
+  "minimum_active_revisions": 2,
+  "minimum_observed_displacement_m": 0.5,
+  "handoff_lead_seconds": 0.75,
+  "handoff_stop_reserve_seconds": 0.35,
+  "scope": "ForestScene PC two-UAV native complete exploration in the configured region; native completion is not full-scene coverage",
+  "depth_sample_max_age_s": 2.0,
+  "odometry_sample_max_age_s": 1.25,
+  "physical_radius_basis": "Candidate envelope enclosing the expanded execution rectangle from both configured ground origins; geometry check only, not clearance or flight acceptance.",
+  "land_action_timeout_s": 30.0
+}

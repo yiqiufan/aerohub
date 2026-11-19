@@ -1,0 +1,177 @@
+{
+  "case": "20261118-diagnostics-flight-02",
+  "scope": "one PC dual-UAV 20-second exploration with full declared diagnostic recording; not full RACER reproduction",
+  "pass": true,
+  "flight_pass": true,
+  "recording_pass": true,
+  "flight_metrics": {
+    "drone0": {
+      "active_revisions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "rejected_count": 0,
+      "tracking_as2_references": 463,
+      "tracking_px4_references": 835,
+      "tracking_shared_trajectories": 179,
+      "tracking_wall_s": 20.046220678,
+      "sampled_tracking_min_separation_m": 2.776028172026065,
+      "horizontal_displacement_m": 4.720155188243251
+    },
+    "drone1": {
+      "active_revisions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "rejected_count": 0,
+      "tracking_as2_references": 510,
+      "tracking_px4_references": 848,
+      "tracking_shared_trajectories": 179,
+      "tracking_wall_s": 20.012242535,
+      "sampled_tracking_min_separation_m": 2.776028172026065,
+      "horizontal_displacement_m": 1.7720690464468396
+    }
+  },
+  "recording": {
+    "drone0": {
+      "recording_checks": {
+        "writer_complete_without_queue_drop": true,
+        "all_cdr_messages_decode": true,
+        "required_payloads_received": true,
+        "raw_and_adapted_images_valid": true,
+        "image_pose_pairs_available": true,
+        "paired_depth_preserves_raw_pixels": true,
+        "paired_stamps_have_pose_and_raw": true,
+        "clouds_link_to_native_revision": true,
+        "cloud_stamp_association_unambiguous": true,
+        "nonempty_raw_and_inflated_map": true,
+        "depth_updates_recorded": true,
+        "map_revisions_monotonic": true,
+        "per_vehicle_publishers_unique": true,
+        "native_collision_queries_present": true,
+        "query_ids_have_recorded_native_plan": true,
+        "native_queries_have_clock_and_payload": true
+      },
+      "readback_messages": 32816,
+      "paired_depth_images": 64,
+      "map_update_sources": {
+        "depth": 41,
+        "esdf": 39,
+        "peer_chunk": 3325
+      },
+      "native_queries": 74,
+      "query_sample_count": 5615,
+      "detailed_path_failure_count": 8
+    },
+    "drone1": {
+      "recording_checks": {
+        "writer_complete_without_queue_drop": true,
+        "all_cdr_messages_decode": true,
+        "required_payloads_received": true,
+        "raw_and_adapted_images_valid": true,
+        "image_pose_pairs_available": true,
+        "paired_depth_preserves_raw_pixels": true,
+        "paired_stamps_have_pose_and_raw": true,
+        "clouds_link_to_native_revision": true,
+        "cloud_stamp_association_unambiguous": true,
+        "nonempty_raw_and_inflated_map": true,
+        "depth_updates_recorded": true,
+        "map_revisions_monotonic": true,
+        "per_vehicle_publishers_unique": true,
+        "native_collision_queries_present": true,
+        "query_ids_have_recorded_native_plan": true,
+        "native_queries_have_clock_and_payload": true
+      },
+      "readback_messages": 33272,
+      "paired_depth_images": 66,
+      "map_update_sources": {
+        "depth": 40,
+        "esdf": 37,
+        "peer_chunk": 3340
+      },
+      "native_queries": 188,
+      "query_sample_count": 11882,
+      "detailed_path_failure_count": 9
+    }
+  },
+  "preserved_failure": {
+    "case": "20261118-diagnostics-flight-01",
+    "motion_requested": false,
+    "reason": "untyped empty ROS YAML probe array; native constructor aborted"
+  },
+  "minimal_fix": "multi/native.py omits empty probe_points, keeps native typed default; nonempty points serialized as doubles",
+  "isolation_validation": {
+    "pass": true,
+    "scope": "actual native construction/no inputs/no flight; old failure reproduced",
+    "cases": [
+      {
+        "case": "old-empty",
+        "pass": true,
+        "alive_after_5s": false,
+        "exit": -6,
+        "empty_yaml_error": true,
+        "probe_parameter_written": [],
+        "diagnostic_output_created": false
+      },
+      {
+        "case": "new-empty",
+        "pass": true,
+        "alive_after_5s": true,
+        "exit": 0,
+        "empty_yaml_error": false,
+        "probe_parameter_written": "omitted",
+        "diagnostic_output_created": true
+      },
+      {
+        "case": "new-points",
+        "pass": true,
+        "alive_after_5s": true,
+        "exit": 0,
+        "empty_yaml_error": false,
+        "probe_parameter_written": [
+          0.0,
+          -3.0,
+          0.75
+        ],
+        "diagnostic_output_created": true
+      },
+      {
+        "case": "disabled",
+        "pass": true,
+        "alive_after_5s": true,
+        "exit": 0,
+        "empty_yaml_error": false,
+        "probe_parameter_written": "omitted",
+        "diagnostic_output_created": false
+      }
+    ]
+  },
+  "configuration_correspondence": {
+    "flight_equals_frozen_plan": true,
+    "flight_config_byte_identical": true,
+    "fleet_config_semantically_identical": true,
+    "fleet_config_byte_identical": false,
+    "fleet_note": "Rendering rewrites JSON whitespace; compare parsed values as well as retaining raw hashes."
+  },
+  "formal_skill_modified": false,
+  "limits": [
+    "No exhaustive UE collision event stream: no destructive collision RPC polling",
+    "All recorded native checks safe does not prove full body clearance or historical collision cause fixed",
+    "Single successful PC short case does not cover repeat reliability, complete exploration or RoboPi mixed deployment",
+    "Queue-loss zero and CDR count equality do not prove DDS transport zero-loss"
+  ]
+}

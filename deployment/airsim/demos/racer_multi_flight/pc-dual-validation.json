@@ -1,0 +1,537 @@
+{
+  "version": "0.2.1-pc-dual.20261119",
+  "stage": "partial",
+  "topology": "ForestScene, PC, two UAVs",
+  "raw_evidence": "Resolve run under the local evidence root; assessment paths are relative to log/racer-ros2.",
+  "cases": {
+    "R1-first": {
+      "run": "forest-recorder-complete-01",
+      "assessment": "20261119-recorder-complete/comparison.json",
+      "assessment_sha256": "b9aa5d8fb57aca5d1e62e42fb553afead2b651f4be8ca24c5a8493ee7306bf7a",
+      "initial_assessment_pass": true,
+      "case_pass": true,
+      "recording_pass": true,
+      "vehicles": {
+        "drone0": {
+          "termination": "native_finished",
+          "stop": true,
+          "land": true,
+          "landed_disarmed": true,
+          "active": 14,
+          "rejected": 0,
+          "tracking_s": 137.947414261,
+          "max_horizontal_m": 4.897219125097955,
+          "received": 83117,
+          "persisted": 83117,
+          "decoded": 83117,
+          "mismatches_received_submitted_persisted_decoded_receipts": {},
+          "queue_drops": {},
+          "plan_topics": [
+            [
+              "/racer_execution/drone_1/plan",
+              14
+            ]
+          ],
+          "missing_query_plan_ids": [],
+          "recorder_pass": true,
+          "db_bytes": 894509056,
+          "readback_error": null,
+          "failed_readback_checks": []
+        },
+        "drone1": {
+          "termination": "native_finished",
+          "stop": true,
+          "land": true,
+          "landed_disarmed": true,
+          "active": 14,
+          "rejected": 0,
+          "tracking_s": 137.95264423,
+          "max_horizontal_m": 3.1335046588789743,
+          "received": 82807,
+          "persisted": 82807,
+          "decoded": 82807,
+          "mismatches_received_submitted_persisted_decoded_receipts": {},
+          "queue_drops": {},
+          "plan_topics": [
+            [
+              "/racer_execution/drone_2/plan",
+              14
+            ]
+          ],
+          "missing_query_plan_ids": [],
+          "recorder_pass": true,
+          "db_bytes": 895254528,
+          "readback_error": null,
+          "failed_readback_checks": []
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "5cca60aff55f08ee11a186de411e3539fd811061cf755c7817c3cae489d670e3",
+        "flow-result.json": "cf6f09704e66b2d4507beab6792d2e0d206c0c9fea417cacf29bcb8be10df50f",
+        "px4-ground.json": "562bd6eda23b40c082e06193b9888f03a665819767d612ec363ffb103c71c7ef",
+        "cleanup-result.json": "c0ed1083a8c3cd763a2a19ed594b3dcb3bbbc5c0f9046d822d3060bbe6a4e52e",
+        "core-final.json": "4dd35c744ab71af27e516381171c3d218ec343cfb7c3d38f7a327c96002bc556",
+        "recording-readback/recording-result.json": "48db9b2e33e23d1a88972d9c39b2d62d61232d6487e6e1d4182edebf8f668c24",
+        "ulog/drone0.ulg": "88ddfb73a917e935c081437bc6a06bd4ee44fe4a8d98f3dcdb17c33067cb95cc",
+        "ulog/drone1.ulg": "ba6ab51b2021c92ea442ec1cb2c74e4830f39948aeca950f81805c9ada4428a3"
+      }
+    },
+    "R1-final": {
+      "run": "forest-r1-final-01",
+      "assessment": "20261119-r1-final/comparison.json",
+      "assessment_sha256": "5bc88191d2481d742e7adf332ffb067a99da65abb7a839565c360dacabb03f49",
+      "initial_assessment_pass": true,
+      "case_pass": true,
+      "recording_pass": true,
+      "vehicles": {
+        "drone0": {
+          "termination": "native_finished",
+          "stop": true,
+          "land": true,
+          "landed_disarmed": true,
+          "active": 14,
+          "rejected": 0,
+          "tracking_s": 136.485680611,
+          "max_horizontal_m": 4.76858431416192,
+          "received": 81160,
+          "persisted": 81160,
+          "decoded": 81160,
+          "mismatches_received_submitted_persisted_decoded_receipts": {},
+          "queue_drops": {},
+          "plan_topics": [
+            [
+              "/racer_execution/drone_1/plan",
+              14
+            ]
+          ],
+          "missing_query_plan_ids": [],
+          "recorder_pass": true,
+          "db_bytes": 912855040,
+          "readback_error": null,
+          "failed_readback_checks": []
+        },
+        "drone1": {
+          "termination": "native_finished",
+          "stop": true,
+          "land": true,
+          "landed_disarmed": true,
+          "active": 22,
+          "rejected": 0,
+          "tracking_s": 136.477446404,
+          "max_horizontal_m": 6.480837382883702,
+          "received": 81570,
+          "persisted": 81570,
+          "decoded": 81570,
+          "mismatches_received_submitted_persisted_decoded_receipts": {},
+          "queue_drops": {},
+          "plan_topics": [
+            [
+              "/racer_execution/drone_2/plan",
+              22
+            ]
+          ],
+          "missing_query_plan_ids": [],
+          "recorder_pass": true,
+          "db_bytes": 893640704,
+          "readback_error": null,
+          "failed_readback_checks": []
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "9b6e09f0da8235dcb9b4bc02e3fe6eb759fd8fb80a47bae7d5dbafd9c5d40f0a",
+        "flow-result.json": "302e3a054d6a4acac0e79a5318a6c096f0706d71512d1986152b26dd58a0d61e",
+        "px4-ground.json": "d4f6268d99f0cfc421170ba5c5643116ab6b06db03f7436c636121417e41f90e",
+        "cleanup-result.json": "f45c8d562573c66f6fc2628d4e62e074483b5a9d5d8ccedd76f263880ac62d9c",
+        "core-final.json": "4915c2a7b9d27054a89db83f014352da09fabf5106f162c965c901310b41bf76",
+        "recording-readback/recording-result.json": "883eec60229d521e4b3c3c34941aed4cd51955426b49dc0e301f0b815bd74055",
+        "ulog/drone0.ulg": "97ea4b4f3071f721754901d8ed0b3f8398b82b875e705167ff49f1a787b63e32",
+        "ulog/drone1.ulg": "da1c7e8ddc97d0da3b5f916448be5df0b16fd4345f3a693c70b88ba537d5c66b"
+      }
+    },
+    "R2": {
+      "run": "forest-r2-cancel-01",
+      "assessment": "20261119-r2-flight/r2-assessment.json",
+      "assessment_sha256": "1fade5b88b6256049601b764c0335c98c7eccbd2f431b0da3d44d0af44f44300",
+      "initial_assessment_pass": true,
+      "case_pass": true,
+      "recording_pass": true,
+      "vehicles": {
+        "drone0": {
+          "plan_at_signal": 1,
+          "termination": "cancelled",
+          "phase": "tracking",
+          "error": "operator interrupted",
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "stop_sim_ns": 1795083021428948992,
+          "land_sim_ns": 1795083029172114176,
+          "decoded": 26837,
+          "recording_checks_failed": [],
+          "fault_checks": {
+            "precondition": true,
+            "cancelled": true,
+            "recovery": true,
+            "px4_ground": true,
+            "ulog": true
+          },
+          "recording_pass": true
+        },
+        "drone1": {
+          "plan_at_signal": 1,
+          "termination": "cancelled",
+          "phase": "tracking",
+          "error": "operator interrupted",
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "stop_sim_ns": 1795083021419948800,
+          "land_sim_ns": 1795083030882150656,
+          "decoded": 27076,
+          "recording_checks_failed": [],
+          "fault_checks": {
+            "precondition": true,
+            "cancelled": true,
+            "recovery": true,
+            "px4_ground": true,
+            "ulog": true
+          },
+          "recording_pass": true
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "fd1f840dac8e3e58ad78219e116bd4c05c9fa8cc10fdc01c4ecd5e8eb7c25e53",
+        "flow-result.json": "3f866dc1d0d426bda25afbfc8f96690ad0c6c076121ff16674b24fa77eb91087",
+        "px4-ground.json": "5c78cff310f20157c98fb95a030b683e8d877dd0ec187ebea3671a3cfdef9b7d",
+        "cleanup-result.json": "90ab5ffb0906399835c0de0f8400c77284063e6492d4d52411d7e83242cf9696",
+        "core-final.json": "21333561a43fe2f00f65db0506f3559b69cc0951b11289cee7b555b368842424",
+        "recording-readback/recording-result.json": "f661a533ca87c8822fa30c6c06715dfbfa05f7de0ae743a3ed1697131d5cf17c",
+        "ulog/drone0.ulg": "91b393c07b7f5d9b2302b21323387953ae505db6d05ba67ff1d50b5e039d45ce",
+        "ulog/drone1.ulg": "c15610d597cc52c38365441d5569d2cf8040ecd9e1b1ade8d00c8c4410b6b8d1"
+      }
+    },
+    "R3-first": {
+      "run": "forest-r3-budget-01",
+      "assessment": "20261119-r3-budget-01/r3-assessment.json",
+      "assessment_sha256": "9e07134b1c0c9fb53923de6f39978d3ad0a25484a04ac33be51d0a434bd51ccc",
+      "initial_assessment_pass": false,
+      "case_pass": false,
+      "recording_pass": true,
+      "vehicles": {
+        "drone0": {
+          "termination_reason": "execution_failed",
+          "error": "peer mission failed; recover independently",
+          "active": 13,
+          "tracking_wall_span_s": 18.330357895,
+          "tracking_sampled_min_separation_m": 0.8367143457937696,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "decoded": 32882,
+          "recording_pass": true
+        },
+        "drone1": {
+          "termination_reason": "execution_failed",
+          "error": "minimum fleet separation violated",
+          "active": 13,
+          "tracking_wall_span_s": 18.33658345,
+          "tracking_sampled_min_separation_m": 0.8367143457937696,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "decoded": 33180,
+          "recording_pass": true
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "3ded1c300e016af5beb08f116ec5dc5c237bd2d5fb1f9c86fb0bb5a07289b089",
+        "flow-result.json": "9759c1765fac1ba8e5bd0db540b0099d3bd6e0b819fb22091f4b9970a18174a3",
+        "px4-ground.json": "e969b30dcf6eeff88750a49182c9511f83a712e3b0dfec758ca427e919116edf",
+        "cleanup-result.json": "44ff7903f1feae67297dbe692e0dadb88d39bb137d2a4da000476805438a9d4e",
+        "core-final.json": "db16e4b518eff19779aff38568b78067d0354ca1207cb4c011f14925a4ff8139",
+        "recording-readback/recording-result.json": "cb831d894b2647a1a0122a5a7d2882dac87cf515cccda87a5f9dfdf21d592425",
+        "ulog/drone0.ulg": "484728a6ad2d089882649ee93fb47201af1b1ad4361af66cd8a11541733c50d7",
+        "ulog/drone1.ulg": "ea277e30fcf4953c71dc3c70318a31a7ec239687fa4bb570b9b26c9aae68378a"
+      }
+    },
+    "R3-repeat": {
+      "run": "forest-r3-budget-02",
+      "assessment": "20261119-r3-budget-02/r3-assessment.json",
+      "assessment_sha256": "2f9ba7fa6e3df9ea69658e7823b97022ec027e70b86ccf62684c07d3dc56ab83",
+      "initial_assessment_pass": false,
+      "case_pass": true,
+      "recording_pass": true,
+      "vehicles": {
+        "drone0": {
+          "termination_reason": "execution_failed",
+          "error": "peer mission failed; recover independently",
+          "active": 13,
+          "tracking_wall_span_s": 20.006975332,
+          "tracking_sampled_min_separation_m": 1.782201387202268,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "decoded": 33114,
+          "recording_pass": true
+        },
+        "drone1": {
+          "termination_reason": "budget_exhausted",
+          "error": "completion budget exhausted; exploration incomplete",
+          "active": 17,
+          "tracking_wall_span_s": 20.010086543,
+          "tracking_sampled_min_separation_m": 1.782201387202268,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "decoded": 33173,
+          "recording_pass": true
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "99ae76267bf705922606c2dacb5bf102defa6781181adccfdd6afb46d8376f83",
+        "flow-result.json": "8c0a527649c1cd5bfb6753e2067ee86dff66587b1825a4091f44f1587b9ee731",
+        "px4-ground.json": "b0c525f7691d48ab0db7f5cd4c2b766afb181f84296750afa840ee51136c215f",
+        "cleanup-result.json": "b087eb830f0fca19da2e1704068d11a31b502c9145d24acc2ddc27010ed1d703",
+        "core-final.json": "d1b2758b5a56ea010549aa678895323b8242c34997e68a67783614311f8ecaf7",
+        "recording-readback/recording-result.json": "f93d80b8e755f4861944563b1ea6997cf76480b923c1668bad4599521794f71b",
+        "ulog/drone0.ulg": "dec5a41d26bd18f90a0db499e31f7ac7f3722ed72c981aa1411a760efd91b1fc",
+        "ulog/drone1.ulg": "ffc3e1e9099e758c25a009fde2d37227820b3dd28d4068b95357cf134d75da96"
+      },
+      "review": "20261119-r3-budget-02/r3-stop-review.json",
+      "review_sha256": "23b81dcba7d089de0448961d410bc1030dd6d1e7a18e6fa74b10dbf47bdb21d5",
+      "stop_review_checks": {
+        "original_timeout": true,
+        "same_stop": true,
+        "action_stopped": true,
+        "before_land": true,
+        "remote_stop_acknowledged": true,
+        "land_ground": true
+      }
+    },
+    "R4": {
+      "run": "forest-r4-input-01",
+      "assessment": "20261119-r4-flight/r4-assessment.json",
+      "assessment_sha256": "a96de738a0ae3aaebce542509ee4acce6cd81fcd43e2c2c004de919a248b59a8",
+      "initial_assessment_pass": true,
+      "case_pass": true,
+      "recording_pass": true,
+      "vehicles": {
+        "drone1": {
+          "checks": {
+            "cause": true,
+            "stop_before_land": true,
+            "recovered": true,
+            "px4": true,
+            "services_live": true,
+            "input_scope": true,
+            "ulog": true
+          },
+          "error": "native/input state stale",
+          "advanced_states": 0,
+          "resume_pair_wall_ns": 1795084760565180486,
+          "live_samples": {
+            "/clock": 77,
+            "/drone1/platform/info": 14,
+            "/drone1/fmu/out/vehicle_status_v4": 3,
+            "/drone1/navigation/odom": 77,
+            "/racer_multi/drone1/native_state": 15
+          },
+          "stop": {
+            "event": "stop_confirmed",
+            "wall_ns": 1795084760127778966,
+            "sim_ns": 1795084751018500608,
+            "vehicle": "drone1",
+            "plan": 1,
+            "reason": "execution_failed",
+            "operator": true,
+            "mode": 2,
+            "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+            "evidence": "terminal action, successful stop reply and compatible controller mode",
+            "at_ns": 1795084751018500608
+          },
+          "land_request": {
+            "event": "action_requested",
+            "phase": "landing",
+            "wall_ns": 1795084760166771281,
+            "sim_ns": 1795084751060501504,
+            "action": "land_success",
+            "goal": {
+              "land_speed": 0.35
+            }
+          },
+          "recording_pass": true
+        },
+        "drone0": {
+          "checks": {
+            "cause": true,
+            "stop_before_land": true,
+            "recovered": true,
+            "px4": true,
+            "services_live": true,
+            "input_scope": true,
+            "ulog": true
+          },
+          "error": "peer mission failed; recover independently",
+          "advanced_states": 7,
+          "resume_pair_wall_ns": 1795084760327072492,
+          "live_samples": {
+            "/clock": 77,
+            "/drone0/platform/info": 14,
+            "/drone0/fmu/out/vehicle_status_v4": 3,
+            "/drone0/navigation/odom": 77,
+            "/racer_multi/drone0/native_state": 15
+          },
+          "stop": {
+            "event": "stop_confirmed",
+            "wall_ns": 1795084759996364838,
+            "sim_ns": 1795084750886497792,
+            "vehicle": "drone0",
+            "plan": 1,
+            "reason": "execution_failed",
+            "operator": true,
+            "mode": 2,
+            "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+            "evidence": "terminal action, successful stop reply and compatible controller mode",
+            "at_ns": 1795084750886497792
+          },
+          "land_request": {
+            "event": "action_requested",
+            "phase": "landing",
+            "wall_ns": 1795084760069103652,
+            "sim_ns": 1795084750967499520,
+            "action": "land_success",
+            "goal": {
+              "land_speed": 0.35
+            }
+          },
+          "recording_pass": true
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "1e7246e4072f49c3370798624462bb06afdaf6f4a9f2a2ae995f68f44e5a7c58",
+        "flow-result.json": "87c7457f855e921c4369e75be76cf887f325a5983437a28498e9722c87c94905",
+        "px4-ground.json": "f979d7aa594b3165acf5ac874d897ae233968a6f3dcd8c3df2af022420fd2960",
+        "cleanup-result.json": "931c2f8b0e6e2e82f94acbf14ed1e0a836ed2a092fbcca1166080ae184871a84",
+        "core-final.json": "8049ce2f859539406bad862961eb3ea2aa7c5e424e159edfa187ee389f344647",
+        "recording-readback/recording-result.json": "22caf6146e79d4064ea19dfe803e50bb4dfc8a0ec9bb22d83d9e67c578e48272",
+        "ulog/drone0.ulg": "84906e51aa2a398c5e1d8e392f88b0660cdbd73cb96a113ef04453deef13a41f",
+        "ulog/drone1.ulg": "710bb9aab9572a20b57fc506c2d00e56c6e98308b96f88537d4cde9cadd702ea"
+      }
+    },
+    "R5": {
+      "run": "forest-r5-exit-01",
+      "assessment": "20261119-r5-flight/r5-assessment.json",
+      "assessment_sha256": "8cffae8626e07ca6362801087d291ac7be7e5e959fc49061001c596e4d02dedc",
+      "initial_assessment_pass": true,
+      "case_pass": true,
+      "recording_pass": false,
+      "vehicles": {
+        "drone0": {
+          "error": "peer mission failed; recover independently",
+          "native_stop_error": null,
+          "faults": [],
+          "native_finish": true,
+          "execution_stop": {
+            "event": "stop_confirmed",
+            "wall_ns": 1795086146176103602,
+            "sim_ns": 1795086137947282432,
+            "vehicle": "drone0",
+            "plan": 1,
+            "reason": "execution_failed",
+            "operator": true,
+            "mode": 2,
+            "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+            "evidence": "terminal action, successful stop reply and compatible controller mode",
+            "at_ns": 1795086137947282432
+          },
+          "land_request": {
+            "event": "action_requested",
+            "phase": "landing",
+            "wall_ns": 1795086146230593383,
+            "sim_ns": 1795086138007283712,
+            "action": "land_success",
+            "goal": {
+              "land_speed": 0.35
+            }
+          },
+          "land_success": true,
+          "landed_disarmed": true,
+          "px4_ground": true,
+          "children": {
+            "exploration": 0,
+            "solver-2": 0,
+            "solver-1": 0
+          },
+          "decoded": 28087,
+          "original_readback_error": null,
+          "failed_prefix_checks": [],
+          "bag_counts_match": true,
+          "recording_pass": true
+        },
+        "drone1": {
+          "error": "exploration exited -9",
+          "native_stop_error": "native stop not confirmed",
+          "faults": [
+            "exploration exited -9"
+          ],
+          "native_finish": false,
+          "execution_stop": {
+            "event": "stop_confirmed",
+            "wall_ns": 1795086146165571495,
+            "sim_ns": 1795086137938282240,
+            "vehicle": "drone1",
+            "plan": 1,
+            "reason": "execution_failed",
+            "operator": true,
+            "mode": 2,
+            "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+            "evidence": "terminal action, successful stop reply and compatible controller mode",
+            "at_ns": 1795086137938282240
+          },
+          "land_request": {
+            "event": "action_requested",
+            "phase": "landing",
+            "wall_ns": 1795086149179090798,
+            "sim_ns": 1795086140716341504,
+            "action": "land_success",
+            "goal": {
+              "land_speed": 0.35
+            }
+          },
+          "land_success": true,
+          "landed_disarmed": true,
+          "px4_ground": true,
+          "children": {
+            "exploration": -9,
+            "solver-2": 0,
+            "solver-1": 0
+          },
+          "decoded": 27623,
+          "original_readback_error": "JSONDecodeError(\"Expecting ',' delimiter: line 1 column 28713 (char 28712)\")",
+          "failed_prefix_checks": [],
+          "bag_counts_match": true,
+          "recording_pass": false
+        }
+      },
+      "artifacts_sha256": {
+        "mission/result.json": "8258715e4da1f0a9078e201cc915dc5e91e542515e1affaf603e98e51a249b03",
+        "flow-result.json": "b112c7bfcc10d19b1e8ae7c22b21b9befe4e6a21d8bb95959231661916077602",
+        "px4-ground.json": "6affb07af90e0ae1309dadc5bcfc2e63371b8100215f152cb0e63d3ae16658ec",
+        "cleanup-result.json": "9f6f0f87d9988ff8b0ce734e0e2a33f0dc743513c70d307cd050b804c3e3e94a",
+        "core-final.json": "027608d4f93d6a10ce1dc327febeb7bef4e6c32b1ebcaed76fc6d3b54ed7594b",
+        "recording-readback/recording-result.json": "866efc50268b00d9ab0add7a4185715f650520d1e5ed4e8ea1f028e424b0a9fd",
+        "ulog/drone0.ulg": "5f6422bb8d9c42a4f12da05f91315eedc3e600ca72da006b1e7a0b9ad637db37",
+        "ulog/drone1.ulg": "8854cfb471c5976d2c93677ba4ecb36316e963a1ead79770de04f0c0a06354b1",
+        "injection-owner.json": "85ecc8b24fb07e0a7ffed6c05ebcd529bee83b3bc8c17ef80ea2c5c732415c47",
+        "native/injection.json": "61b260e9f9cfa5325ff388536e86c7566e1214ffd88fda7bf48f8bd61805c641",
+        "r5-expected-exit.json": "69ec3c7febafae4479a4098f417601d563aa2e9f28ee0026ebb9e1244d6ed592",
+        "native/worker-final.json": "61ef04fa1217a0df76fd6a088b4e6276d94a52df66412458f6955f4fcfc51a31",
+        "native/drone0/native-cleanup.json": "8cc9bd75111e5ee21ea6aa90c6b12fb1ed2239d2a56a2a70790b6c2c1d9def2d",
+        "native/drone1/native-cleanup.json": "800ea29803a1d839f3ba8a3d5d7dba3c40d7f256fa00492a8bbdc9aeefa26b42",
+        "local.json": "0d2b6bcdd8b9c57a488314cdfe2321cdf322e1c91cbed982e8d327b8a6bdbc7e",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2"
+      }
+    }
+  },
+  "R6": "full-flight non-consuming collision observation unavailable"
+}

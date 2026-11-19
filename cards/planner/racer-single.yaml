@@ -1,0 +1,55 @@
+schema_version: '0.1'
+id: planner.racer-single
+name: RACER native bounded single-vehicle exploration
+version: '0.1.0-candidate.1'
+type: planner
+description: Native frontier/viewpoint selection and rolling B-spline planning executed through FollowTimedPath.
+component:
+  id: aerohub.planner.racer-single
+  manifest: deployment/airsim/demos/racer_single/component.yaml
+  shared_process_group: racer-native-FSM-with-TSP-ACVRP-and-adapter
+  coupled_capabilities: [internal-frontier-map]
+usage:
+  mode: native-FSM-start-and-operator-stop
+  selection_phase: deployment
+  invocation_interface: geometry_msgs/msg/PoseStamped on /racer_explore/trigger
+  trigger_semantics: 'Pose contents ignored by native callback; starts WAIT_TRIGGER -> PLAN_TRAJ; task does not choose viewpoints.'
+  switching_constraints: [stop-and-land-before-replacing-motion-provider, reset-map-on-new-session]
+inputs:
+  - topic: /racer_ground/depth
+    schema: sensor_msgs/msg/Image; 16UC1 millimeters
+    calibration: config/mapper.yaml and camera-bridge.json; 640x480 planar depth; 90-degree horizontal FOV
+  - topic: /racer_ground/camera_pose
+    schema: geometry_msgs/msg/PoseStamped; optical pose in drone0/odom at original depth stamp
+  - topic: /racer_short/odometry
+    schema: nav_msgs/msg/Odometry; pose and world-rotated velocity in drone0/odom ENU
+outputs:
+  - topic: /racer_execution/drone_1/plan
+    schema: bspline/msg/Bspline; full position and yaw spline with future start time
+  - action: /drone0/follow_timed_path
+    rolling_update: /drone0/follow_timed_path/_behavior/modify
+    semantics: PVA and yaw preserved; native original start time; acceptance and actual-active feedback distinguished
+preconditions:
+  - Actual camera calibration, frame mapping and unique simulation clock verified.
+  - Native TakeoffBehavior completes before exploration is enabled.
+  - Real TSP/ACVRP solvers, live native map/frontiers and execution server ready.
+resources:
+  reads: [depth-camera, AS2-odometry]
+  writes: [drone0-FollowTimedPath-session]
+  conflicts: [other-motion-Behaviors-for-drone0]
+  enforcement: single-demo-owner and timed/native-FollowPath server mutual exclusion; no general Tool runtime
+lifecycle:
+  startup: deploy compute capability then call from workstation
+  readiness: fresh inputs plus native WAIT_TRIGGER/frontiers and actual AS2 clients ready
+  feedback: /racer_explore/native_state and /racer_short/adapter/state
+  stop: /racer_short/adapter/command JSON operator stop; await stop protocol and native FINISH; task then lands
+  completion: bounded task duration is not map-completion proof; native no-frontier can transition to idle
+  failure: preserve failed attempt and attempt native Land independently of trajectory stop failure
+  cleanup: require fresh landed/disarmed; inspect actual owned-process exits
+type_specific:
+  original_scope: RACER supports multi-agent exploration; this component entry is single-active-UAV only
+  synchronization: shared ROS sim clock; future rolling handoff from previous curve state
+validation:
+  stage: partial
+  evidence: [deployment/airsim/demos/racer_single/validation.md]
+  limitations: [no-general-Tool-runtime, no-four-vehicle-cooperation-acceptance, no-whole-map-coverage, no-real-hardware]

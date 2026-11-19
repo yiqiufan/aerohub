@@ -1,0 +1,783 @@
+{
+  "case": "20261117-staged-dual-explore-01",
+  "rejected_count": 34,
+  "matched_server_warnings": 34,
+  "rows": [
+    {
+      "revision": 3,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927618797977811,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927618.797977811] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.354384,
+      "response_lead_s": 0.68999872,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 0.943342,
+      "distance_to_nearest_odom_m": 0.24162840277162118,
+      "nearby_distance_range_m": [
+        0.18250940298758012,
+        0.3019266935659695
+      ]
+    },
+    {
+      "revision": 4,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619272010240,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.272010240] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.308937,
+      "response_lead_s": 0.710999168,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 6.182352,
+      "distance_to_nearest_odom_m": 0.4439980059329605,
+      "nearby_distance_range_m": [
+        0.43299814201927367,
+        0.44437168741212746
+      ]
+    },
+    {
+      "revision": 5,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619332194406,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.332194406] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.336731,
+      "response_lead_s": 0.71999936,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -14.487966,
+      "distance_to_nearest_odom_m": 0.44200423765742797,
+      "nearby_distance_range_m": [
+        0.4234526118422812,
+        0.44437168741212746
+      ]
+    },
+    {
+      "revision": 6,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619378658159,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.378658159] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.432927,
+      "response_lead_s": 0.728999552,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -0.88023,
+      "distance_to_nearest_odom_m": 0.4308570874527318,
+      "nearby_distance_range_m": [
+        0.4004525164261671,
+        0.442869021671978
+      ]
+    },
+    {
+      "revision": 7,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619425386514,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.425386514] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.318625,
+      "response_lead_s": 0.722999424,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -7.451885,
+      "distance_to_nearest_odom_m": 0.4234526118422812,
+      "nearby_distance_range_m": [
+        0.38408419212166706,
+        0.4367312512989153
+      ]
+    },
+    {
+      "revision": 8,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619849274901,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.849274901] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 2.031254,
+      "response_lead_s": 0.698998912,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -1.231148,
+      "distance_to_nearest_odom_m": 0.25419422511885975,
+      "nearby_distance_range_m": [
+        0.2537116890562834,
+        0.29484237297340515
+      ]
+    },
+    {
+      "revision": 9,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619901747050,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.901747050] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.47108,
+      "response_lead_s": 0.710999168,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -3.863032,
+      "distance_to_nearest_odom_m": 0.2669300158797314,
+      "nearby_distance_range_m": [
+        0.2537116890562834,
+        0.33625910994849556
+      ]
+    },
+    {
+      "revision": 10,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927619960088097,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927619.960088097] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 1.210738,
+      "response_lead_s": 0.698998912,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -2.492655,
+      "distance_to_nearest_odom_m": 0.547424698337202,
+      "nearby_distance_range_m": [
+        0.4386630129704664,
+        0.6800347957142161
+      ]
+    },
+    {
+      "revision": 11,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620028576745,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.028576745] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 2.76479,
+      "response_lead_s": 0.668998272,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 9.471586,
+      "distance_to_nearest_odom_m": 0.6800347957142161,
+      "nearby_distance_range_m": [
+        0.5332874523198045,
+        0.8218675752607695
+      ]
+    },
+    {
+      "revision": 12,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620082971178,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.082971178] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 8.5124,
+      "response_lead_s": 0.698998912,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -4.347599,
+      "distance_to_nearest_odom_m": 0.726310181199345,
+      "nearby_distance_range_m": [
+        0.6050622435915828,
+        0.8875026466607456
+      ]
+    },
+    {
+      "revision": 13,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620153215577,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.153215577] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.422446,
+      "response_lead_s": 0.710999168,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 5.467472,
+      "distance_to_nearest_odom_m": 0.38169722796875094,
+      "nearby_distance_range_m": [
+        0.22043950851558208,
+        0.534427277597701
+      ]
+    },
+    {
+      "revision": 14,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620212837919,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.212837919] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.762483,
+      "response_lead_s": 0.716999296,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 10.023612,
+      "distance_to_nearest_odom_m": 0.49990014391933607,
+      "nearby_distance_range_m": [
+        0.33227024395957494,
+        0.6215562394276767
+      ]
+    },
+    {
+      "revision": 15,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620269365501,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.269365501] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 1.961199,
+      "response_lead_s": 0.692998784,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -6.754417,
+      "distance_to_nearest_odom_m": 0.5690056886392848,
+      "nearby_distance_range_m": [
+        0.39829750680571974,
+        0.7458709502617403
+      ]
+    },
+    {
+      "revision": 16,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620322213067,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.322213067] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.438206,
+      "response_lead_s": 0.716999296,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 2.510659,
+      "distance_to_nearest_odom_m": 0.6746717170861882,
+      "nearby_distance_range_m": [
+        0.4999288778897235,
+        0.7998735351212125
+      ]
+    },
+    {
+      "revision": 17,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620417360861,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.417360861] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 4.041517,
+      "response_lead_s": 0.671998336,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 2.529807,
+      "distance_to_nearest_odom_m": 0.5326182233631248,
+      "nearby_distance_range_m": [
+        0.40734411639450613,
+        0.6955863246174585
+      ]
+    },
+    {
+      "revision": 18,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620496597972,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.496597972] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.674343,
+      "response_lead_s": 0.692998784,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 2.104396,
+      "distance_to_nearest_odom_m": 0.6955845699852493,
+      "nearby_distance_range_m": [
+        0.5326164791316993,
+        0.8408612140723725
+      ]
+    },
+    {
+      "revision": 19,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620928213325,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.928213325] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.494756,
+      "response_lead_s": 0.68999872,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 9.519669,
+      "distance_to_nearest_odom_m": 1.483615644009448,
+      "nearby_distance_range_m": [
+        1.319738151036309,
+        1.6075996108145396
+      ]
+    },
+    {
+      "revision": 20,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927620983837994,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927620.983837994] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.385014,
+      "response_lead_s": 0.71999936,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -6.008627,
+      "distance_to_nearest_odom_m": 1.546672568453773,
+      "nearby_distance_range_m": [
+        1.419337100819928,
+        1.6666354705645805
+      ]
+    },
+    {
+      "revision": 21,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621038740038,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.038740038] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 2.595343,
+      "response_lead_s": 0.68999872,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -0.981216,
+      "distance_to_nearest_odom_m": 1.6375071114745852,
+      "nearby_distance_range_m": [
+        1.5311286431827231,
+        1.7515418436252832
+      ]
+    },
+    {
+      "revision": 22,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621091275329,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.091275329] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.314568,
+      "response_lead_s": 0.716999296,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -3.26674,
+      "distance_to_nearest_odom_m": 1.7096665251240757,
+      "nearby_distance_range_m": [
+        1.5773153663235575,
+        1.8312871813750986
+      ]
+    },
+    {
+      "revision": 23,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621144806755,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.144806755] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.579028,
+      "response_lead_s": 0.710999168,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 5.455708,
+      "distance_to_nearest_odom_m": 1.7918485057616433,
+      "nearby_distance_range_m": [
+        1.6666354705645805,
+        1.8812952440689739
+      ]
+    },
+    {
+      "revision": 24,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621206147973,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.206147973] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 5.253732,
+      "response_lead_s": 0.698998912,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -3.559924,
+      "distance_to_nearest_odom_m": 1.8565369505225773,
+      "nearby_distance_range_m": [
+        1.7515418436252832,
+        1.9405794671734313
+      ]
+    },
+    {
+      "revision": 25,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621266275684,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.266275684] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.631379,
+      "response_lead_s": 0.710999168,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -2.613809,
+      "distance_to_nearest_odom_m": 1.9405794671734313,
+      "nearby_distance_range_m": [
+        1.8312871813750986,
+        2.037445317043553
+      ]
+    },
+    {
+      "revision": 26,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621346060583,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.346060583] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.564791,
+      "response_lead_s": 0.686998656,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -7.139832,
+      "distance_to_nearest_odom_m": 0.3812138199902344,
+      "nearby_distance_range_m": [
+        0.2815339689448077,
+        0.47863109030864065
+      ]
+    },
+    {
+      "revision": 27,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621425596461,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.425596461] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 5.784694,
+      "response_lead_s": 0.680998528,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -7.622114,
+      "distance_to_nearest_odom_m": 0.3886218387527313,
+      "nearby_distance_range_m": [
+        0.3087947418113771,
+        0.4619090281951791
+      ]
+    },
+    {
+      "revision": 28,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621483820390,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.483820390] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.558349,
+      "response_lead_s": 0.707999104,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -5.496096,
+      "distance_to_nearest_odom_m": 0.439485541075712,
+      "nearby_distance_range_m": [
+        0.3796192564707267,
+        0.5082825615589709
+      ]
+    },
+    {
+      "revision": 29,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621534560645,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.534560645] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.341059,
+      "response_lead_s": 0.728999552,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": 3.389898,
+      "distance_to_nearest_odom_m": 0.4852837218178403,
+      "nearby_distance_range_m": [
+        0.40873934571653886,
+        0.5377260629165748
+      ]
+    },
+    {
+      "revision": 30,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927621602732721,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927621.602732721] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 8.618138,
+      "response_lead_s": 0.671998336,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -4.234109,
+      "distance_to_nearest_odom_m": 0.22199831047880048,
+      "nearby_distance_range_m": [
+        0.17853192306694488,
+        0.2676100071723265
+      ]
+    },
+    {
+      "revision": 31,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927622027618355,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927622.027618355] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.342742,
+      "response_lead_s": 0.707999104,
+      "prior_stopped_revision": 2,
+      "nearest_odom_offset_ms": -9.588553,
+      "distance_to_nearest_odom_m": 0.2741928515444684,
+      "nearby_distance_range_m": [
+        0.23549018883114373,
+        0.29267185721434985
+      ]
+    },
+    {
+      "revision": 33,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927623996296925,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927623.996296925] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.589009,
+      "response_lead_s": 0.737999744,
+      "prior_stopped_revision": 32,
+      "nearest_odom_offset_ms": 2.194143,
+      "distance_to_nearest_odom_m": 0.18138750755239813,
+      "nearby_distance_range_m": [
+        0.12427647906032299,
+        0.21592355802075272
+      ]
+    },
+    {
+      "revision": 34,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927624042384708,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927624.042384708] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.307995,
+      "response_lead_s": 0.728999552,
+      "prior_stopped_revision": 32,
+      "nearest_odom_offset_ms": -4.370121,
+      "distance_to_nearest_odom_m": 0.1695035806995395,
+      "nearby_distance_range_m": [
+        0.12790669089574241,
+        0.2131831177929952
+      ]
+    },
+    {
+      "revision": 35,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927624091808573,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927624.091808573] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 9.674899,
+      "response_lead_s": 0.71999936,
+      "prior_stopped_revision": 32,
+      "nearest_odom_offset_ms": 5.929265,
+      "distance_to_nearest_odom_m": 0.19719467832351228,
+      "nearby_distance_range_m": [
+        0.14953261978317056,
+        0.230460081813119
+      ]
+    },
+    {
+      "revision": 36,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927624136160109,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927624.136160109] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.380095,
+      "response_lead_s": 0.728999552,
+      "prior_stopped_revision": 32,
+      "nearest_odom_offset_ms": 3.305312,
+      "distance_to_nearest_odom_m": 0.2131831177929952,
+      "nearby_distance_range_m": [
+        0.1695035806995395,
+        0.23956409099324555
+      ]
+    },
+    {
+      "revision": 37,
+      "initial": true,
+      "base": 0,
+      "warning": {
+        "wall_ns": 1794927624179725305,
+        "line": "[follow_path_extended_node-4] [WARN] [1794927624.179725305] [drone0.FollowPathBehavior]: initial point is not continuous with vehicle position"
+      },
+      "response_minus_warning_ms": 0.345988,
+      "response_lead_s": 0.731999616,
+      "prior_stopped_revision": 32,
+      "nearest_odom_offset_ms": -1.68042,
+      "distance_to_nearest_odom_m": 0.230460081813119,
+      "nearby_distance_range_m": [
+        0.19719467832351228,
+        0.25499536954941376
+      ]
+    }
+  ],
+  "all_initial_base_zero": true,
+  "native_to_adapter_first_point_max_error_m": 3.1401849173675503e-16,
+  "converted_plan_count": 38,
+  "pose_caveat": "Nearby mission navigation odometry is not the exact executor callback pose. Explicit server warning establishes the failed predicate.",
+  "stops_and_actions": [
+    {
+      "event": "active",
+      "wall_ns": 1794927615008544507,
+      "sim_ns": 1794927607479424768,
+      "vehicle": "drone0",
+      "plan": 1,
+      "at_ns": 1794927607479424768
+    },
+    {
+      "event": "active",
+      "wall_ns": 1794927617568479022,
+      "sim_ns": 1794927609840475136,
+      "vehicle": "drone0",
+      "plan": 2,
+      "at_ns": 1794927609840475136
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794927617706372478,
+      "sim_ns": 1794927609972477952,
+      "vehicle": "drone0",
+      "reason": "planner requested stop",
+      "operator": false,
+      "at_ns": 1794927609972477952
+    },
+    {
+      "event": "action_result",
+      "wall_ns": 1794927617851212012,
+      "sim_ns": 1794927610116481024,
+      "vehicle": "drone0",
+      "status": 5,
+      "reason": "CANCELED",
+      "plan": 2,
+      "at_ns": 1794927610116481024
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794927617981516418,
+      "sim_ns": 1794927610230483456,
+      "vehicle": "drone0",
+      "plan": 2,
+      "reason": "planner requested stop",
+      "operator": false,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794927610230483456
+    },
+    {
+      "event": "active",
+      "wall_ns": 1794927622868724429,
+      "sim_ns": 1794927614694578688,
+      "vehicle": "drone0",
+      "plan": 32,
+      "at_ns": 1794927614694578688
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794927622996013618,
+      "sim_ns": 1794927614826581504,
+      "vehicle": "drone0",
+      "reason": "planner requested stop",
+      "operator": false,
+      "at_ns": 1794927614826581504
+    },
+    {
+      "event": "action_result",
+      "wall_ns": 1794927623131423911,
+      "sim_ns": 1794927614958584320,
+      "vehicle": "drone0",
+      "status": 5,
+      "reason": "CANCELED",
+      "plan": 32,
+      "at_ns": 1794927614958584320
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794927623261559725,
+      "sim_ns": 1794927615069586688,
+      "vehicle": "drone0",
+      "plan": 32,
+      "reason": "planner requested stop",
+      "operator": false,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794927615069586688
+    },
+    {
+      "event": "active",
+      "wall_ns": 1794927625028888860,
+      "sim_ns": 1794927616671620864,
+      "vehicle": "drone0",
+      "plan": 38,
+      "at_ns": 1794927616671620864
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794927627232568860,
+      "sim_ns": 1794927618693664000,
+      "vehicle": "drone0",
+      "reason": "planner requested stop",
+      "operator": false,
+      "at_ns": 1794927618693664000
+    },
+    {
+      "event": "action_result",
+      "wall_ns": 1794927627371601869,
+      "sim_ns": 1794927618825666816,
+      "vehicle": "drone0",
+      "status": 5,
+      "reason": "CANCELED",
+      "plan": 38,
+      "at_ns": 1794927618825666816
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794927627501840792,
+      "sim_ns": 1794927618936669184,
+      "vehicle": "drone0",
+      "plan": 38,
+      "reason": "planner requested stop",
+      "operator": false,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794927618936669184
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794927634168123268,
+      "sim_ns": 1794927625029799168,
+      "vehicle": "drone0",
+      "reason": "bounded fleet episode ended",
+      "operator": true,
+      "at_ns": 1794927625029799168
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794927634302226355,
+      "sim_ns": 1794927625158801920,
+      "vehicle": "drone0",
+      "plan": 0,
+      "reason": "bounded fleet episode ended",
+      "operator": true,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794927625158801920
+    }
+  ],
+  "controller_sample_warning_count": 3,
+  "unresolved": "Planner start-state input and solver boundary error were not logged; cannot separate optimizer drift, movement while solving, or other upstream contributors.",
+  "evidence_sha256": {
+    "adapter/drone0/adapter-events.jsonl": "ce10796cb7ccce7f4023324c0242768909dd6fe7739748a1d74e68ec157f946e",
+    "mission/drone0/flight-events.jsonl": "6b2dcd1de68f8faf0be325e70b624f597ca5d3fd907ff7f6c190b1ab6d83023e",
+    "as2-drone0-container.log": "ce15560d62d93c2623365a1ed1148f0cd3d9e3096c7faa236d2e678341a3f722",
+    "native/drone0/exploration.log": "c73c07180845c729f07dc9c5925d838d5bff2c19f23e2bdb82f7bfb6be91070b"
+  }
+}

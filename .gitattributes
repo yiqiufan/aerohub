@@ -1,0 +1,7 @@
+# Preserve RACER fixed-case source and configuration checksums across Git checkouts.
+src/planner/racer/** -text
+deployment/airsim/demos/racer_single/** -text
+deployment/airsim/demos/racer_multi_ground/** -text
+deployment/airsim/demos/racer_multi_flight/** -text
+cards/planner/racer-single.yaml -text
+cards/planner/racer-dual.yaml -text

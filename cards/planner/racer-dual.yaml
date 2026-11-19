@@ -1,0 +1,47 @@
+schema_version: '0.1'
+id: planner.racer-dual
+name: RACER native two-vehicle bounded exploration
+version: '0.2.1-pc-dual.20261119'
+type: planner
+component:
+  id: aerohub.planner.racer-dual
+  manifest: deployment/airsim/demos/racer_multi_flight/component.yaml
+  shared_process_group: per-vehicle native-FSM-and-solvers coordinated by shared swarm communication
+  coupled_capabilities: [native-frontier-map, native-pairwise-allocation]
+usage:
+  mode: native-FSM-start-and-natural-fleet-finish
+  completion: both fresh same-session native return-finished and confirmed FINISH; budget exhaustion is not completion
+  selection_phase: deployment
+  invocation_interface: geometry_msgs/msg/PoseStamped on /racer_multi/{namespace}/trigger
+  trigger_semantics: starts native exploration; task does not select viewpoints
+  switching_constraints: stop-land-disarm-both-before-changing-provider; reset-map-on-new-session
+inputs:
+  - topic: /racer_multi/{namespace}/depth
+    schema: sensor_msgs/msg/Image; 32FC1 meters from actual DepthPlanar
+  - topic: /racer_multi/{namespace}/camera_pose
+    schema: geometry_msgs/msg/PoseStamped; optical pose in racer_world at original depth stamp
+  - topic: /racer_multi/{namespace}/odometry
+    schema: nav_msgs/msg/Odometry; pose and world-rotated velocity in common ENU
+outputs:
+  - topic: /racer_execution/drone_{racer_id}/plan
+    schema: bspline/msg/Bspline; complete position/yaw splines with future start time
+  - action: /{namespace}/follow_timed_path
+    rolling_update: /{namespace}/follow_timed_path/_behavior/modify
+    semantics: full PVA/yaw/time preserved; common-frame translation inverted once per vehicle
+preconditions: [exactly-two-configured-UAVs, aligned-ENU-registration, actual-sensors-and-native-solvers, completed-native-takeoff]
+resources:
+  reads: [per-UAV-depth-and-AS2-odometry, native-peer-map-and-trajectory]
+  writes: [both-FollowTimedPath-sessions]
+  conflicts: [other-motion-clients-for-either-UAV]
+lifecycle:
+  feedback: /racer_multi/{namespace}/adapter/state and native_state
+  stop: per-vehicle adapter/command operator stop; await protocol and native FINISH then Land
+  failure: independently recover both vehicles after either mission fails
+validation:
+  stage: partial
+  current_baseline: deployment/airsim/demos/racer_multi_flight/pc-dual.lock.json
+  pc_reliability: deployment/airsim/demos/racer_multi_flight/pc-dual-validation.json
+  complete_case_evidence: deployment/airsim/demos/racer_multi_flight/forest-complete-validation.json
+  short_case_evidence: deployment/airsim/demos/racer_multi_flight/forest-short-validation.json
+  evidence: deployment/airsim/demos/racer_multi_flight/validation.md
+  limitations: [PC-two-UAV-configured-region-only, no-full-map-coverage, no-general-Tool-runtime, no-RoboPi, no-four-vehicle-flight, R5-Drone1-diagnostic-readback-incomplete, historical-input-exit-unresolved]

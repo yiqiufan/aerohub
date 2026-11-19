@@ -1,0 +1,46 @@
+{
+  "planning_box_enu": [
+    [
+      -2.5,
+      2.5
+    ],
+    [
+      -1.0,
+      4.0
+    ],
+    [
+      0.25,
+      1.5
+    ]
+  ],
+  "execution_box_enu": [
+    [
+      -3.0,
+      3.0
+    ],
+    [
+      -1.5,
+      4.5
+    ],
+    [
+      0.15,
+      1.8
+    ]
+  ],
+  "physical_radius_m": 5.5,
+  "physical_height_during_active_flight_m": [
+    -0.12,
+    2.0
+  ],
+  "peer_min_separation_m": 1.0,
+  "planner_speed_m_s": 0.65,
+  "planner_acceleration_m_s2": 0.9,
+  "execution_max_speed_m_s": 1.5,
+  "explore_wall_seconds": 20.0,
+  "first_active_wait_seconds": 15.0,
+  "minimum_active_revisions": 2,
+  "minimum_observed_displacement_m": 0.5,
+  "handoff_lead_seconds": 0.75,
+  "handoff_stop_reserve_seconds": 0.35,
+  "scope": "Single bounded native-FSM exploration episode, stopped by task duration; no coverage-completion claim"
+}

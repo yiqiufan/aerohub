@@ -1,0 +1,298 @@
+{
+  "scope": "two UAVs, 20 s native exploration, existing flight.json thresholds; no inter-trial change",
+  "planned_trials": 2,
+  "completed_trials": 2,
+  "passed_trials": 1,
+  "repeat_acceptance_pass": false,
+  "frozen_files_verified_before_report_updates": 111,
+  "same_runtime_source": true,
+  "same_runtime_airsim_settings": true,
+  "equal_artifacts": [
+    "runtime-source.json",
+    "build-manifest.json",
+    "configuration/flight.json",
+    "configuration/fleet.json"
+  ],
+  "images": {
+    "flight": "sha256:1eff3190ca7870d0267ddb1531365dd7c68d85c6e52ade3d25b17b84b4758843",
+    "onboard": "sha256:ba618faf22ece6a76ffb8a0fb625b741894ef9f8f1c086a552737156a769086d",
+    "algorithm": "sha256:964048afd46a9d394aa771d801d48b57de8a2b2665979b1ba6f2b5e273f9adb9",
+    "workstation": "sha256:592f97da6b871a438fdb97f86b422ab9f80657e80efa7b98d258894738c8a0c0"
+  },
+  "cases": [
+    {
+      "case": "20261117-dual-repeat-01",
+      "evaluation": {
+        "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+        "pass": false,
+        "checks": {
+          "drone0": true,
+          "drone1": false,
+          "cleanup": true,
+          "flow": false,
+          "native_cooperation": true
+        },
+        "metrics": {
+          "drone0": {
+            "active_revisions": [
+              1,
+              5,
+              6,
+              9,
+              10,
+              11,
+              12,
+              16,
+              17,
+              18,
+              19
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 441,
+            "tracking_px4_references": 842,
+            "tracking_shared_trajectories": 248,
+            "tracking_wall_s": 19.994196977,
+            "sampled_tracking_min_separation_m": 1.3081484624985156,
+            "horizontal_displacement_m": 4.311786482049155
+          },
+          "drone1": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 363,
+            "tracking_px4_references": 873,
+            "tracking_shared_trajectories": 248,
+            "tracking_wall_s": 19.991839161,
+            "sampled_tracking_min_separation_m": 1.3081484624985156,
+            "horizontal_displacement_m": 0.8853462580049917
+          }
+        },
+        "artifacts_sha256": {
+          "ulog/drone0.ulg": "8603b4bdd126ebe0deae71cc86e65417df950dab732a9d304c7b57a9cf3d0934",
+          "mission/drone0/result.json": "075ca5789dd24392cc9d96d302aa2dd7e392aaa0051b473b91c4933ac8bfd237",
+          "adapter/drone0/adapter-events.jsonl": "0a06a325b3be57d30559b9f514cb55ff49e49ea711c856d8b8590ee0160cfc04",
+          "ulog/drone1.ulg": "f149256c7beba5354a012d28883ce3f7617c3a23590a68108614f7c8c7aec9c3",
+          "mission/drone1/result.json": "9d2b5fd69b46cfb51cbe39c1d49363a216405b2029239f79a6b879e832599fe6",
+          "adapter/drone1/adapter-events.jsonl": "72e08330b508b984372dabc2701b7943472d55f0eea7b7ea40fd338e8794bd9d",
+          "flow-result.json": "75c3735611b326f011ab4ffcc456066abc7c15d0b06ec056a6216e11ae8141d6",
+          "runtime-source.json": "ba10c8c4e462016d3d8daa4ff97956a7d74248020687a148c741bcc36ffed37c",
+          "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+          "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+          "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+        }
+      },
+      "full_flow_pass": false,
+      "native_land_action_wall_s": {
+        "drone0": 8.733672306,
+        "drone1": null
+      },
+      "vehicle_results": {
+        "drone0": {
+          "vehicle": "drone0",
+          "mode": "explore",
+          "motion_requested": true,
+          "takeoff_success": true,
+          "active_revisions": [
+            1,
+            5,
+            6,
+            9,
+            10,
+            11,
+            12,
+            16,
+            17,
+            18,
+            19
+          ],
+          "horizontal_displacement_m": 4.311786482049155,
+          "px4_references": 842,
+          "as2_references": 441,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "pass": true
+        },
+        "drone1": {
+          "vehicle": "drone1",
+          "mode": "explore",
+          "motion_requested": true,
+          "takeoff_success": true,
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "horizontal_displacement_m": 0.8853462580049917,
+          "px4_references": 873,
+          "as2_references": 363,
+          "stop_confirmed": true,
+          "landing_error": "AS2 land_success timeout",
+          "recovery_error": "PX4 native landing did not disarm",
+          "landed_disarmed": false,
+          "pass": false
+        }
+      },
+      "cleanup": "post-failure ground confirmation and explicit formal commands",
+      "all_14_containers_exit_zero": true
+    },
+    {
+      "case": "20261117-dual-repeat-02",
+      "evaluation": {
+        "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+        "pass": true,
+        "checks": {
+          "drone0": true,
+          "drone1": true,
+          "cleanup": true,
+          "flow": true,
+          "native_cooperation": true
+        },
+        "metrics": {
+          "drone0": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              6,
+              7,
+              9,
+              10,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 628,
+            "tracking_px4_references": 838,
+            "tracking_shared_trajectories": 268,
+            "tracking_wall_s": 20.0376255,
+            "sampled_tracking_min_separation_m": 3.0047917294652815,
+            "horizontal_displacement_m": 2.738551305941491
+          },
+          "drone1": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              11,
+              12,
+              13
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 412,
+            "tracking_px4_references": 852,
+            "tracking_shared_trajectories": 268,
+            "tracking_wall_s": 20.024983224,
+            "sampled_tracking_min_separation_m": 3.0047917294652815,
+            "horizontal_displacement_m": 1.1813380836541338
+          }
+        },
+        "artifacts_sha256": {
+          "ulog/drone0.ulg": "a5caaf05b2a4de9c994a735353cdc93e39ddee174f95099b7d081dd44376b0c1",
+          "mission/drone0/result.json": "331dabb28f50f1cc69810fbc18fed9d57498985eaddc7f28c7181e39341e002d",
+          "adapter/drone0/adapter-events.jsonl": "3beca232706021cd6f3dbb1d7fc91b8565a48e07023bde103ef718b80f9e1c64",
+          "ulog/drone1.ulg": "f77e9ea15649c554858a2f3f3f8f08f150d70b5bef27b1917ff86a68fb9b3747",
+          "mission/drone1/result.json": "ae2079ff3b2a26bc278c4152ea0e0021c74127ebc3701be02b9bd0584823919c",
+          "adapter/drone1/adapter-events.jsonl": "11ca08d3a12d862e3f7dad6f49c6b15e34b0e926dc45b56008ebb82d256b7085",
+          "flow-result.json": "7044c9ef2c3eb4bb1a5a85f1960e4e353b203a26be4d45bfa102ffaf9527926c",
+          "runtime-source.json": "ba10c8c4e462016d3d8daa4ff97956a7d74248020687a148c741bcc36ffed37c",
+          "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+          "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+          "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+        }
+      },
+      "full_flow_pass": true,
+      "native_land_action_wall_s": {
+        "drone0": 7.846990732,
+        "drone1": 8.971310466
+      },
+      "vehicle_results": {
+        "drone0": {
+          "vehicle": "drone0",
+          "mode": "explore",
+          "motion_requested": true,
+          "takeoff_success": true,
+          "active_revisions": [
+            1,
+            2,
+            3,
+            6,
+            7,
+            9,
+            10,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "horizontal_displacement_m": 2.738551305941491,
+          "px4_references": 838,
+          "as2_references": 628,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "pass": true
+        },
+        "drone1": {
+          "vehicle": "drone1",
+          "mode": "explore",
+          "motion_requested": true,
+          "takeoff_success": true,
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13
+          ],
+          "horizontal_displacement_m": 1.1813380836541338,
+          "px4_references": 852,
+          "as2_references": 412,
+          "stop_confirmed": true,
+          "native_land_success": true,
+          "landed_disarmed": true,
+          "pass": true
+        }
+      },
+      "cleanup": "automatic full_flow",
+      "all_14_containers_exit_zero": true
+    }
+  ],
+  "conclusion": "Intermittent landing/contact failure persists; one later pass does not replace the failed trial.",
+  "limitations": [
+    "two-UAV PC bounded flight only",
+    "no full-map coverage",
+    "no flight collision-event statistics",
+    "no RoboPi mixed deployment",
+    "no identified unique UE/physics root cause"
+  ],
+  "evidence_index": "log/racer-ros2/20261117-dual-repeat; raw case directories recorded in local process notes"
+}

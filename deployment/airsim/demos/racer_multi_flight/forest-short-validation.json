@@ -1,0 +1,314 @@
+{
+  "schema_version": 1,
+  "baseline": "0.1.0-forest-short.20261118",
+  "migration_stage": "partial",
+  "short_case_repetitions_pass": true,
+  "scope": "two predeclared same-configuration PC ForestScene 20s runs; no retry substitution",
+  "trials": [
+    {
+      "id": "20261118-handoff-repeat-01",
+      "summary": {
+        "flow_pass": true,
+        "evaluation_pass": true,
+        "recording_pass": true,
+        "pass": true,
+        "configuration_differences": [],
+        "same_build_manifest": true,
+        "metrics": {
+          "drone0": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 384,
+            "tracking_px4_references": 840,
+            "tracking_shared_trajectories": 307,
+            "tracking_wall_s": 20.001774299,
+            "sampled_tracking_min_separation_m": 2.5986168892539787,
+            "horizontal_displacement_m": 5.159180561105061
+          },
+          "drone1": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 745,
+            "tracking_px4_references": 852,
+            "tracking_shared_trajectories": 307,
+            "tracking_wall_s": 19.997064278,
+            "sampled_tracking_min_separation_m": 2.5986168892539787,
+            "horizontal_displacement_m": 3.3115334592793415
+          }
+        },
+        "cleanup": {
+          "pass": true,
+          "checks": {
+            "worker_identities": true,
+            "core_identities": true,
+            "all_exited_cleanly": true
+          },
+          "expected_workers": [
+            "racer-handoff-repeat-01-adapter",
+            "racer-handoff-repeat-01-camera-drone0",
+            "racer-handoff-repeat-01-camera-drone1",
+            "racer-handoff-repeat-01-diagnostics",
+            "racer-handoff-repeat-01-inputs",
+            "racer-handoff-repeat-01-native",
+            "racer-handoff-repeat-01-observer",
+            "racer-handoff-repeat-01-overhead"
+          ],
+          "expected_core": [
+            "racer-handoff-repeat-01-as2-drone0-1",
+            "racer-handoff-repeat-01-as2-drone1-1",
+            "racer-handoff-repeat-01-clock-1",
+            "racer-handoff-repeat-01-drone0-1",
+            "racer-handoff-repeat-01-drone1-1",
+            "racer-handoff-repeat-01-navigation-drone0-1",
+            "racer-handoff-repeat-01-navigation-drone1-1"
+          ]
+        },
+        "vehicles": {
+          "drone0": {
+            "pass": true,
+            "error": null,
+            "stop_confirmed": true,
+            "native_land_success": true,
+            "landed_disarmed": true,
+            "max_accept_queue_ms": 60.571,
+            "acceptance_missed_count": 0,
+            "solver_missed_window_count": 0,
+            "insufficient_active_coverage_count": 2,
+            "no_grid_count": 1,
+            "no_frontier_stops": 0,
+            "tracking_allocation_attempts": 16,
+            "tracking_accepted_allocation_responses": 4,
+            "max_horizontal_from_ground_m": 6.9408622248116245,
+            "sampled_horizontal_polyline_m": 17.953643317312622,
+            "tracking_physics_samples": 100,
+            "last_sample_horizontal_m": 5.159180561105061
+          },
+          "drone1": {
+            "pass": true,
+            "error": null,
+            "stop_confirmed": true,
+            "native_land_success": true,
+            "landed_disarmed": true,
+            "max_accept_queue_ms": 50.317,
+            "acceptance_missed_count": 0,
+            "solver_missed_window_count": 0,
+            "insufficient_active_coverage_count": 1,
+            "no_grid_count": 0,
+            "no_frontier_stops": 1,
+            "tracking_allocation_attempts": 0,
+            "tracking_accepted_allocation_responses": 0,
+            "max_horizontal_from_ground_m": 3.9546531939403495,
+            "sampled_horizontal_polyline_m": 21.005826780426247,
+            "tracking_physics_samples": 100,
+            "last_sample_horizontal_m": 3.3115334592793415
+          }
+        }
+      },
+      "evidence_sha256": {
+        "flow-result.json": "27b17bb01c65b0962e6456cb807c71cf1db41575f7b95b180b77402bc749a646",
+        "evaluation.json": "1b405764d814f2b7be02f634d4d589c0129bc8466a76ba4b45fa9d9fad79beb9",
+        "mission/result.json": "75e685562c0894d2edd14a2db355715dc5188b483cdc569855e0a63484915e51",
+        "recording-verification/recording-result.json": "e4a3a2e6f1933360c5ffda70907ce0f1b5db2234121583ecc98df0da04b8e556",
+        "runtime-source.json": "d2d824df695e5bad4893bac26e4a602048b4a915ec0747724f406c2f441b8143",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "test-plan.json": "35c73f0a637c04e435f2f5c004569a670908f987d016831f06d537b0f748b181"
+      }
+    },
+    {
+      "id": "20261118-handoff-repeat-02",
+      "summary": {
+        "flow_pass": true,
+        "evaluation_pass": true,
+        "recording_pass": true,
+        "pass": true,
+        "configuration_differences": [],
+        "same_build_manifest": true,
+        "metrics": {
+          "drone0": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "rejected_count": 0,
+            "tracking_as2_references": 196,
+            "tracking_px4_references": 875,
+            "tracking_shared_trajectories": 286,
+            "tracking_wall_s": 20.012476785,
+            "sampled_tracking_min_separation_m": 2.877499942844303,
+            "horizontal_displacement_m": 2.8291980564431554
+          },
+          "drone1": {
+            "active_revisions": [
+              1,
+              2,
+              3,
+              4,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            "rejected_count": 1,
+            "tracking_as2_references": 883,
+            "tracking_px4_references": 876,
+            "tracking_shared_trajectories": 286,
+            "tracking_wall_s": 20.020806059,
+            "sampled_tracking_min_separation_m": 2.877499942844303,
+            "horizontal_displacement_m": 1.4330354153429454
+          }
+        },
+        "cleanup": {
+          "pass": true,
+          "checks": {
+            "worker_identities": true,
+            "core_identities": true,
+            "all_exited_cleanly": true
+          },
+          "expected_workers": [
+            "racer-handoff-repeat-02-adapter",
+            "racer-handoff-repeat-02-camera-drone0",
+            "racer-handoff-repeat-02-camera-drone1",
+            "racer-handoff-repeat-02-diagnostics",
+            "racer-handoff-repeat-02-inputs",
+            "racer-handoff-repeat-02-native",
+            "racer-handoff-repeat-02-observer",
+            "racer-handoff-repeat-02-overhead"
+          ],
+          "expected_core": [
+            "racer-handoff-repeat-02-as2-drone0-1",
+            "racer-handoff-repeat-02-as2-drone1-1",
+            "racer-handoff-repeat-02-clock-1",
+            "racer-handoff-repeat-02-drone0-1",
+            "racer-handoff-repeat-02-drone1-1",
+            "racer-handoff-repeat-02-navigation-drone0-1",
+            "racer-handoff-repeat-02-navigation-drone1-1"
+          ]
+        },
+        "vehicles": {
+          "drone0": {
+            "pass": true,
+            "error": null,
+            "stop_confirmed": true,
+            "native_land_success": true,
+            "landed_disarmed": true,
+            "max_accept_queue_ms": 8.04,
+            "acceptance_missed_count": 0,
+            "solver_missed_window_count": 0,
+            "insufficient_active_coverage_count": 1,
+            "no_grid_count": 1,
+            "no_frontier_stops": 0,
+            "tracking_allocation_attempts": 20,
+            "tracking_accepted_allocation_responses": 3,
+            "max_horizontal_from_ground_m": 4.053314993886219,
+            "sampled_horizontal_polyline_m": 10.752422703991456,
+            "tracking_physics_samples": 101,
+            "last_sample_horizontal_m": 2.8291980564431554
+          },
+          "drone1": {
+            "pass": true,
+            "error": null,
+            "stop_confirmed": true,
+            "native_land_success": true,
+            "landed_disarmed": true,
+            "max_accept_queue_ms": 55.703,
+            "acceptance_missed_count": 0,
+            "solver_missed_window_count": 0,
+            "insufficient_active_coverage_count": 1,
+            "no_grid_count": 0,
+            "no_frontier_stops": 1,
+            "tracking_allocation_attempts": 0,
+            "tracking_accepted_allocation_responses": 0,
+            "max_horizontal_from_ground_m": 3.3306160111829195,
+            "sampled_horizontal_polyline_m": 13.80353921133374,
+            "tracking_physics_samples": 101,
+            "last_sample_horizontal_m": 1.4330354153429454
+          }
+        }
+      },
+      "evidence_sha256": {
+        "flow-result.json": "9a76f9075d5eebdd31387071b412714cf857e6beb166d02361191545d895377c",
+        "evaluation.json": "c6620a4d4f437b85cb6ddd8b06bd8a706da86bb9d9ca1eefb2aeba275cf4d35d",
+        "mission/result.json": "a30bd12e6c617ec1fdb167cb635de034a7cd9f52785f4f4ba2febdf2fc4cf286",
+        "recording-verification/recording-result.json": "24c56bc403415e531ab612864794f74b2da1c65bf5e23ea7b3e3c26dd90a740c",
+        "runtime-source.json": "d2d824df695e5bad4893bac26e4a602048b4a915ec0747724f406c2f441b8143",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "test-plan.json": "308a35e9a8d71ff539de6d3de27f43448be0d156c055785a5683365020b091e2"
+      }
+    }
+  ],
+  "limits": [
+    "No full map coverage or continuous collision clearance proof",
+    "No four-UAV AirSim flight",
+    "No RoboPi mixed topology",
+    "No complete fault matrix or hot rollback",
+    "No long-duration reliability claim"
+  ],
+  "manifest_note": "Original manifest exit_code=143 is inherited history; kept unchanged. Last incremental build succeeded by build.py control flow and log, node smoke and flight consumption; not a new clean build.",
+  "delivery_verification": {
+    "pass": true,
+    "flight_started": false,
+    "flight_runtime_unchanged": true,
+    "formal_skills_unchanged": true,
+    "identity_tests": {
+      "passed": 8,
+      "failed": 0
+    },
+    "baseline_source_and_artifact_check": true,
+    "four_local_images_checked": true,
+    "formal_readback": {
+      "pass": true,
+      "exactly_equal_to_previous_report": true,
+      "vehicles": 2,
+      "checks_per_vehicle": 16,
+      "report_sha256": "38f8148406d88e91b912493dd36dc25a865db82e53a559a6015c833c0bc609c4"
+    },
+    "snapshot_scope": "source only; existing candidate and raw flight records remain at recorded external paths",
+    "pending": [
+      "Actual map/session/resources must be checked again before the next flight",
+      "No new clean build or flight in this solidification task",
+      "No rollback flight test"
+    ],
+    "changes_to_previous_runtime_snapshot": [
+      "deployment/airsim/demos/racer_multi_flight/component.yaml",
+      "deployment/airsim/demos/racer_multi_flight/README.md",
+      "deployment/airsim/demos/racer_multi_flight/validation.md"
+    ]
+  }
+}

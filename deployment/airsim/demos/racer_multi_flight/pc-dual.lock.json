@@ -1,0 +1,27 @@
+{
+  "id": "0.2.1-pc-dual.20261119",
+  "base": "forest-complete.lock.json",
+  "base_sha256": "b25e965edcf8b1ddcec1a9ae2b8d190a6b8c1748463e6d349125aa42d8f2ac9f",
+  "source_files": {
+    "deployment/airsim/demos/racer_multi_flight/scene-contact-validation.json": "e6aef78bf415250643b88c474f0efeccfc73939e0292f3377151ddba3e7a6f37",
+    "deployment/airsim/demos/racer_multi_flight/staged-explore-validation.json": "dc934b1b000ec38334a645dddcd9ee0a0aa50b2c7be1e31ab921ee8010279c75",
+    "deployment/airsim/demos/racer_multi_flight/start-point-diagnosis.json": "a404e0897da399c224fa5d3ee0f9c9ba2f5ae7003a0dbd22a2b74ba371682d80",
+    "src/planner/racer/README.md": "95b23a5216db32ddcb7122b013947836d75d7017a511295a55860bf7f3d7c68a",
+    "src/planner/racer/ros2_adapter/multi/diagnostics.py": "16c947bd0179cd1a8d254f31940a1b759c0bcdfe269c52a55878867ee4496780"
+  },
+  "delivery_files": {
+    "cards/planner/racer-dual.yaml": "077a51e5c4660bad706c5c7c92bcec617c0f9e8e5a6cc70334bf93ec1d9a3e8b",
+    "deployment/airsim/demos/racer_multi_flight/check_complete.py": "a775cc05eb63f472ba60f61c47f0b73ff22f82b616ab2ed3a39a57893a4fbe92",
+    "deployment/airsim/demos/racer_multi_flight/COMPLETE_EXPLORATION.md": "de414c105b3f3727b067961f837af76437f84835914a3ef065911d9cb16f5f1d",
+    "deployment/airsim/demos/racer_multi_flight/component.yaml": "ec1322e625d9dc2261269f9847d556b3238cc426e57af434a998b27f05d896f8",
+    "deployment/airsim/demos/racer_multi_flight/DELIVERY_REVIEW.md": "5fbf01cfc6c8a445db9f1e2b18c0bc8ba49f0720b2844331090d2545e67e6388",
+    "deployment/airsim/demos/racer_multi_flight/FOREST_COMPLETE.md": "d6c9a348d3ebec173fe9d80cf623300370a1637ef55e53b394e1a5b5c35248bf",
+    "deployment/airsim/demos/racer_multi_flight/README.md": "c505d481bae4ee1df552ece4351f7411cb9b35eb02f2ca71f79d90e8c5beb590",
+    "deployment/airsim/demos/racer_multi_flight/validation.md": "9f4b73e22bc2afd15756f419ee55363ce5d5490c66d81a43d744a62b111a57cc",
+    "deployment/airsim/demos/racer_multi_flight/PC_DUAL.md": "b37081863a1d6d9f3aebd4732daa94eecc3e8642ac5460105bd5f5a560641874",
+    "deployment/airsim/demos/racer_multi_flight/pc-dual-validation.json": "f3436c1c585e65bcd58036e82dfa9a1609cc982ae16c4630d8e21d182a655599",
+    "deployment/airsim/demos/racer_multi_flight/reliability/r5_stop.py": "700e83af09b1b44fa438513694f2a165b3a076c648679d4e8415bc6dddbbb5ec",
+    "deployment/airsim/demos/racer_multi_flight/reliability/verify_r5.py": "a51c0663bdb5d7c183ab25e4e5b117ade7aaa626e013e3fdb3ba255607a2a9ee",
+    "deployment/airsim/demos/racer_multi_flight/PC_RELIABILITY.md": "578839cab84efdaeab0d69b7701427dd56db3f105df633d676b3b1e1a317dd1d"
+  }
+}
