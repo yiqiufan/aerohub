@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>poscmd_2_odom</name>
+  <version>0.0.0</version>
+  <description>Lightweight RACER position-command to odometry simulator.</description>
+  <maintainer email="codex@example.com">Codex</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>nav_msgs</depend>
+  <depend>quadrotor_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

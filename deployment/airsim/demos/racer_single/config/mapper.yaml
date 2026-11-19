@@ -1,0 +1,37 @@
+/**:
+  ros__parameters:
+    use_sim_time: true
+    sdf_map:
+      resolution: 0.1
+      map_size_x: 20.0
+      map_size_y: 20.0
+      map_size_z: 8.0
+      obstacles_inflation: 0.199
+      local_bound_inflate: 0.5
+      local_map_margin: 20
+      ground_height: -2.0
+      default_dist: 0.5
+      max_ray_length: 8.0
+      box_min_x: -9.9
+      box_min_y: -9.9
+      box_min_z: -1.9
+      box_max_x: 9.9
+      box_max_y: 9.9
+      box_max_z: 5.9
+    map_ros:
+      fx: 320.0
+      fy: 320.0
+      cx: 319.5
+      cy: 239.5
+      depth_filter_maxdist: 12.0
+      depth_filter_mindist: 0.2
+      depth_filter_margin: 2
+      k_depth_scaling_factor: 1000.0
+      skip_pixel: 4
+      visualization_truncate_height: 6.0
+      visualization_truncate_low: -2.0
+      frame_id: drone0/odom
+      show_all_map: true
+    exploration:
+      drone_num: 1
+      drone_id: 1

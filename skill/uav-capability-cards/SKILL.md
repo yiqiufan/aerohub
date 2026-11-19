@@ -27,6 +27,8 @@ description: 为 UAV 底层能力和 Agent Tool 创建或更新机器可读的�
 
 规划、Behavior、状态估计、感知、推理等是实现类别，不是 v1 的 Card `type`。它们既可能是底层 `capability`，也可能参与实现上层 `tool`。
 
+版本选择及状态更新沿用[组件部署](../uav-component-deployment/SKILL.md#选择版本与回退)，不把其他候选或拓扑的结果计入本卡片。
+
 ## 编写流程
 
 1. 从 `assets/capability.yaml` 复制固定骨架；除可选 `demo` 外不得省略顶层字段。空内容使用 `[]` 或明确的 `null`。

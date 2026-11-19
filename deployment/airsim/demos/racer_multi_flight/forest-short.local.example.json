@@ -1,0 +1,15 @@
+{
+  "run_root": "<run_root>",
+  "release": "<release>",
+  "project": "<project>",
+  "airsim_host": "<airsim_host>",
+  "settings": "<settings>",
+  "domain": 132,
+  "rpc_port": 41461,
+  "diagnostics": {
+    "enabled": true,
+    "queue_messages": 128,
+    "bag_cache_bytes": 33554432,
+    "probe_points": []
+  }
+}

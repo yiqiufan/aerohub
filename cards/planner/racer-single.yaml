@@ -1,0 +1,53 @@
+schema_version: "1.0"
+id: planner.racer-single
+version: "0.1.0-candidate.1"
+type: capability
+name: RACER single-vehicle exploration
+description: Selects frontier viewpoints in a bounded region and hands rolling position and yaw splines to the FollowTimedPath adapter.
+
+implementation:
+  component_id: aerohub.planner.racer-single
+  manifest: deployment/airsim/demos/racer_single/component.yaml
+  shared_runtime: single-vehicle-native-fsm-solvers-and-adapter
+  coupled_capabilities: []
+
+# Native planner inputs are supplied by the sensor adapter.
+inputs:
+  - id: axial_depth
+    capability_type: sensor/camera/depth/axial-image
+  - id: depth_camera_pose
+    capability_type: state/camera/optical-pose-at-depth-stamp/3d
+  - id: planning_odometry
+    capability_type: state/odometry/planning-frame-twist/3d
+  - id: controller_status
+    capability_type: control/controller/status
+outputs:
+  - id: execution_plan
+    capability_type: planning/trajectory/racer-bspline/3d
+
+# The deployed mission sends these operations. FollowTimedPath is a downstream action client.
+interfaces:
+  - id: trigger_exploration
+    role: functional_operation
+    interaction: managed_task
+    protocol: ros2_topic
+    schema: geometry_msgs/msg/PoseStamped
+    parameter_schema: null
+  - id: request_operator_stop
+    role: functional_operation
+    interaction: managed_task
+    protocol: ros2_topic
+    schema: std_msgs/msg/String
+    parameter_schema: null
+lifecycle:
+  management: system_managed
+  operations: {start: null, status: null, stop: null}
+
+hardware_requirements:
+  - hardware_type: compute/cpu/x86-64
+  - hardware_type: sensor/camera/depth
+  - hardware_type: flight-controller/px4
+resource_access:
+  reads: [drone/self_state, vehicle/depth-camera, vehicle/controller-status, clock]
+  shared_writes: []
+  exclusive_writes: [drone/motion]

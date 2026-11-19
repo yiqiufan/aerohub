@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0-forest-complete.20261119",
+  "stage": "partial",
+  "mode": "explore-complete",
+  "topology": "PC Docker two-UAV compute and SITL, workstation ROS, host UE/AirSim",
+  "scene_package": "/Game/RacerDemo/Maps/ForestScene",
+  "completion_wall_budget_s": 300,
+  "same_identity_fields": [
+    "runtime-source.json",
+    "settings.json",
+    "build-manifest.json",
+    "configuration/fleet.json",
+    "configuration/flight.json"
+  ],
+  "runs": [
+    {
+      "id": "forest-complete-01",
+      "archive_index": "log/racer-ros2/20261119-complete-exploration/index.json",
+      "raw_index": "log/racer-ros2/20261119-complete-exploration/raw-index.json",
+      "flight_pass": true,
+      "flow_pass": true,
+      "cleanup_pass": true,
+      "recording_pass": true,
+      "termination_reason": {
+        "drone0": "native_finished",
+        "drone1": "native_finished"
+      },
+      "metrics": {
+        "drone0": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 694,
+          "tracking_px4_references": 6610,
+          "tracking_shared_trajectories": 1972,
+          "tracking_wall_s": 155.597211674,
+          "sampled_tracking_min_separation_m": 3.0047759277765955,
+          "horizontal_displacement_m": 1.1960762762302566,
+          "sampled_max_exploration_displacement_m": 6.098126973324169
+        },
+        "drone1": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            30,
+            31,
+            32,
+            33,
+            34
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 1570,
+          "tracking_px4_references": 6597,
+          "tracking_shared_trajectories": 1972,
+          "tracking_wall_s": 155.595971159,
+          "sampled_tracking_min_separation_m": 3.0047759277765955,
+          "horizontal_displacement_m": 0.962125173798353,
+          "sampled_max_exploration_displacement_m": 6.853036340524073
+        }
+      },
+      "evidence_sha256": {
+        "runtime-source.json": "348fb98cf06b69e7acc40edb172a03e1c2feb2de83838a2525d348e10d3b25e4",
+        "settings.json": "c91b51c33619b8e0cea9999a8ede5dda0a6d9ca2bf628344a52494a6dd761bb6",
+        "build-manifest.json": "0d00ac6b14fe0ffc2ba3b5919ee3bad6b8583ce0a8cc9add284d2f4d8bca89a9",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2",
+        "configuration/flight.json": "c9016ac02db98390f96e050fe2620f6b9dc2227c1d4bf4c233646aa103616d55",
+        "flow-result.json": "09acaff8f271454894baa5aeacf66b12310c45b7935a8e6b9d617abb2de02bd4",
+        "evaluation.json": "6156015492b62e4e3ced19e53769e92194b78ef27e482406a323997e88ebc0c0",
+        "cleanup-result.json": "7aecbd1a76f8ddfa164d1b1a9eed9323f91745c17a579793d01ab2dde692212e",
+        "mission/result.json": "19c06555ee0cdb4027b315a2c1553a24debcc63a2c9626589ef7c39d6c101d0c",
+        "recording-readback/recording-result.json": "f0dd9cd32608de406fe0a54afe041a7002b88cb30bddbd2fbef08d441939ae00"
+      }
+    },
+    {
+      "id": "forest-complete-02",
+      "archive_index": "log/racer-ros2/20261119-complete-repeat/index.json",
+      "raw_index": "log/racer-ros2/20261119-complete-repeat/raw-index.json",
+      "flight_pass": true,
+      "flow_pass": true,
+      "cleanup_pass": true,
+      "recording_pass": false,
+      "termination_reason": {
+        "drone0": "native_finished",
+        "drone1": "native_finished"
+      },
+      "metrics": {
+        "drone0": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 1104,
+          "tracking_px4_references": 6989,
+          "tracking_shared_trajectories": 2105,
+          "tracking_wall_s": 163.21008129,
+          "sampled_tracking_min_separation_m": 2.414268731214313,
+          "horizontal_displacement_m": 0.7666932131901769,
+          "sampled_max_exploration_displacement_m": 5.653954929845037
+        },
+        "drone1": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 2188,
+          "tracking_px4_references": 7012,
+          "tracking_shared_trajectories": 2105,
+          "tracking_wall_s": 163.218579003,
+          "sampled_tracking_min_separation_m": 2.414268731214313,
+          "horizontal_displacement_m": 0.7969233830673202,
+          "sampled_max_exploration_displacement_m": 8.241784173504008
+        }
+      },
+      "evidence_sha256": {
+        "runtime-source.json": "348fb98cf06b69e7acc40edb172a03e1c2feb2de83838a2525d348e10d3b25e4",
+        "settings.json": "c91b51c33619b8e0cea9999a8ede5dda0a6d9ca2bf628344a52494a6dd761bb6",
+        "build-manifest.json": "0d00ac6b14fe0ffc2ba3b5919ee3bad6b8583ce0a8cc9add284d2f4d8bca89a9",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2",
+        "configuration/flight.json": "c9016ac02db98390f96e050fe2620f6b9dc2227c1d4bf4c233646aa103616d55",
+        "flow-result.json": "887addf94d5acd2620fd28e17f8eed942702f83cc68de84fc27674f55fab9740",
+        "evaluation.json": "8ba056205ebb78cef8276a362b7c0ba77316637abf98944ad30dd2cfc6817dbb",
+        "cleanup-result.json": "d3736434616e2171d251af2ed443677ae2c6a763ab45f7ba16cfb5b4e273612f",
+        "mission/result.json": "f657c5e32cc5575361028297a2b2635e0b384ae154baee4a4e1c53029e382893",
+        "recording-readback/recording-result.json": "83a8e610dc445dfd7031496eedd93cb2841548176b11480e1acb2a83129773c8"
+      }
+    }
+  ],
+  "known_gaps": [
+    {
+      "item": "repeat diagnostic recording",
+      "status": "failed",
+      "vehicle": "drone1",
+      "run": "forest-complete-02",
+      "plan_readback": 36,
+      "plan_written_and_receipts": 38,
+      "missing_plan_ids": [
+        33,
+        36
+      ],
+      "checks": [
+        "all_cdr_messages_decode",
+        "query_ids_have_recorded_native_plan"
+      ],
+      "note": "The first check also compares readback/written/receipt counts; not proof of a CDR decode exception. Adapter active events exist for both IDs."
+    },
+    {
+      "item": "historical inputs exit -11",
+      "status": "unresolved",
+      "note": "Not reproduced in these two flights; no root-cause fix claimed."
+    },
+    {
+      "item": "full asset identity",
+      "status": "not covered",
+      "note": "settings locked; complete external UE assets not hashed."
+    },
+    {
+      "item": "RoboPi mixed deployment, four-UAV flight, full fault matrix, cross-version flight rollback, all-phase collision-event statistics, long-term reliability",
+      "status": "not covered"
+    }
+  ],
+  "completion_scope": "Native algorithm returned and completed in configured region; not entire-scene or all-voxel coverage.",
+  "freeze_scope": "Metadata, named configuration and read-only checker only; no new flight, algorithm change or image rebuild."
+}

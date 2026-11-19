@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-19",
+  "migration_stage": "partial",
+  "review_scope": "local identity, lifecycle and existing evidence review; no new flight, build, source change or Skill update",
+  "review_pass": true,
+  "complete_migration_pass": false,
+  "git": {
+    "branch": "feat/migrate-ego-planner-v2",
+    "head": "4c06d210b08df47059dbe6e3073f0d5db35f3196",
+    "cached_dev": "4c06d210b08df47059dbe6e3073f0d5db35f3196",
+    "relation": "0\t0",
+    "remote_contacted": false,
+    "cache_date": "2026-11-11; does not prove current remote state"
+  },
+  "identity": {
+    "current_candidate_source": {
+      "count": 718,
+      "mismatches": []
+    },
+    "current_artifacts": {
+      "count": 2075,
+      "mismatches": []
+    },
+    "current_runtime_source": {
+      "count": 135,
+      "mismatches": []
+    },
+    "old_baseline_source": {
+      "count": 675,
+      "mismatches": []
+    },
+    "entry_native_guard_current": {
+      "count": 573,
+      "mismatches": []
+    },
+    "latest_evidence_index": {
+      "count": 318,
+      "mismatches": []
+    },
+    "formal_candidate_source": {
+      "count": 718,
+      "mismatches": [
+        "deployment/airsim/demos/racer_multi_flight/flight.json",
+        "deployment/airsim/demos/racer_multi_ground/fleet.json",
+        "deployment/airsim/demos/racer_multi_flight/__pycache__/run.cpython-312.pyc",
+        "deployment/airsim/demos/racer_multi_ground/__pycache__/run.cpython-312.pyc"
+      ]
+    },
+    "formal_vs_current_runtime": {
+      "count": 135,
+      "mismatches": [
+        "deployment/airsim/demos/racer_multi_flight/flight.json",
+        "deployment/airsim/demos/racer_multi_ground/fleet.json"
+      ]
+    },
+    "formal_vs_old_baseline": {
+      "count": 675,
+      "mismatches": [
+        "src/planner/racer/ros2_adapter/native/src/active_perception/include/active_perception/frontier_finder.h",
+        "src/planner/racer/ros2_adapter/native/src/active_perception/src/frontier_finder.cpp",
+        "src/planner/racer/ros2_adapter/native/src/exploration_manager/src/fast_exploration_fsm.cpp",
+        "src/planner/racer/ros2_adapter/multi/native.py"
+      ]
+    }
+  },
+  "candidate_manifest_sha256": "0d00ac6b14fe0ffc2ba3b5919ee3bad6b8583ce0a8cc9add284d2f4d8bca89a9",
+  "runs": {
+    "20261118-handoff-repeat-01": {
+      "outcomes": {
+        "flow-result.json": true,
+        "evaluation.json": true,
+        "mission/result.json": true,
+        "recording-verification/recording-result.json": true
+      },
+      "sha256": {
+        "flow-result.json": "27b17bb01c65b0962e6456cb807c71cf1db41575f7b95b180b77402bc749a646",
+        "evaluation.json": "1b405764d814f2b7be02f634d4d589c0129bc8466a76ba4b45fa9d9fad79beb9",
+        "mission/result.json": "75e685562c0894d2edd14a2db355715dc5188b483cdc569855e0a63484915e51",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "runtime-source.json": "d2d824df695e5bad4893bac26e4a602048b4a915ec0747724f406c2f441b8143",
+        "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09",
+        "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+        "recording-verification/recording-result.json": "e4a3a2e6f1933360c5ffda70907ce0f1b5db2234121583ecc98df0da04b8e556"
+      }
+    },
+    "20261118-handoff-repeat-02": {
+      "outcomes": {
+        "flow-result.json": true,
+        "evaluation.json": true,
+        "mission/result.json": true,
+        "recording-verification/recording-result.json": true
+      },
+      "sha256": {
+        "flow-result.json": "9a76f9075d5eebdd31387071b412714cf857e6beb166d02361191545d895377c",
+        "evaluation.json": "c6620a4d4f437b85cb6ddd8b06bd8a706da86bb9d9ca1eefb2aeba275cf4d35d",
+        "mission/result.json": "a30bd12e6c617ec1fdb167cb635de034a7cd9f52785f4f4ba2febdf2fc4cf286",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "runtime-source.json": "d2d824df695e5bad4893bac26e4a602048b4a915ec0747724f406c2f441b8143",
+        "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09",
+        "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+        "recording-verification/recording-result.json": "24c56bc403415e531ab612864794f74b2da1c65bf5e23ea7b3e3c26dd90a740c"
+      }
+    },
+    "forest-expand-short-01": {
+      "outcomes": {
+        "flow-result.json": true,
+        "evaluation.json": true,
+        "mission/result.json": true,
+        "recording-verification/recording-result.json": true
+      },
+      "sha256": {
+        "flow-result.json": "e4efefa61d1275445ad81484de2d04acccfdd2c67757d9b4bd157c2fb4cab036",
+        "evaluation.json": "475e1923247dece9b676670d59fd2c5eb2f964d65ec59938ac35f6b1b91d8033",
+        "mission/result.json": "0f6af18b944d94780443e4d5e134428518aa35355a481174aae9966567193e2a",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "runtime-source.json": "f8de05238bb4cf14bb2a0b270b17ae7d38299b30e464191a627704e22f7c45de",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2",
+        "configuration/flight.json": "83f05e0d5fa2ad88be302a12fac2fe15316a187a72362b5bf2bea02aea9ead8a",
+        "recording-verification/recording-result.json": "b245949c03807a04a18664d7eeb31ae7f889486c2318548e4f60b206fa8bdf1f"
+      }
+    },
+    "forest-expand-short-02": {
+      "outcomes": {
+        "flow-result.json": true,
+        "evaluation.json": true,
+        "mission/result.json": true,
+        "recording-verification/recording-result.json": true
+      },
+      "sha256": {
+        "flow-result.json": "5f68919154dbbb4a48b7a07314cb85fdc2269b87721280068c8e4fd73f6c5d8a",
+        "evaluation.json": "eacde5eaba7e9464ac59b90ad0ee2b80b367fd836334ec536796bb8aff5e8f10",
+        "mission/result.json": "5c338298b6b0fedbd8acf205ad3eba400e870e4e69851036380b9bf229d60845",
+        "build-manifest.json": "34d09d8079ee7b50225bde5ac93f4ab4e3869e41cd5a0b3a7426664e00a6bb24",
+        "runtime-source.json": "f8de05238bb4cf14bb2a0b270b17ae7d38299b30e464191a627704e22f7c45de",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2",
+        "configuration/flight.json": "83f05e0d5fa2ad88be302a12fac2fe15316a187a72362b5bf2bea02aea9ead8a",
+        "recording-verification/recording-result.json": "603ce2b19e9f70c1304b9123492485232bcdeae492788cb5f33eba31b7e328ee"
+      }
+    },
+    "forest-frontier-flight-01": {
+      "outcomes": {
+        "flow-result.json": true,
+        "evaluation.json": true,
+        "mission/result.json": true,
+        "recording-verification/recording-result.json": false
+      },
+      "sha256": {
+        "flow-result.json": "a90f0761ba3b2b1b0bc16353b461cccbacfeeaf3ee82dee78b92b0e143787c65",
+        "evaluation.json": "c4226d061460d6252e48ec7c95fa47b071b736387bfeb442afbf727cc051d204",
+        "mission/result.json": "65e578f77a1e4526a66f8286b0c463765f6f2995699971ebf232f1910a4c4668",
+        "build-manifest.json": "0d00ac6b14fe0ffc2ba3b5919ee3bad6b8583ce0a8cc9add284d2f4d8bca89a9",
+        "runtime-source.json": "be285115a7fc1f4291611f36cfba909af90a1d4f0735f80205ddc3e4203c8e76",
+        "configuration/fleet.json": "2e7c290a0a880f36461455cd2de0a786e86d71f4a6d4eb8a3b187637067f8ce2",
+        "configuration/flight.json": "83f05e0d5fa2ad88be302a12fac2fe15316a187a72362b5bf2bea02aea9ead8a",
+        "recording-verification/recording-result.json": "69aad00d0c99cc235ed5a7fd5925d76918e8cb92cc9536e9e9d5629db89788c8"
+      }
+    }
+  },
+  "unresolved": [
+    "one-RoboPi mixed deployment",
+    "complete fault/recovery matrix",
+    "full applicable task and obstacle acceptance",
+    "four-UAV AirSim execution",
+    "cross-version rollback flight",
+    "diagnostic cloud revision ambiguity and external-stop snapshot coverage"
+  ],
+  "normal_dormancy_is_not_a_blocker": true,
+  "no_threshold_change": true,
+  "formal_skills_changed": false,
+  "evidence": "log/racer-ros2/20261119-delivery-review/audit.json",
+  "notes": [
+    "Older repeated flights do not validate current diagnostic candidate repetitions.",
+    "Current working-tree range differs from latest frozen flight; use corresponding frozen source.",
+    "Physical assets and fixed base images are explicit external prerequisites."
+  ]
+}

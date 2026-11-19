@@ -1,0 +1,38 @@
+{
+  "scope": "Formal single-active-UAV RACER deployment with clean native/interface build and complete lifecycle rerun",
+  "configuration": "config/config.json and mapper.yaml; resolved native-params.yaml per case",
+  "success": [
+    "Native WAIT_TRIGGER with real map and nonempty frontier visualization before start",
+    "Both aircraft disarmed/landed, Drone0 PX4 preflight true and AS2 DISARMED/non-Offboard, fresh source streams",
+    "Takeoff using original 0.75 m / 0.35 m/s parameters",
+    "Start message only triggers original FSM, no task-specified viewpoints, real TSP/ACVRP dependencies",
+    "At least two distinct accepted/active native curves and at least 0.5 m observed horizontal displacement during bounded episode",
+    "Actual AS2 and PX4 motion references recorded; no fake plant or direct AirSim movement",
+    "Operator stop confirms Action terminal, stop reply and reviewed PID hold mode; native FSM acknowledges FINISH",
+    "Native AS2 Land succeeds and independent PX4 reports landed/disarmed within original waiting budgets",
+    "Drone1 stays disarmed and temporary owned processes stop after recovery confirmation"
+  ],
+  "phase_scope": {
+    "arming_takeoff_tracking": "Existing telemetry freshness pattern, physics/rendered radius and height in config, peer separation; native plan bounds and speed checked before execution",
+    "stopping_landing": "Existing stop and landing budgets; jointly wait fresh landed/disarmed within original 10 seconds after Land result; contact trajectory diagnostic",
+    "collision": "Scene physics collision stays enabled, native map trajectory collision checking stays enabled. No clearing simGetCollisionInfo polling, so flight collision-event statistics and complete avoidance validation are not covered"
+  },
+  "engineering_scope_choices": "20 wall seconds from trigger; 15 seconds for first activation; 0.5 m movement and 2 active revisions distinguish actual autonomous execution from a no-motion/one-shot response. Planning ENU box is local scene scope, not universal RACER requirement. All fixed before airborne run.",
+  "unchanged_recovery": "Stop 6 s, Takeoff 18 s, Land 22 s, final disarm feedback 10 s; NAV_LAND 75 s only on recovery failure, no forced disarm",
+  "not_covered": [
+    "whole-map coverage completion",
+    "original four-vehicle pillar integration",
+    "RoboPi",
+    "fault injection",
+    "real hardware",
+    "full flight collision events",
+    "seamless hot rollback",
+    "new algorithm optimization"
+  ],
+  "additional_delivery_checks": [
+    "new native and workstation interface build from formal sources",
+    "all owned processes stop with recorded normal exits",
+    "dynamic shared overhead camera loaded and moving with world-frame fleet centroid",
+    "source/image/artifact and runtime snapshots retained"
+  ]
+}

@@ -1,0 +1,53 @@
+schema_version: "1.0"
+id: planner.racer-dual
+version: "0.2.1-pc-dual.20261119"
+type: capability
+name: RACER cooperative two-vehicle exploration
+description: Two native planners share map updates and coordinate frontier allocation in a registered ENU frame. Each hands its plan to its own FollowTimedPath adapter.
+
+implementation:
+  component_id: aerohub.planner.racer-dual
+  manifest: deployment/airsim/demos/racer_multi_flight/component.yaml
+  shared_runtime: per-vehicle-native-fsm-solvers-and-adapter-with-peer-communication
+  coupled_capabilities: []
+
+# Native planner inputs are supplied by the sensor adapter for each member.
+inputs:
+  - id: axial_depth
+    capability_type: sensor/camera/depth/axial-image
+  - id: depth_camera_pose
+    capability_type: state/camera/optical-pose-at-depth-stamp/3d
+  - id: planning_odometry
+    capability_type: state/odometry/planning-frame-twist/3d
+  - id: controller_status
+    capability_type: control/controller/status
+outputs:
+  - id: execution_plan
+    capability_type: planning/trajectory/racer-bspline/3d
+
+# The deployed mission sends these operations per member. FollowTimedPath is a downstream action client.
+interfaces:
+  - id: trigger_exploration
+    role: functional_operation
+    interaction: managed_task
+    protocol: ros2_topic
+    schema: geometry_msgs/msg/PoseStamped
+    parameter_schema: null
+  - id: request_operator_stop
+    role: functional_operation
+    interaction: managed_task
+    protocol: ros2_topic
+    schema: std_msgs/msg/String
+    parameter_schema: null
+lifecycle:
+  management: system_managed
+  operations: {start: null, status: null, stop: null}
+
+hardware_requirements:
+  - hardware_type: compute/cpu/x86-64
+  - hardware_type: sensor/camera/depth
+  - hardware_type: flight-controller/px4
+resource_access:
+  reads: [drone/self_state, vehicle/depth-camera, vehicle/controller-status, clock, navigation/peer-map, navigation/peer-trajectories]
+  shared_writes: [navigation/peer-map, navigation/peer-trajectories]
+  exclusive_writes: [drone/motion]

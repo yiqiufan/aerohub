@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>active_perception</name>
+  <version>0.0.0</version>
+  <description>Active perception and frontier utilities used by RACER.</description>
+  <maintainer email="codex@example.com">Codex</maintainer>
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>bspline</depend>
+  <depend>path_searching</depend>
+  <depend>plan_env</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>visualization_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

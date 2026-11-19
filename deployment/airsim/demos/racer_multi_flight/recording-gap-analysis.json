@@ -1,0 +1,125 @@
+{
+  "baseline": "0.2.0-forest-complete.20261119",
+  "delivery_metadata_revision": 1,
+  "status": "offline-localized; no fix or new flight validation",
+  "finding": "All missing diagnostic messages reconcile exactly with rosbag2 internal cache loss warnings, by topic and total.",
+  "scope": "Original evidence read only; no ROS publishers, AirSim calls or flight.",
+  "runs": [
+    {
+      "run": "forest-complete-01",
+      "vehicle": "drone0",
+      "received_total": 86523,
+      "written_api_total": 86523,
+      "receipt_total": 86523,
+      "sqlite_total": 86523,
+      "missing_total": 0,
+      "cache_warning_total": 0,
+      "missing_matches_cache_warning_by_topic": true,
+      "quick_check": {
+        "bag_0.db3": "ok"
+      }
+    },
+    {
+      "run": "forest-complete-01",
+      "vehicle": "drone1",
+      "received_total": 89191,
+      "written_api_total": 89191,
+      "receipt_total": 89191,
+      "sqlite_total": 89191,
+      "missing_total": 0,
+      "cache_warning_total": 0,
+      "missing_matches_cache_warning_by_topic": true,
+      "quick_check": {
+        "bag_0.db3": "ok"
+      }
+    },
+    {
+      "run": "forest-complete-02",
+      "vehicle": "drone0",
+      "received_total": 93471,
+      "written_api_total": 93471,
+      "receipt_total": 93471,
+      "sqlite_total": 93471,
+      "missing_total": 0,
+      "cache_warning_total": 0,
+      "missing_matches_cache_warning_by_topic": true,
+      "quick_check": {
+        "bag_0.db3": "ok"
+      }
+    },
+    {
+      "run": "forest-complete-02",
+      "vehicle": "drone1",
+      "received_total": 96564,
+      "written_api_total": 96564,
+      "receipt_total": 96564,
+      "sqlite_total": 92086,
+      "missing_total": 4478,
+      "cache_warning_total": 4478,
+      "missing_matches_cache_warning_by_topic": true,
+      "quick_check": {
+        "bag_0.db3": "ok"
+      }
+    }
+  ],
+  "affected_topics": {
+    "/racer_multi/drone1/native_state": 109,
+    "/tf": 1965,
+    "/drone1/navigation/odom": 541,
+    "/racer_multi/drone1/occupancy": 52,
+    "/racer_multi/drone1/odometry": 542,
+    "/clock": 555,
+    "/racer_multi/drone1/input_state": 51,
+    "/racer_multi/drone1/adapter/state": 280,
+    "/drone1/platform/info": 97,
+    "/racer_multi/drone1/occupancy_local": 51,
+    "/racer_multi/drone1/occupancy_local_inflate": 51,
+    "/drone1/fmu/out/vehicle_status_v4": 20,
+    "/drone1/sensor_measurements/front_center/depth_planar/image": 8,
+    "/drone1/sensor_measurements/front_center/depth_planar/camera_info": 8,
+    "/racer_multi/drone1/camera_pose": 8,
+    "/racer_multi/drone1/depth": 7,
+    "/drone1/fmu/out/vehicle_land_detected": 12,
+    "/drone1/motion_reference/trajectory": 101,
+    "/racer_execution/drone_2/plan": 2,
+    "/racer_multi/drone1/adapter/event": 15,
+    "/racer_execution/drone_2/status": 3
+  },
+  "application_queue_drops": {},
+  "max_application_queue_messages": 21,
+  "bag_cache_bytes": 33554432,
+  "first_loss_seconds_after_start": 144.508397013,
+  "last_loss_seconds_before_stop": 10.653539807,
+  "successfully_stored_after_last_loss": 3285,
+  "plan_correlation": {
+    "missing_counts_by_nearest_prior_mission_phase": {
+      "tracking": 3551,
+      "landing": 927
+    },
+    "phase_alignment_limit": "Same-host wall reception times; phase assigned from nearest prior mission event, not exact callback state.",
+    "missing_plan_ids_from_existing_ros_readback": [
+      33,
+      36
+    ],
+    "adapter_received_count": 38,
+    "adapter_active_count": 38,
+    "missing_plan_payloads_available_in_separate_adapter_log": true,
+    "note": "Separate source evidence retained; no messages inserted into the original bag or original verdict changed."
+  },
+  "confirmed_limit": "Loss occurred during operation, not merely an unflushed tail. Storage delay/resource contention causing cache pressure is not yet isolated.",
+  "recorder_verdict_limit": "writer API returned and application queue drained, but original pass did not check internal cache drop counts or actual persisted counts.",
+  "readback_verdict_limit": "all_cdr_messages_decode also tests message count equality; false is not proof of a deserialization exception.",
+  "minimum_validation_plan": "deployment/airsim/demos/racer_multi_flight/PC_RELIABILITY.md",
+  "next_step": "Isolated two-stream actual-CDR storage comparison, then candidate/ground preparation before any flight.",
+  "evidence_index": "log/racer-ros2/20261119-recording-gap-offline/index.json",
+  "source_sha256": {
+    "src/planner/racer/ros2_adapter/multi/diagnostics.py": "17ca63dafc2eb1470d7be8f916acf843244ffd0887b73d0142ea4ae61e703bb2",
+    "deployment/airsim/demos/racer_multi_ground/verify_diagnostics.py": "f277c5031c39a0d6f0654616a52c26b74510324cbf44c16c4409232cf0d5d008",
+    "deployment/airsim/demos/racer_multi_flight/readback_flight.py": "3f25a5f37cb91af52c8bdae1d2687d9b2a9ef03377df60274807a1f3d556d4cc",
+    "deployment/airsim/demos/racer_multi_flight/mission.py": "ed5e83fc482f427f9d9ffeb14a295a8051ebcd0d2c2d441c6909f61b4fce5bb9",
+    "deployment/airsim/demos/racer_single/observe.py": "8d46a2533b5caeb539e19c25ae22974be0d7725f0424cf21791c8bf4ea024d5f"
+  },
+  "formal_skills_changed": false,
+  "flight_or_recording_code_changed": false,
+  "original_evidence_changed": false
+}

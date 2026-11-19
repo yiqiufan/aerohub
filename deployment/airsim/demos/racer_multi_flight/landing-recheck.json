@@ -1,0 +1,82 @@
+{
+  "latest_case": "20261117-dual-landing-recheck-02",
+  "full_flow_pass": true,
+  "landing_action_wall_s": {
+    "drone0": 10.145778855,
+    "drone1": 8.924438213
+  },
+  "evaluation": {
+    "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+    "pass": true,
+    "checks": {
+      "drone0": true,
+      "drone1": true,
+      "cleanup": true,
+      "flow": true,
+      "native_cooperation": true
+    },
+    "metrics": {
+      "drone0": {
+        "active_revisions": [
+          1,
+          4,
+          5,
+          6,
+          7,
+          14
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 429,
+        "tracking_px4_references": 849,
+        "tracking_shared_trajectories": 283,
+        "tracking_wall_s": 20.039232993,
+        "sampled_tracking_min_separation_m": 1.428282567298824,
+        "horizontal_displacement_m": 1.6350216399311703
+      },
+      "drone1": {
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 955,
+        "tracking_px4_references": 888,
+        "tracking_shared_trajectories": 283,
+        "tracking_wall_s": 20.025811102,
+        "sampled_tracking_min_separation_m": 1.428282567298824,
+        "horizontal_displacement_m": 3.7613093793811387
+      }
+    },
+    "artifacts_sha256": {
+      "ulog/drone0.ulg": "f42c518f289153658fcc2de0e00c7fff3e5e672fec8df76b6922821f98ebe9dc",
+      "mission/drone0/result.json": "a732a11eb87930501d1ae027f4c7213009dfbf7976e827d0e56567a273168cb2",
+      "adapter/drone0/adapter-events.jsonl": "03a224f4ce06f424ec100e4ae29b869fcc1d196a1e13b6b132b42c5fc0769e0c",
+      "ulog/drone1.ulg": "d4bdd0b29107536947843acc34d0a4a2f9d2a30d85fd6948ffb9045e98454551",
+      "mission/drone1/result.json": "6fcb23162de951b310f49734314e7d35a1120ade7349f59b3feb19d7d80b6b8b",
+      "adapter/drone1/adapter-events.jsonl": "cc7a73b5f8ae82afdae701622ff4278f35ae5b08624fae66a64f9323480354db",
+      "flow-result.json": "9ba1205481dc8be31c4088f93ee734956a67c7a0efe1821526f3c4b27212384e",
+      "runtime-source.json": "7e9e747a223a9d463ce544d75e71954abd2c1ab6e5b86e4b20f3f2d622744a69",
+      "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+      "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+      "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+    }
+  },
+  "diagnosis": "Prior Drone1 failure showed stationary rendering but ongoing simulated physics/GPS descent; later Drone0 failure had landed at 19.654s but Action exceeded 22s. These are distinct observations; simulator root cause unproven.",
+  "change": "Only native Land task wait made configurable at 30s; no PX4 detection, scene physics or RACER algorithm change.",
+  "limitation": "Successful different scene session does not establish causality or cure intermittent contact anomalies."
+}

@@ -1,0 +1,13 @@
+build/
+install/
+log/
+upstream_RACER/
+benchmark_results/
+*.bag/
+*.db3
+*.mcap
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/

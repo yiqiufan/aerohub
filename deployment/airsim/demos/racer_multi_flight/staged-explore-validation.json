@@ -1,0 +1,587 @@
+{
+  "case": "20261117-staged-dual-explore-01",
+  "formal_command": [
+    "python",
+    "deployment/airsim/demos/racer_multi_flight/full_flow.py",
+    "--local",
+    "<local.json>",
+    "--mode",
+    "explore"
+  ],
+  "scope": "one bounded PC dual native exploration with formal staged startup",
+  "evaluation": {
+    "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+    "pass": true,
+    "checks": {
+      "drone0": true,
+      "drone1": true,
+      "cleanup": true,
+      "flow": true,
+      "native_cooperation": true
+    },
+    "metrics": {
+      "drone0": {
+        "active_revisions": [
+          1,
+          2,
+          32,
+          38
+        ],
+        "rejected_count": 34,
+        "tracking_as2_references": 238,
+        "tracking_px4_references": 861,
+        "tracking_shared_trajectories": 190,
+        "tracking_wall_s": 20.014421115,
+        "sampled_tracking_min_separation_m": 1.0260745157214997,
+        "horizontal_displacement_m": 0.600531702274014
+      },
+      "drone1": {
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 385,
+        "tracking_px4_references": 865,
+        "tracking_shared_trajectories": 190,
+        "tracking_wall_s": 20.033113538,
+        "sampled_tracking_min_separation_m": 1.0260745157214997,
+        "horizontal_displacement_m": 1.2202019165241598
+      }
+    },
+    "artifacts_sha256": {
+      "ulog/drone0.ulg": "9a8761d5f85aced222fec31121dc84a7e0e864e30ce431e93d4d9badb24f683a",
+      "mission/drone0/result.json": "c8f684fd4f79312f5a12f64e1fab5725edaeb930aee7f3a23e6c79c76d756ebc",
+      "adapter/drone0/adapter-events.jsonl": "ce10796cb7ccce7f4023324c0242768909dd6fe7739748a1d74e68ec157f946e",
+      "ulog/drone1.ulg": "58c6914f56f246edc8b56e942dfe4920c82ebe03a253ba2c295a133fd9d676c7",
+      "mission/drone1/result.json": "9149656db321f1e4630378469b63b2a1cc9a0aa6bf7b7fe38f1c900d2271a46d",
+      "adapter/drone1/adapter-events.jsonl": "f3fef16e1269869c4466062943f8ee93653ada7b7cb214036883a505ae4de3ef",
+      "flow-result.json": "9bd072a6203050da02fd40c87ada49f48389684bd49bfaeb6d514814f55f6eeb",
+      "runtime-source.json": "6a10902083e161412674b6e01be386abad6f5a3ee22f75c61910a8fd961e30c7",
+      "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+      "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+      "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+    }
+  },
+  "startup_pass": true,
+  "landing": {
+    "drone0": {
+      "action_result_wall_s": 9.835376674,
+      "feedback_wall_s": {
+        "land_detected/ground_contact": 9.67301315,
+        "land_detected/maybe_landed": 10.055006831,
+        "land_detected/landed": 10.420383541,
+        "px4/arming_state": 12.572280522,
+        "platform/armed": 12.638458591
+      },
+      "ulog_transitions_s_from_ground_contact": {
+        "ground_contact": 0.0,
+        "maybe_landed": 0.360008,
+        "landed": 0.696015,
+        "at_rest": 0.696015,
+        "disarmed": 2.700058
+      },
+      "firmware": "61907962c9220437ec01a98fa26bfbf5cbb254b5",
+      "scene_samples": [
+        {
+          "wall_s_since_land_request": -0.00729002,
+          "query_duration_s": 0.010514482,
+          "rendered_position": {
+            "x_val": -0.3770490884780884,
+            "y_val": -0.4084553122520447,
+            "z_val": -0.3049764037132263
+          },
+          "physics_position": {
+            "x_val": -0.33914223313331604,
+            "y_val": -0.4066174328327179,
+            "z_val": -0.30563294887542725
+          },
+          "physics_velocity": {
+            "x_val": 0.6291357278823853,
+            "y_val": 0.020428169518709183,
+            "z_val": -0.01137237623333931
+          },
+          "physics_render_gap_m": 0.03795706172031088
+        },
+        {
+          "wall_s_since_land_request": 1.992648635,
+          "query_duration_s": 0.004285756,
+          "rendered_position": {
+            "x_val": 0.4041496813297272,
+            "y_val": -0.4922243356704712,
+            "z_val": 0.13915996253490448
+          },
+          "physics_position": {
+            "x_val": 0.40646761655807495,
+            "y_val": -0.4966059625148773,
+            "z_val": 0.17158477008342743
+          },
+          "physics_velocity": {
+            "x_val": 0.020470591261982918,
+            "y_val": -0.06320573389530182,
+            "z_val": 0.47113654017448425
+          },
+          "physics_render_gap_m": 0.03280151859419297
+        },
+        {
+          "wall_s_since_land_request": 3.992728324,
+          "query_duration_s": 0.004482956,
+          "rendered_position": {
+            "x_val": 0.24499697983264923,
+            "y_val": -0.5589805245399475,
+            "z_val": 0.7069206833839417
+          },
+          "physics_position": {
+            "x_val": 0.2458198219537735,
+            "y_val": -0.5588597059249878,
+            "z_val": 0.7054499387741089
+          },
+          "physics_velocity": {
+            "x_val": 0.000237043816014193,
+            "y_val": 3.589362677303143e-06,
+            "z_val": -0.0026370538398623466
+          },
+          "physics_render_gap_m": 0.0016896023204793476
+        },
+        {
+          "wall_s_since_land_request": 4.992742109,
+          "query_duration_s": 0.003953176,
+          "rendered_position": {
+            "x_val": 0.2559739947319031,
+            "y_val": -0.5629470348358154,
+            "z_val": 0.6958916187286377
+          },
+          "physics_position": {
+            "x_val": 0.2571691572666168,
+            "y_val": -0.5639054775238037,
+            "z_val": 0.6971834897994995
+          },
+          "physics_velocity": {
+            "x_val": 0.01544987317174673,
+            "y_val": -0.014958327636122704,
+            "z_val": 0.025037109851837158
+          },
+          "physics_render_gap_m": 0.002003985213086973
+        },
+        {
+          "wall_s_since_land_request": 5.992685246,
+          "query_duration_s": 0.003926615,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 7.992642198,
+          "query_duration_s": 0.003695642,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 8.992601921,
+          "query_duration_s": 0.004328935,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 9.992635333,
+          "query_duration_s": 0.00392244,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 10.992649698,
+          "query_duration_s": 0.004522029,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 11.992705704,
+          "query_duration_s": 0.006030473,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 13.992701811,
+          "query_duration_s": 0.01240171,
+          "rendered_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_position": {
+            "x_val": 0.25849398970603943,
+            "y_val": -0.5685181021690369,
+            "z_val": 0.7092516422271729
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        }
+      ]
+    },
+    "drone1": {
+      "action_result_wall_s": 9.078090695,
+      "feedback_wall_s": {
+        "land_detected/ground_contact": 8.683804098,
+        "land_detected/maybe_landed": 9.074840114,
+        "land_detected/landed": 9.438630859,
+        "px4/arming_state": 9.087691407,
+        "platform/armed": 9.133597046
+      },
+      "ulog_transitions_s_from_ground_contact": {
+        "ground_contact": 0.0,
+        "maybe_landed": 0.360008,
+        "landed": 0.702015,
+        "at_rest": 0.702015,
+        "disarmed": 0.372008
+      },
+      "firmware": "61907962c9220437ec01a98fa26bfbf5cbb254b5",
+      "scene_samples": [
+        {
+          "wall_s_since_land_request": -0.075610931,
+          "query_duration_s": 0.010514482,
+          "rendered_position": {
+            "x_val": 0.9292306303977966,
+            "y_val": -0.7744110226631165,
+            "z_val": -0.288957417011261
+          },
+          "physics_position": {
+            "x_val": 0.9123045802116394,
+            "y_val": -0.7872299551963806,
+            "z_val": -0.2889063060283661
+          },
+          "physics_velocity": {
+            "x_val": -0.23772059381008148,
+            "y_val": -0.1814362108707428,
+            "z_val": 0.0002676158619578928
+          },
+          "physics_render_gap_m": 0.021232494401960025
+        },
+        {
+          "wall_s_since_land_request": 1.924327724,
+          "query_duration_s": 0.004285756,
+          "rendered_position": {
+            "x_val": 0.9308077692985535,
+            "y_val": -0.8032755255699158,
+            "z_val": 0.13985714316368103
+          },
+          "physics_position": {
+            "x_val": 0.939238429069519,
+            "y_val": -0.7987635135650635,
+            "z_val": 0.16973331570625305
+          },
+          "physics_velocity": {
+            "x_val": 0.11766035109758377,
+            "y_val": 0.0630696639418602,
+            "z_val": 0.41584673523902893
+          },
+          "physics_render_gap_m": 0.03136909246853092
+        },
+        {
+          "wall_s_since_land_request": 3.924407413,
+          "query_duration_s": 0.004482956,
+          "rendered_position": {
+            "x_val": 1.0632528066635132,
+            "y_val": -0.7335440516471863,
+            "z_val": 0.6516187787055969
+          },
+          "physics_position": {
+            "x_val": 1.063250184059143,
+            "y_val": -0.7335443496704102,
+            "z_val": 0.6515868306159973
+          },
+          "physics_velocity": {
+            "x_val": -3.391391510376707e-05,
+            "y_val": 2.9481971068889834e-05,
+            "z_val": -0.0006662783562205732
+          },
+          "physics_render_gap_m": 3.20569384157127e-05
+        },
+        {
+          "wall_s_since_land_request": 4.924421198,
+          "query_duration_s": 0.003953176,
+          "rendered_position": {
+            "x_val": 1.0649566650390625,
+            "y_val": -0.7295677661895752,
+            "z_val": 0.6536173224449158
+          },
+          "physics_position": {
+            "x_val": 1.0657416582107544,
+            "y_val": -0.7285446524620056,
+            "z_val": 0.6566709280014038
+          },
+          "physics_velocity": {
+            "x_val": 0.012371443212032318,
+            "y_val": 0.015272850170731544,
+            "z_val": 0.04970335587859154
+          },
+          "physics_render_gap_m": 0.0033147372254462098
+        },
+        {
+          "wall_s_since_land_request": 5.924364335,
+          "query_duration_s": 0.003926615,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 7.924321287,
+          "query_duration_s": 0.003695642,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 8.92428101,
+          "query_duration_s": 0.004328935,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 9.924314422,
+          "query_duration_s": 0.00392244,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 10.924328787,
+          "query_duration_s": 0.004522029,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 11.924384793,
+          "query_duration_s": 0.006030473,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        },
+        {
+          "wall_s_since_land_request": 13.9243809,
+          "query_duration_s": 0.01240171,
+          "rendered_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_position": {
+            "x_val": 1.0653271675109863,
+            "y_val": -0.7291603684425354,
+            "z_val": 0.6551812887191772
+          },
+          "physics_velocity": {
+            "x_val": 0.0,
+            "y_val": 0.0,
+            "z_val": 0.0
+          },
+          "physics_render_gap_m": 0.0
+        }
+      ]
+    }
+  },
+  "warnings": [
+    "Drone0: 34 new Action requests after planner stop were rejected by the initial-position continuity check; see rejection-analysis.json. Origin of native first-point deviation remains unresolved.",
+    "Sampled minimum separation 1.026 m is not continuous collision-clearance proof."
+  ],
+  "limits": [
+    "single run does not replace historical failed repeat acceptance",
+    "no complete collision event history",
+    "no four-UAV or RoboPi validation"
+  ],
+  "evidence": "log/racer-ros2/20261117-staged-explore/01/evidence-index.json",
+  "owned_containers": {
+    "count": 16,
+    "all_stopped_exit_zero": true
+  },
+  "configuration_comparison": {
+    "settings.json": true,
+    "build-manifest.json": true,
+    "configuration/fastdds_udp.xml": true,
+    "configuration/fleet.json": true,
+    "configuration/flight.json": true,
+    "configuration/drone0/camera-bridge.json": true,
+    "configuration/drone0/fleet.yaml": true,
+    "configuration/drone0/mapper.yaml": true,
+    "configuration/drone0/navigation.yaml": true,
+    "configuration/drone1/camera-bridge.json": true,
+    "configuration/drone1/fleet.yaml": true,
+    "configuration/drone1/mapper.yaml": true,
+    "configuration/drone1/navigation.yaml": true
+  },
+  "followup_diagnosis": "deployment/airsim/demos/racer_multi_flight/rejection-analysis.json"
+}

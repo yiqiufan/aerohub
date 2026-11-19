@@ -1,0 +1,923 @@
+{
+  "case": "20261118-state-sampling-01",
+  "source_checks": {
+    "src/planner/racer/ros2_adapter/bridge/camera_pose.py": {
+      "sha256": "dcb6648a8c3f9c1e3bfc98623645fb23bb58cea688528e803009cba67728a7be",
+      "matches_run_manifest": true,
+      "expected": "dcb6648a8c3f9c1e3bfc98623645fb23bb58cea688528e803009cba67728a7be"
+    },
+    "src/planner/racer/ros2_adapter/multi/inputs.py": {
+      "sha256": "7dc00eebdb2c5ea893ad10bf6839026f63f339a40cf144aaffcee541b19b2317",
+      "matches_run_manifest": true,
+      "expected": "7dc00eebdb2c5ea893ad10bf6839026f63f339a40cf144aaffcee541b19b2317"
+    },
+    "src/planner/racer/ros2_adapter/multi/flight_adapter.py": {
+      "sha256": "eefbbe222c6ae21c14b110b8eb890fccb22de2bcdc6effafd562dbe90d4a1a26",
+      "matches_run_manifest": true,
+      "expected": "eefbbe222c6ae21c14b110b8eb890fccb22de2bcdc6effafd562dbe90d4a1a26"
+    },
+    "src/planner/racer/ros2_adapter/bridge/trajectory.py": {
+      "sha256": "29c67d61c16b0af55279961bff90d3997a9a78f6d44d1900e2e682edcc51da05",
+      "matches_run_manifest": true,
+      "expected": "29c67d61c16b0af55279961bff90d3997a9a78f6d44d1900e2e682edcc51da05"
+    },
+    "src/planner/racer/ros2_adapter/bridge/bspline_evaluator.py": {
+      "sha256": "20ea5398364431b19ac8b9e8e919a6058ed9de96f855e19dab1b554797118e18",
+      "matches_run_manifest": true,
+      "expected": "20ea5398364431b19ac8b9e8e919a6058ed9de96f855e19dab1b554797118e18"
+    },
+    "src/planner/racer/ros2_adapter/native/src/plan_env/src/map_ros.cpp": {
+      "sha256": "f381a7777238bf3cddd0719f926c559a134f93a88205c8f76743d98f80fe88ea",
+      "matches_run_manifest": true,
+      "expected": "f381a7777238bf3cddd0719f926c559a134f93a88205c8f76743d98f80fe88ea"
+    },
+    "src/planner/racer/ros2_adapter/native/src/plan_env/src/sdf_map.cpp": {
+      "sha256": "2a0f938ec369ec8661a88b6f2e8c0cfecada11bca2cdfdb2fab4b39d5b011a8b",
+      "matches_run_manifest": true,
+      "expected": "2a0f938ec369ec8661a88b6f2e8c0cfecada11bca2cdfdb2fab4b39d5b011a8b"
+    },
+    "src/planner/racer/ros2_adapter/native/src/plan_manage/src/planner_manager.cpp": {
+      "sha256": "2723d4972cadd4902fe70f282233b97025ed315f21ff5860e46cf7c00708ef66",
+      "matches_run_manifest": true,
+      "expected": "2723d4972cadd4902fe70f282233b97025ed315f21ff5860e46cf7c00708ef66"
+    },
+    "src/planner/racer/ros2_adapter/native/src/bspline_opt/src/bspline_optimizer.cpp": {
+      "sha256": "aaecd7866ff02414f69a64d6b2ed4f73ef74f6a9597793b76d9cb7344f07aba2",
+      "matches_run_manifest": true,
+      "expected": "aaecd7866ff02414f69a64d6b2ed4f73ef74f6a9597793b76d9cb7344f07aba2"
+    },
+    "src/planner/racer/ros2_adapter/native/src/exploration_manager/src/fast_exploration_fsm.cpp": {
+      "sha256": "25e8f7cd6a779cbeb9ad197400a1e18ffebbc3aa32604f905c16129df6787d3f",
+      "matches_run_manifest": true,
+      "expected": "25e8f7cd6a779cbeb9ad197400a1e18ffebbc3aa32604f905c16129df6787d3f"
+    }
+  },
+  "depth_pixels_available": false,
+  "map_snapshot_available": false,
+  "camera_status_counts": {
+    "accepted": 87,
+    "pair_timeout": 1
+  },
+  "camera_timing_count": 94,
+  "land_wall_ns": 1794934960543818354,
+  "window_ideal_world_aabb": [
+    [
+      1.94936767578125,
+      1.9893731689453125
+    ],
+    [
+      -3.03408935546875,
+      -1.53408935546875
+    ],
+    [
+      0.7837033200263976,
+      3.283703320026398
+    ]
+  ],
+  "window_simple_face_world_x": 1.9481222534179687,
+  "static_geometry_assumptions": "Current reset-session geometry, aligned ENU axes, vertical ground anchor from initial rendered Drone1; no historical exact collision event.",
+  "phases": {
+    "before_tracking": {
+      "poses": {
+        "clock_pair_gap_s": {
+          "n": 0
+        },
+        "odom_stamp_gap_s": {
+          "n": 0
+        },
+        "odom_rendered_error_m": {
+          "n": 0
+        },
+        "odom_physics_error_m": {
+          "n": 0
+        },
+        "rendered_physics_error_m": {
+          "n": 0
+        },
+        "reference_odom_error_m": {
+          "n": 0
+        },
+        "reference_rendered_error_m": {
+          "n": 0
+        }
+      },
+      "camera": {
+        "nearest_observer_sample_gap_s": {
+          "n": 9,
+          "min": 0.006000128,
+          "median": 0.057001216,
+          "max": 0.09000192
+        },
+        "camera_position_error_m": {
+          "n": 9,
+          "min": 0.057632804995481554,
+          "median": 0.08375463381904613,
+          "max": 0.14972579395664232
+        },
+        "optical_forward_error_deg": {
+          "n": 9,
+          "min": 7.133547885592844,
+          "median": 7.172953568358373,
+          "max": 7.243853947718448
+        },
+        "image_age_s": {
+          "n": 9,
+          "min": 0.102002176,
+          "median": 0.13500288,
+          "max": 0.141003008
+        }
+      },
+      "target_in_estimated_fov_count": 0,
+      "camera_samples": 9
+    },
+    "landing": {
+      "poses": {
+        "clock_pair_gap_s": {
+          "n": 100,
+          "min": 0.000229785,
+          "median": 0.003072605,
+          "max": 0.008767589
+        },
+        "odom_stamp_gap_s": {
+          "n": 100,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        },
+        "odom_rendered_error_m": {
+          "n": 100,
+          "min": 0.06458891477849939,
+          "median": 1.232457857302063,
+          "max": 1.699190127327544
+        },
+        "odom_physics_error_m": {
+          "n": 100,
+          "min": 0.06561893135156997,
+          "median": 1.1192025848988,
+          "max": 1.6521635344186363
+        },
+        "rendered_physics_error_m": {
+          "n": 100,
+          "min": 0.0010753485955036605,
+          "median": 0.0449435356420628,
+          "max": 0.5752763913994999
+        },
+        "reference_odom_error_m": {
+          "n": 0
+        },
+        "reference_rendered_error_m": {
+          "n": 0
+        }
+      },
+      "camera": {
+        "nearest_observer_sample_gap_s": {
+          "n": 27,
+          "min": 0.0,
+          "median": 0.042000896,
+          "max": 0.09000192
+        },
+        "camera_position_error_m": {
+          "n": 27,
+          "min": 0.05721206965669181,
+          "median": 0.9651198217149514,
+          "max": 1.6822610188407106
+        },
+        "optical_forward_error_deg": {
+          "n": 27,
+          "min": 1.7002612493808273,
+          "median": 2.873073146936478,
+          "max": 4.7831429881245935
+        },
+        "image_age_s": {
+          "n": 27,
+          "min": 0.09000192,
+          "median": 0.129002752,
+          "max": 0.156003328
+        }
+      },
+      "target_in_estimated_fov_count": 0,
+      "camera_samples": 27
+    },
+    "tracking_before_window_overlap": {
+      "poses": {
+        "clock_pair_gap_s": {
+          "n": 83,
+          "min": 4.2472e-05,
+          "median": 0.000657332,
+          "max": 0.005021247
+        },
+        "odom_stamp_gap_s": {
+          "n": 83,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.012000256
+        },
+        "odom_rendered_error_m": {
+          "n": 83,
+          "min": 0.00465335375725005,
+          "median": 0.2456360118057459,
+          "max": 1.8469468443165413
+        },
+        "odom_physics_error_m": {
+          "n": 83,
+          "min": 0.007910313896815957,
+          "median": 0.33267000850770423,
+          "max": 1.6867739551453216
+        },
+        "rendered_physics_error_m": {
+          "n": 83,
+          "min": 0.00026574056588497846,
+          "median": 0.11025731175791151,
+          "max": 0.6632736682876652
+        },
+        "reference_odom_error_m": {
+          "n": 70,
+          "min": 0.003247193809608814,
+          "median": 0.5575431336204711,
+          "max": 1.261374169146564
+        },
+        "reference_rendered_error_m": {
+          "n": 70,
+          "min": 0.06149245179911269,
+          "median": 0.8109362907741386,
+          "max": 1.83896810000977
+        }
+      },
+      "camera": {
+        "nearest_observer_sample_gap_s": {
+          "n": 15,
+          "min": 0.006000128,
+          "median": 0.048001024,
+          "max": 0.0750016
+        },
+        "camera_position_error_m": {
+          "n": 15,
+          "min": 0.02188698271351853,
+          "median": 0.23038335461921722,
+          "max": 0.9798749948323279
+        },
+        "optical_forward_error_deg": {
+          "n": 15,
+          "min": 0.6324390890692344,
+          "median": 5.022745211575987,
+          "max": 7.895835782639349
+        },
+        "image_age_s": {
+          "n": 15,
+          "min": 0.09000192,
+          "median": 0.126002688,
+          "max": 0.16500352
+        }
+      },
+      "target_in_estimated_fov_count": 8,
+      "camera_samples": 15
+    },
+    "tracking_window_overlap": {
+      "poses": {
+        "clock_pair_gap_s": {
+          "n": 18,
+          "min": 0.000806742,
+          "median": 0.0009664974999999999,
+          "max": 0.002573673
+        },
+        "odom_stamp_gap_s": {
+          "n": 18,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        },
+        "odom_rendered_error_m": {
+          "n": 18,
+          "min": 1.2587562075585,
+          "median": 1.4887733947047925,
+          "max": 2.0186726876619807
+        },
+        "odom_physics_error_m": {
+          "n": 18,
+          "min": 1.0529655251507717,
+          "median": 1.5143756605806455,
+          "max": 1.9693175387857622
+        },
+        "rendered_physics_error_m": {
+          "n": 18,
+          "min": 0.015458855057012595,
+          "median": 0.10419418703150218,
+          "max": 0.32089074931394673
+        },
+        "reference_odom_error_m": {
+          "n": 17,
+          "min": 0.14689912049637438,
+          "median": 1.1319138695230162,
+          "max": 1.2737858837822023
+        },
+        "reference_rendered_error_m": {
+          "n": 17,
+          "min": 1.9907425091344801,
+          "median": 2.4983840421815646,
+          "max": 2.674857205811638
+        }
+      },
+      "camera": {
+        "nearest_observer_sample_gap_s": {
+          "n": 4,
+          "min": 0.027000576,
+          "median": 0.045000960000000007,
+          "max": 0.054001152
+        },
+        "camera_position_error_m": {
+          "n": 4,
+          "min": 1.3230480370855544,
+          "median": 1.494958010268895,
+          "max": 2.016309201102837
+        },
+        "optical_forward_error_deg": {
+          "n": 4,
+          "min": 1.0271442736599723,
+          "median": 1.5235223009548515,
+          "max": 2.1533905865094174
+        },
+        "image_age_s": {
+          "n": 4,
+          "min": 0.138002944,
+          "median": 0.14250304000000003,
+          "max": 0.16500352
+        }
+      },
+      "target_in_estimated_fov_count": 0,
+      "camera_samples": 4
+    }
+  },
+  "reference_curve_error_m": {
+    "n": 832,
+    "min": 2.5471553798966073e-10,
+    "median": 7.45714406944147e-08,
+    "max": 2.639952961334364e-07
+  },
+  "native_curve_window_plane_crossings": [
+    {
+      "revision": 10,
+      "world_position": [
+        1.9481222534201348,
+        -2.0281424238643524,
+        1.0537963040044782
+      ],
+      "sim_ns": 1794934844283756138,
+      "on_active_interval": false,
+      "inside_window_mesh_aabb_yz": true,
+      "curve_time_s": 1.9478104129253002
+    },
+    {
+      "revision": 11,
+      "world_position": [
+        1.948122253410218,
+        -2.149388500745759,
+        1.184324304105582
+      ],
+      "sim_ns": 1794934846412996321,
+      "on_active_interval": false,
+      "inside_window_mesh_aabb_yz": true,
+      "curve_time_s": 3.041389153949453
+    },
+    {
+      "revision": 12,
+      "world_position": [
+        1.9481222534143083,
+        -2.240995132087094,
+        1.3420877014642318
+      ],
+      "sim_ns": 1794934846523649786,
+      "on_active_interval": false,
+      "inside_window_mesh_aabb_yz": true,
+      "curve_time_s": 2.1980222663946694
+    },
+    {
+      "revision": 13,
+      "world_position": [
+        1.9481222534261304,
+        -2.270271321213651,
+        1.3304975396869019
+      ],
+      "sim_ns": 1794934846535321275,
+      "on_active_interval": true,
+      "inside_window_mesh_aabb_yz": true,
+      "curve_time_s": 0.4216556118976029,
+      "wall_since_land_s_approx": -5.177794118,
+      "clock_pair_gap_s": 0.001369413
+    }
+  ],
+  "stop_events": [
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794934944787608196,
+      "sim_ns": 1794934836870484480,
+      "vehicle": "drone1",
+      "reason": "planner requested stop",
+      "operator": false,
+      "at_ns": 1794934836870484480,
+      "wall_since_land_s": -15.756210158
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794934945059461574,
+      "sim_ns": 1794934837107489536,
+      "vehicle": "drone1",
+      "plan": 4,
+      "reason": "planner requested stop",
+      "operator": false,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794934837107489536,
+      "wall_since_land_s": -15.48435678
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794934950824726181,
+      "sim_ns": 1794934842357601536,
+      "vehicle": "drone1",
+      "reason": "planner requested stop",
+      "operator": false,
+      "at_ns": 1794934842357601536,
+      "wall_since_land_s": -9.719092173
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794934951099694973,
+      "sim_ns": 1794934842603606784,
+      "vehicle": "drone1",
+      "plan": 10,
+      "reason": "planner requested stop",
+      "operator": false,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794934842603606784,
+      "wall_since_land_s": -9.444123381
+    },
+    {
+      "event": "stop_requested",
+      "wall_ns": 1794934960196995295,
+      "sim_ns": 1794934850964785152,
+      "vehicle": "drone1",
+      "reason": "bounded fleet episode ended",
+      "operator": true,
+      "at_ns": 1794934850964785152,
+      "wall_since_land_s": -0.346823059
+    },
+    {
+      "event": "stop_confirmed",
+      "wall_ns": 1794934960470008590,
+      "sim_ns": 1794934851213790464,
+      "vehicle": "drone1",
+      "plan": 16,
+      "reason": "bounded fleet episode ended",
+      "operator": true,
+      "mode": 2,
+      "hold_contract": "Fixed onboard v0.1.1 PID position-hold; existing single AirSim evidence",
+      "evidence": "terminal action, successful stop reply and compatible controller mode",
+      "at_ns": 1794934851213790464,
+      "wall_since_land_s": -0.073809764
+    }
+  ],
+  "recording_limits": "No raw pixels/cloud/occupancy/ESDF. Camera projection is predicted FOV, not observed visibility. Observer pose proxy paired via nearest mission clock, not image exposure exact truth.",
+  "offline_pairing_selection": "Camera proxy statistics exclude clock pairing gaps >50ms and image-to-observer sample gaps >150ms (5Hz pose sampling); these are analysis selection bounds, not new runtime gates. Rejected pairs retained.",
+  "timeline_samples": [
+    {
+      "wall_since_land_s": -17.995169065,
+      "wall_ns": 1794934942548649289,
+      "sim_ns": 1794934834815440640,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000269912,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        0.0009368694154545665,
+        -2.922273469856009,
+        0.72161865234375
+      ],
+      "rendered_world": [
+        0.00019702970166690648,
+        -2.8829577639698982,
+        0.6715683471411467
+      ],
+      "physics_world": [
+        0.0003019707219209522,
+        -2.8819484636187553,
+        0.6711473930627108
+      ],
+      "odom_rendered_error_m": 0.06364986365263477,
+      "odom_physics_error_m": 0.06460539635200357,
+      "rendered_physics_error_m": 0.0010985909851718807,
+      "reference_world": [
+        0.07870033137811165,
+        -2.819044836374723,
+        0.7377957759399479
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.13024978354944744,
+      "reference_rendered_error_m": 0.12096984340400412
+    },
+    {
+      "wall_since_land_s": -11.99522775,
+      "wall_ns": 1794934948548590604,
+      "sim_ns": 1794934840281557248,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000847968,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        -0.44870592548977584,
+        -1.0317138039972633,
+        0.9016036987304688
+      ],
+      "rendered_world": [
+        -0.49230635166168213,
+        -1.0759211778640747,
+        0.8555121719837189
+      ],
+      "physics_world": [
+        -0.4891572892665863,
+        -0.7825524806976318,
+        0.9143138974905014
+      ],
+      "odom_rendered_error_m": 0.07732863573358999,
+      "odom_physics_error_m": 0.25274340152088415,
+      "rendered_physics_error_m": 0.2992202399465639,
+      "reference_world": [
+        0.04157078189006276,
+        -0.3644301827820029,
+        0.9451144513587737
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.8291754136102014,
+      "reference_rendered_error_m": 0.894020580457469
+    },
+    {
+      "wall_since_land_s": -9.995228325,
+      "wall_ns": 1794934950548590029,
+      "sim_ns": 1794934842105596160,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000607396,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        0.40473823354113847,
+        -0.46769078611396253,
+        0.9946441650390625
+      ],
+      "rendered_world": [
+        0.40743744373321533,
+        -0.3342556953430176,
+        1.0621409714221954
+      ],
+      "physics_world": [
+        0.6772820353507996,
+        -0.5129685401916504,
+        1.02903550863266
+      ],
+      "odom_rendered_error_m": 0.149559446564346,
+      "odom_physics_error_m": 0.27841150018157707,
+      "rendered_physics_error_m": 0.3253465171254514,
+      "reference_world": [
+        0.13674228608088432,
+        -1.2673498988835303,
+        0.9734858052132942
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.8436374817900449,
+      "reference_rendered_error_m": 0.9756025827932459
+    },
+    {
+      "wall_since_land_s": -7.99524495,
+      "wall_ns": 1794934952548573404,
+      "sim_ns": 1794934843950635520,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000601204,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        1.2311496596084908,
+        -1.3468998277094215,
+        0.9383468627929688
+      ],
+      "rendered_world": [
+        0.7550144791603088,
+        -0.5983059406280518,
+        1.020876705646515
+      ],
+      "physics_world": [
+        0.7377391457557678,
+        -0.6443819999694824,
+        1.0208250880241394
+      ],
+      "odom_rendered_error_m": 0.8910155401548552,
+      "odom_physics_error_m": 0.8624313834213911,
+      "rendered_physics_error_m": 0.049208160431497845,
+      "reference_world": [
+        1.1057165023559636,
+        -1.3599344781516143,
+        0.94001865477515
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.1261196810133892,
+      "reference_rendered_error_m": 0.8423823138186856
+    },
+    {
+      "wall_since_land_s": -5.995240017,
+      "wall_ns": 1794934954548578337,
+      "sim_ns": 1794934845789674752,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000720986,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        0.7044842700706795,
+        -1.7193460070993751,
+        1.2165985107421875
+      ],
+      "rendered_world": [
+        0.43106964230537415,
+        -1.5101763010025024,
+        1.2547258734703064
+      ],
+      "physics_world": [
+        0.600330114364624,
+        -1.8411591053009033,
+        1.3322899341583252
+      ],
+      "odom_rendered_error_m": 0.3463541834788402,
+      "odom_physics_error_m": 0.19766391804360361,
+      "rendered_physics_error_m": 0.3797563793451906,
+      "reference_world": [
+        1.3223923953854513,
+        -2.185243331734796,
+        1.2500827997590775
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.7745914833274538,
+      "reference_rendered_error_m": 1.1181204337071438
+    },
+    {
+      "wall_since_land_s": -3.995213879,
+      "wall_ns": 1794934956548604475,
+      "sim_ns": 1794934847613713664,
+      "phase": "tracking_before_window_overlap",
+      "clock_pair_gap_s": 0.000657332,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        3.03785418078769,
+        -2.898448778083548,
+        1.2980804443359375
+      ],
+      "rendered_world": [
+        1.4049559831619263,
+        -2.535500943660736,
+        1.45099937915802
+      ],
+      "physics_world": [
+        1.8306444883346558,
+        -2.4313390851020813,
+        1.3956343531608582
+      ],
+      "odom_rendered_error_m": 1.6797237436402441,
+      "odom_physics_error_m": 1.2980999468287526,
+      "rendered_physics_error_m": 0.44173032759620723,
+      "reference_world": [
+        3.078451122566432,
+        -2.381789024170884,
+        1.2278902255787962
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.5229838236542852,
+      "reference_rendered_error_m": 1.6952849407148636
+    },
+    {
+      "wall_since_land_s": -3.595217673,
+      "wall_ns": 1794934956948600681,
+      "sim_ns": 1794934847982721536,
+      "phase": "tracking_window_overlap",
+      "clock_pair_gap_s": 0.000986793,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        3.3635461191879585,
+        -2.692037155618891,
+        1.2293472290039062
+      ],
+      "rendered_world": [
+        1.4246019124984741,
+        -2.5305120944976807,
+        1.448413074016571
+      ],
+      "physics_world": [
+        1.4510995149612427,
+        -2.5126841962337494,
+        1.4422239065170288
+      ],
+      "odom_rendered_error_m": 1.9579542452457968,
+      "odom_physics_error_m": 1.9325982453390387,
+      "rendered_physics_error_m": 0.03253094968059481,
+      "reference_world": [
+        3.394942922081009,
+        -2.4583349781342236,
+        1.1734539725018547
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 0.24233555891652425,
+      "reference_rendered_error_m": 1.9907425091344801
+    },
+    {
+      "wall_since_land_s": -1.995272113,
+      "wall_ns": 1794934958548546241,
+      "sim_ns": 1794934849455752960,
+      "phase": "tracking_window_overlap",
+      "clock_pair_gap_s": 0.001056104,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        2.8919677595840767,
+        -2.4808902943041176,
+        1.0517807006835938
+      ],
+      "rendered_world": [
+        1.4246019124984741,
+        -2.5305120944976807,
+        1.448413074016571
+      ],
+      "physics_world": [
+        1.447338581085205,
+        -2.706348955631256,
+        1.3869023323059082
+      ],
+      "odom_rendered_error_m": 1.5208359845241197,
+      "odom_physics_error_m": 1.5000305261290359,
+      "rendered_physics_error_m": 0.18766760289812146,
+      "reference_world": [
+        3.9723100489944825,
+        -2.9556686859289902,
+        0.9488497610148665
+      ],
+      "reference_stamp_gap_s": 0.0,
+      "reference_odom_error_m": 1.1845458040040093,
+      "reference_rendered_error_m": 2.630805652210496
+    },
+    {
+      "wall_since_land_s": 0.004764705,
+      "wall_ns": 1794934960548583059,
+      "sim_ns": 1794934851291792128,
+      "phase": "landing",
+      "clock_pair_gap_s": 0.001351997,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        2.4390508990036324,
+        -3.4902866983320564,
+        1.0144577026367188
+      ],
+      "rendered_world": [
+        1.3490869998931885,
+        -2.787697449326515,
+        1.3796032667160034
+      ],
+      "physics_world": [
+        1.5483914613723755,
+        -2.8653393536806107,
+        1.3357234001159668
+      ],
+      "odom_rendered_error_m": 1.3472135083753396,
+      "odom_physics_error_m": 1.134480086121104,
+      "rendered_physics_error_m": 0.21834829142925816,
+      "reference_world": [
+        3.5343575431974394,
+        -3.3156548759747904,
+        0.8969349977272054
+      ],
+      "reference_stamp_gap_s": 0.327006976,
+      "reference_odom_error_m": 1.115349498751027,
+      "reference_rendered_error_m": 2.29937275135524
+    },
+    {
+      "wall_since_land_s": 5.004815076,
+      "wall_ns": 1794934965548633430,
+      "sim_ns": 1794934855896890368,
+      "phase": "landing",
+      "clock_pair_gap_s": 0.005376552,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        1.7518751482712105,
+        -2.809253861894831,
+        0.25881195068359375
+      ],
+      "rendered_world": [
+        1.3490869998931885,
+        -2.787697449326515,
+        1.3796032667160034
+      ],
+      "physics_world": [
+        1.3806285858154297,
+        -2.7684342116117477,
+        1.2006371021270752
+      ],
+      "odom_rendered_error_m": 1.1911658765639115,
+      "odom_physics_error_m": 1.0131756362428006,
+      "rendered_physics_error_m": 0.18274252936144095,
+      "reference_world": [
+        3.5343575431974394,
+        -3.3156548759747904,
+        0.8969349977272054
+      ],
+      "reference_stamp_gap_s": 4.932105216,
+      "reference_odom_error_m": 1.9598179758465784,
+      "reference_rendered_error_m": 2.29937275135524
+    },
+    {
+      "wall_since_land_s": 15.004884913,
+      "wall_ns": 1794934975548703267,
+      "sim_ns": 1794934865095086592,
+      "phase": "landing",
+      "clock_pair_gap_s": 0.008767589,
+      "odom_stamp_gap_s": 0.0,
+      "odom_world": [
+        1.3480000357376412,
+        -2.7342664205934852,
+        -0.00225067138671875
+      ],
+      "rendered_world": [
+        1.3467243909835815,
+        -2.7573214769363403,
+        0.9353138208389282
+      ],
+      "physics_world": [
+        1.3467473983764648,
+        -2.7573614567518234,
+        0.9363881796598434
+      ],
+      "odom_rendered_error_m": 0.9378487831067682,
+      "odom_physics_error_m": 0.9389237681992739,
+      "rendered_physics_error_m": 0.0010753485955036605,
+      "reference_world": [
+        3.5343575431974394,
+        -3.3156548759747904,
+        0.8969349977272054
+      ],
+      "reference_stamp_gap_s": 14.13030144,
+      "reference_odom_error_m": 2.4344828103760228,
+      "reference_rendered_error_m": 2.258085013282363
+    }
+  ],
+  "ulog_position_check": {
+    "firmware": "61907962c9220437ec01a98fa26bfbf5cbb254b5",
+    "scope": "ULog armed interval, independent PX4 clock; not ROS clock subtraction",
+    "armed_px4_timestamp_us": [
+      1794934827747289,
+      1794934867816144
+    ],
+    "local_position_rows": 4448,
+    "reset_counters": {
+      "xy_reset_counter": {
+        "values": [
+          3
+        ],
+        "transitions": 0
+      },
+      "z_reset_counter": {
+        "values": [
+          2
+        ],
+        "transitions": 0
+      },
+      "vxy_reset_counter": {
+        "values": [
+          2
+        ],
+        "transitions": 0
+      },
+      "vz_reset_counter": {
+        "values": [
+          1
+        ],
+        "transitions": 0
+      },
+      "heading_reset_counter": {
+        "values": [
+          1
+        ],
+        "transitions": 0
+      }
+    },
+    "validity": {
+      "xy_valid": {
+        "all_true": true
+      },
+      "z_valid": {
+        "all_true": true
+      },
+      "v_xy_valid": {
+        "all_true": true
+      },
+      "v_z_valid": {
+        "all_true": true
+      }
+    }
+  },
+  "status": "Offline diagnosis completed to available evidence; unique map/perception cause unresolved; original flight failed.",
+  "findings": {
+    "trajectory_translation": "832 AS2 position references match active native curves after recorded registration translation, max residual <1e-6 m.",
+    "executed_window_crossing": "Native revision 13 crosses current window simple-face plane inside the asset Y/Z extent while active. This is static geometry comparison, not prior collision-event identification.",
+    "mapping_pose_discrepancy": "4 camera pairs near window overlap have position discrepancy 1.323-2.016 m against rendered pose proxy; image sample gaps 27-54 ms.",
+    "collision_check_model": "Native checks future center samples against inflated occupancy, not UE body shape; inflation ceil(0.199/0.1)=2 cells; dist0 0.7 is optimizer cost, not hard body clearance.",
+    "unknown_map_state": "No saved raw depth pixels, occupancy/ESDF snapshots or per-voxel query log; cannot determine missed depth, voxel clearing, map projection shift or exact queried occupancy."
+  }
+}

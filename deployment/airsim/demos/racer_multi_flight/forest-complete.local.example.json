@@ -1,0 +1,19 @@
+{
+  "run_root": "<new-run-root>",
+  "release": "<release>",
+  "project": "<unique-project>",
+  "domain": "<unused-integer-domain>",
+  "airsim_host": "<Docker-reachable-AirSim-host>",
+  "rpc_port": 41461,
+  "settings": "<settings.json>",
+  "diagnostics": {
+    "enabled": true,
+    "queue_messages": 128,
+    "bag_cache_bytes": 33554432,
+    "probe_points": []
+  },
+  "docker_subnet": "<unused-Docker-subnet-CIDR>",
+  "fleet_config": "<AeroHub-root>/deployment/airsim/demos/racer_multi_flight/forest-complete.fleet.json",
+  "flight_config": "<AeroHub-root>/deployment/airsim/demos/racer_multi_flight/forest-complete.flight.json",
+  "completion_wall_budget_s": 300
+}

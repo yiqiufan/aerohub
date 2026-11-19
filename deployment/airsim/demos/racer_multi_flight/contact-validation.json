@@ -1,0 +1,88 @@
+{
+  "case": "20261117-drone1-contact-03",
+  "mode": "takeoff-drone1",
+  "formal_staged_startup": true,
+  "mission_pass": true,
+  "flow_pass": true,
+  "drone0_ulog_arming_states": [
+    1
+  ],
+  "unchanged": "images, candidate build, scene, settings, fleet, flight parameters and original 30 s native Land budget",
+  "land_action_wall_seconds": 9.143514903,
+  "first_feedback_wall_seconds": {
+    "land_detected/ground_contact": 11.040129563,
+    "land_detected/maybe_landed": 11.419250085,
+    "land_detected/landed": 11.785708837,
+    "px4/arming_state": 13.926185388,
+    "platform/armed": 14.014699822
+  },
+  "physical_stationarity": {
+    "last_moving_sample_wall_seconds": 5.471571936,
+    "first_stationary_suffix_wall_seconds": 5.671569975,
+    "stationary_suffix_samples": 115,
+    "observer_errors": 0
+  },
+  "px4_ulog_seconds_relative_to_landing_ground_contact": {
+    "ground_contact": 0.0,
+    "maybe_landed": 0.354007,
+    "landed": 0.693014,
+    "at_rest": 0.693014,
+    "disarmed": 2.703057
+  },
+  "px4_firmware": "61907962c9220437ec01a98fa26bfbf5cbb254b5",
+  "COM_DISARM_LAND": 2.0,
+  "contact_snapshot": {
+    "phase": "after actual landed/disarmed",
+    "drone1": {
+      "has_collided": true,
+      "penetration_depth": 0.0,
+      "time_stamp": 1794926693792523776,
+      "normal": {
+        "x_val": -0.037669796496629715,
+        "y_val": -0.0007423485512845218,
+        "z_val": -0.9992899894714355
+      },
+      "impact_point": {
+        "x_val": 0.327178031206131,
+        "y_val": 0.09278622269630432,
+        "z_val": 0.8898856043815613
+      },
+      "position": {
+        "x_val": -0.0070947264321148396,
+        "y_val": 0.004037316422909498,
+        "z_val": 0.6927751302719116
+      },
+      "object_name": "Rubble_76",
+      "object_id": 129
+    },
+    "limitation": "last retained contact only, not first impact or complete flight contact history"
+  },
+  "cleanup": {
+    "core-final.json": {
+      "count": 7,
+      "all_stopped_exit_zero": true
+    },
+    "cleanup-result.json": {
+      "count": 7,
+      "all_stopped_exit_zero": true
+    }
+  },
+  "findings": [
+    "This minimal flight did not reproduce sustained rendered/physics divergence.",
+    "Native Land Action succeeded before PX4 landed. Initial disarm was denied; automatic landing disarm followed.",
+    "Post-contact thrust reduction and detector hysteresis precede landed; COM_DISARM_LAND accounts for about 2 seconds after landed.",
+    "Rubble_76 is an observed contact object, not an established cause of historical landing failures."
+  ],
+  "uncovered": [
+    "same-configuration dual exploration repeat acceptance still failed historically",
+    "complete collision event history",
+    "unique UE/AirSim contact root cause",
+    "four UAVs and RoboPi"
+  ],
+  "evidence": "log/racer-ros2/20261117-contact/contact-03/evidence-index.json",
+  "skills_review": "Existing e2e and platform-sensor guidance covered clock separation, actual firmware, consuming-read side effects and failure preservation. No new generic rule established; no Skill edits.",
+  "all_owned_containers": {
+    "count": 16,
+    "all_stopped_exit_zero": true
+  }
+}

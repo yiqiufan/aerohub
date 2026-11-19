@@ -1,0 +1,133 @@
+{
+  "case": "20261117-formal-startup-01",
+  "formal_cli": "python deployment/airsim/demos/racer_multi_flight/run.py --local <local.json> up",
+  "formal_staged_startup_pass": true,
+  "motion_commands": false,
+  "unchanged_config_artifacts": [
+    "settings.json",
+    "build-manifest.json",
+    "configuration/fastdds_udp.xml",
+    "configuration/fleet.json",
+    "configuration/drone0/camera-bridge.json",
+    "configuration/drone0/fleet.yaml",
+    "configuration/drone0/mapper.yaml",
+    "configuration/drone0/navigation.yaml",
+    "configuration/drone1/camera-bridge.json",
+    "configuration/drone1/fleet.yaml",
+    "configuration/drone1/mapper.yaml",
+    "configuration/drone1/navigation.yaml"
+  ],
+  "probe": {
+    "pass": true,
+    "window_wall_s": 12,
+    "topics": {
+      "/clock": {
+        "count": 605,
+        "unique_stamps": 605
+      },
+      "/drone0/navigation/odom": {
+        "count": 600,
+        "unique_stamps": 600
+      },
+      "/drone0/platform/info": {
+        "count": 114,
+        "platform": {
+          "connected": true,
+          "armed": false
+        },
+        "unique_stamps": 114
+      },
+      "/drone1/navigation/odom": {
+        "count": 599,
+        "unique_stamps": 599
+      },
+      "/drone1/platform/info": {
+        "count": 114,
+        "platform": {
+          "connected": true,
+          "armed": false
+        },
+        "unique_stamps": 114
+      },
+      "/drone0/fmu/out/vehicle_status_v4": {
+        "count": 21,
+        "state": {
+          "system_id": 135,
+          "arming_state": 1,
+          "preflight": true,
+          "failsafe": false
+        },
+        "unique_stamps": 21
+      },
+      "/drone1/fmu/out/vehicle_status_v4": {
+        "count": 21,
+        "state": {
+          "system_id": 136,
+          "arming_state": 1,
+          "preflight": true,
+          "failsafe": false
+        },
+        "unique_stamps": 21
+      },
+      "/drone0/fmu/out/vehicle_land_detected": {
+        "count": 11,
+        "landed": true,
+        "unique_stamps": 11
+      },
+      "/drone1/fmu/out/vehicle_land_detected": {
+        "count": 11,
+        "landed": true,
+        "unique_stamps": 11
+      }
+    }
+  },
+  "startup": {
+    "pass": true,
+    "readiness_timeout_s": 60,
+    "stages": [
+      {
+        "stage": "flight-start",
+        "wall_ns": 1794925976855718200,
+        "services": [
+          "clock",
+          "drone0",
+          "drone1"
+        ]
+      },
+      {
+        "stage": "flight-ready",
+        "wall_ns": 1794925986553431000
+      },
+      {
+        "stage": "compute-start",
+        "wall_ns": 1794925986553946500,
+        "services": [
+          "as2-drone0",
+          "as2-drone1",
+          "navigation-drone0",
+          "navigation-drone1"
+        ]
+      },
+      {
+        "stage": "services-started",
+        "wall_ns": 1794925988969496100
+      }
+    ]
+  },
+  "cleanup": {
+    "containers": 7,
+    "all_exit_zero": true
+  },
+  "source_sha256": {
+    "deployment/airsim/demos/racer_multi_ground/run.py": "110b0aa217e38fb816042f390a219baaef29b0a1f87ab3fe9597e8feb9eac4eb",
+    "deployment/airsim/demos/racer_multi_ground/test_startup.py": "62cea504e98c42ac813a4d1f4722d3f2a67d7a80ad1a8d76c6aad81ad3ea56bd",
+    "deployment/airsim/demos/racer_multi_flight/run.py": "0e821a5e566cc387e257c1e7a9fa2c4532e6017d7c447f3075af76f8aa772dbb",
+    "deployment/airsim/demos/racer_multi_flight/full_flow.py": "d7071e0ddbf969e7dd8fde40b2d19ac10275afff7f44dff96ab492299b8f7a12"
+  },
+  "limits": [
+    "PC two-UAV ground startup only",
+    "no claim of unique DDS crash root cause or permanent repair",
+    "no flight/contact validation",
+    "four-UAV and RoboPi staged deployment unverified"
+  ]
+}

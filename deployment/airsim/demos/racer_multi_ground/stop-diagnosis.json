@@ -1,0 +1,257 @@
+{
+  "schema": 1,
+  "case": "20261117-dual-ground-02",
+  "release": "20261117-stop-01",
+  "scope": "two-UAV PC ground shadow; no flight or physical Action execution",
+  "ground_case_pass": true,
+  "full_multi_reproduction_complete": false,
+  "mission_checks": {
+    "all_native_candidates": true,
+    "all_native_states": true,
+    "all_stationary_swarm_trajectories": true,
+    "pairwise_exchange_reaches_all_vehicles": true,
+    "native_initiator_consumed_response": true,
+    "each_map_integrates_foreign_chunks": true,
+    "all_input_frames": true,
+    "all_shadow_targets_ready": true,
+    "no_arming": true
+  },
+  "stop_trace": {
+    "drone0": {
+      "fsm": "FINISH",
+      "execution_status_received": 2,
+      "execution_status_applied": 2,
+      "max_execution_status_queue_ms": 1.947
+    },
+    "drone1": {
+      "fsm": "FINISH",
+      "execution_status_received": 3,
+      "execution_status_applied": 3,
+      "max_execution_status_queue_ms": 5.46
+    }
+  },
+  "all_landed_disarmed": true,
+  "native_children": {
+    "drone0": [
+      {
+        "name": "exploration",
+        "pid": 92,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-2",
+        "pid": 90,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-1",
+        "pid": 87,
+        "exit": 0,
+        "escalated": false
+      }
+    ],
+    "drone1": [
+      {
+        "name": "exploration",
+        "pid": 97,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-2",
+        "pid": 94,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-1",
+        "pid": 88,
+        "exit": 0,
+        "escalated": false
+      }
+    ]
+  },
+  "all_owned_roles_and_cores_exit_zero": true,
+  "recorder_exit_zero": true,
+  "native_candidates": {
+    "drone0": [
+      1
+    ],
+    "drone1": [
+      1
+    ]
+  },
+  "pair_requests": 1,
+  "matched_accepted_pairs": 1,
+  "regressions": {
+    "busy-stop": {
+      "pass": true,
+      "stop_wall_seconds": 0.09987897199971485,
+      "supervisor_exit": 0,
+      "children": [
+        {
+          "name": "exploration",
+          "pid": 87,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-2",
+          "pid": 85,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-1",
+          "pid": 83,
+          "exit": 0,
+          "escalated": false
+        }
+      ]
+    },
+    "busy-shutdown": {
+      "pass": true,
+      "stop_wall_seconds": null,
+      "supervisor_exit": 0,
+      "children": [
+        {
+          "name": "exploration",
+          "pid": 87,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-2",
+          "pid": 85,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-1",
+          "pid": 83,
+          "exit": 0,
+          "escalated": false
+        }
+      ]
+    },
+    "accept-stop": {
+      "pass": true,
+      "stop_wall_seconds": 0.09990150800149422,
+      "supervisor_exit": 0,
+      "children": [
+        {
+          "name": "exploration",
+          "pid": 87,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-2",
+          "pid": 85,
+          "exit": 0,
+          "escalated": false
+        },
+        {
+          "name": "solver-1",
+          "pid": 83,
+          "exit": 0,
+          "escalated": false
+        }
+      ]
+    }
+  },
+  "planning_failure": {
+    "reproduced_this_live_case": false,
+    "historical_unique_cause": "unresolved; previous case has no raw depth replay or map snapshot",
+    "previous_start": [
+      0.000196937,
+      0.000365154,
+      -0.0065918
+    ],
+    "previous_next_view": [
+      -3.00257,
+      2.25033,
+      0.588565
+    ],
+    "current_start": [
+      0.000424976,
+      -0.0014835,
+      -0.0337524
+    ],
+    "current_next_view": [
+      -0.0928612,
+      0.0287285,
+      0.874
+    ],
+    "bounds_or_algorithm_thresholds_changed": false
+  },
+  "recorded_topics": {
+    "/racer_multi/drone1/camera_pose": 106,
+    "/racer_multi/drone1/depth": 106,
+    "/racer_multi/drone1/input_state": 527,
+    "/racer_multi/drone1/odometry": 5651,
+    "/clock": 5642,
+    "/racer_multi/drone0/camera_pose": 104,
+    "/racer_multi/drone0/depth": 104,
+    "/racer_multi/drone0/input_state": 521,
+    "/racer_multi/drone0/odometry": 5588,
+    "/racer_execution/drone_1/status": 3,
+    "/racer_execution/drone_2/status": 4,
+    "/racer_multi/drone0/shadow_state": 959,
+    "/racer_multi/drone1/shadow_state": 958,
+    "/racer_multi/drone0/trigger": 1,
+    "/racer_multi/drone0/operator_stop": 1,
+    "/racer_multi/drone0/native_state": 958,
+    "/racer_multi/drone1/native_state": 958,
+    "/racer_multi/drone1/operator_stop": 1,
+    "/racer_multi/drone1/trigger": 1,
+    "/swarm_expl/pair_opt": 10,
+    "/swarm_expl/pair_opt_res": 10,
+    "/swarm_expl/drone_state": 2706,
+    "/racer_execution/drone_2/stop": 1,
+    "/racer_execution/drone_2/plan": 1,
+    "/racer_execution/drone_1/plan": 1,
+    "/racer_execution/drone_1/stop": 0,
+    "/multi_map_manager/chunk_stamps": 1169
+  },
+  "images": {
+    "flight": "sha256:1eff3190ca7870d0267ddb1531365dd7c68d85c6e52ade3d25b17b84b4758843",
+    "onboard": "sha256:ba618faf22ece6a76ffb8a0fb625b741894ef9f8f1c086a552737156a769086d",
+    "algorithm": "sha256:964048afd46a9d394aa771d801d48b57de8a2b2665979b1ba6f2b5e273f9adb9",
+    "workstation": "sha256:592f97da6b871a438fdb97f86b422ab9f80657e80efa7b98d258894738c8a0c0"
+  },
+  "limitations": [
+    "no multi-UAV flight",
+    "no physical execution acceptance",
+    "no four-UAV repeat",
+    "no RoboPi",
+    "no unbounded solver-hang stop-preemption guarantee",
+    "startup reliability not established by one successful start"
+  ],
+  "evidence_index_sha256": "18194ee3d5e12f89b1c0e10ea8dcd8682cfab66a59d4bc0814ea00e44d01b11e",
+  "key_evidence_sha256": {
+    "mission/result.json": "ea9c550c447f716a2a914809cf27e07d6e52d259dddeef11264bff3d2e9a02f0",
+    "cleanup-result.json": "0eb3c3b62c1717f0115f6d67b5caff15a590c7eeab92344caf67af896163de1c",
+    "core-final.json": "6b7f6a1d01192bb73560efa6b992a3d84c0a4b0b6c12f952e9905a61454da825",
+    "runtime-source.json": "378881b166f452d01689bad3f8e55209eb77c8210804aa3539320ed804823aa4",
+    "record/rosbag/metadata.yaml": "4a094245a8c147d89a89d1b5b6a282a5cfdf6970338969a1b6cf096d5dff7eee",
+    "diagnostic-plan.json": "d46d3fee1b8d21e00165e35952d87e222ee4b12870ddaeb6e900cccbf11395d5"
+  },
+  "stop_trace_window": "mission final snapshot; see completed_native_trace for all messages through cleanup",
+  "completed_native_trace": {
+    "drone0": {
+      "received": 3,
+      "applied": 3,
+      "max_queue_ms": 212.819,
+      "path_failures": 0
+    },
+    "drone1": {
+      "received": 4,
+      "applied": 4,
+      "max_queue_ms": 7.89,
+      "path_failures": 0
+    }
+  }
+}

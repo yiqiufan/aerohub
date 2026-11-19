@@ -558,3 +558,45 @@ capability_types:
       coordinate_frame: original_camera_optical_frame
       axes: optical_x_right_y_down_z_forward
       timestamp: image_acquisition_time
+
+  - id: state/camera/optical-pose-at-depth-stamp/3d
+    name: Depth camera optical pose
+    description: Pose of the depth optical frame in the planner world, paired to the depth image at its measurement time.
+    transport:
+      protocol: ros2_topic
+      schema: geometry_msgs/msg/PoseStamped
+      qos: {reliability: reliable, durability: volatile, history: keep_last, depth: 10}
+    semantics:
+      unit_system: SI
+      units: {position: m, orientation: unit_quaternion}
+      coordinate_frame: configured_planning_world
+      axes: parent_ENU_child_optical_x_right_y_down_z_forward
+      timestamp: paired_depth_measurement_time
+
+  - id: state/odometry/planning-frame-twist/3d
+    name: Vehicle odometry with world-frame twist
+    description: Vehicle pose and both velocity vectors expressed in the planning world. Both frame IDs name that world; the orientation describes the vehicle body.
+    transport:
+      protocol: ros2_topic
+      schema: nav_msgs/msg/Odometry
+      qos: {reliability: reliable, durability: volatile, history: keep_last, depth: 10}
+    semantics:
+      unit_system: SI
+      units: {position: m, orientation: unit_quaternion, linear_velocity: m/s, angular_velocity: rad/s}
+      coordinate_frame: configured_planning_world
+      axes: world_ENU_body_FLU
+      timestamp: odometry_measurement_time
+
+  - id: planning/trajectory/racer-bspline/3d
+    name: RACER execution B-spline
+    description: Per-vehicle execution proposal identified by trajectory ID, with position control points and knot vector, yaw control points and yaw knot interval. Start time is the absolute execution epoch on the shared ROS clock.
+    transport:
+      protocol: ros2_topic
+      schema: bspline/msg/Bspline
+      qos: {reliability: reliable, durability: volatile, history: keep_last, depth: 10}
+    semantics:
+      unit_system: SI
+      units: {position: m, yaw: rad, knots: s, yaw_dt: s}
+      coordinate_frame: configured_planning_world
+      axes: ENU
+      timestamp: absolute_trajectory_start_time

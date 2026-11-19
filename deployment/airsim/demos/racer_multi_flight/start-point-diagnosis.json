@@ -1,0 +1,398 @@
+{
+  "case": "20261117-start-point-diag-01",
+  "diagnosis_date_local": "2026-11-18",
+  "evaluation": {
+    "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+    "pass": true,
+    "checks": {
+      "drone0": true,
+      "drone1": true,
+      "cleanup": true,
+      "flow": true,
+      "native_cooperation": true
+    },
+    "metrics": {
+      "drone0": {
+        "active_revisions": [
+          1,
+          4,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          22
+        ],
+        "rejected_count": 6,
+        "tracking_as2_references": 592,
+        "tracking_px4_references": 823,
+        "tracking_shared_trajectories": 247,
+        "tracking_wall_s": 20.017571678,
+        "sampled_tracking_min_separation_m": 1.180018520174494,
+        "horizontal_displacement_m": 1.9081312094009788
+      },
+      "drone1": {
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          8
+        ],
+        "rejected_count": 0,
+        "tracking_as2_references": 279,
+        "tracking_px4_references": 880,
+        "tracking_shared_trajectories": 247,
+        "tracking_wall_s": 20.022211992,
+        "sampled_tracking_min_separation_m": 1.180018520174494,
+        "horizontal_displacement_m": 1.908971473025578
+      }
+    },
+    "artifacts_sha256": {
+      "ulog/drone0.ulg": "e249fe3cfdecc7ba8dd7fec5770675300e44ae7c4b0f3c28f707be8299f18eaf",
+      "mission/drone0/result.json": "6c941aa44dc570aef86b5655e5f8e948eb861e6596f2d6df8e6e3d3237f04f94",
+      "adapter/drone0/adapter-events.jsonl": "cf6113c0bf0c69c4ba5ea6e956e497680219fdeb8ebeec783088b953316ebb9f",
+      "ulog/drone1.ulg": "4ffb68fac6e6d04cd14d04e650e12a5eaaaccc63fe184c0d6a46e8e0022748d1",
+      "mission/drone1/result.json": "2f97218f9fc4ca993656116af6ef8f69bfa81f86695a9eecb2cc4657af8cd8d7",
+      "adapter/drone1/adapter-events.jsonl": "e9f1a5e919de1a8f0ef059d8c1ed8e8fc16b91fdd6a7241172eef6148dc2d5cd",
+      "flow-result.json": "7389dc31a25aeabb9b1df7c13c8b2bafa850d1ec7989f72026147227a5425d4d",
+      "runtime-source.json": "357f481056581b380a7788ffca77fd228a5050e1a882f97e400fcc6d8e7bf4bd",
+      "build-manifest.json": "e75458ba88c518dae9048a9c247f76675835118da25d93a5e805697ba954c679",
+      "configuration/flight.json": "8416fc1ed9fbcbb7c2163240fa056f33bbeaf14c4a2efd3a791c7225e0208abb",
+      "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+    }
+  },
+  "diagnostic_rows": [
+    {
+      "revision": 16,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 16,
+        "static": 1,
+        "sim_ns": 1794931064651462144,
+        "odom_ns": 1794931064498458880,
+        "start": [
+          -1.931869902,
+          -1.147612429,
+          0.781585693
+        ],
+        "odom": [
+          -1.931869902,
+          -1.147612429,
+          0.781585693
+        ],
+        "vel": [
+          0.966760466,
+          -0.397940326,
+          0.015333976
+        ]
+      },
+      "end": {
+        "next": 16,
+        "result": 2,
+        "sim_ns": 1794931064681462784,
+        "first": [
+          -1.932468904,
+          -1.147048845,
+          0.780462758
+        ],
+        "boundary_error": 0.00139191,
+        "odom": [
+          -1.931869902,
+          -1.147612429,
+          0.781585693
+        ],
+        "odom_ns": 1794931064498458880,
+        "solve_sim_s": 0.03000064
+      },
+      "solver_boundary_error_m": 0.0013919099594747728,
+      "output_to_goal_error_m": 5.608716217363215e-10,
+      "input_to_receiver_nearby_odom_m": 0.1952874508413135,
+      "goal_to_receiver_nearby_odom_m": 0.19592000706804283,
+      "nearest_odom_offset_ms": -8.467979,
+      "solver_input_odom_age_s": 0.153003264,
+      "response_lead_s": 0.71999936
+    },
+    {
+      "revision": 17,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 17,
+        "static": 1,
+        "sim_ns": 1794931064702463232,
+        "odom_ns": 1794931064519459328,
+        "start": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "vel": [
+          0.955604025,
+          -0.389588672,
+          0.016175549
+        ]
+      },
+      "end": {
+        "next": 17,
+        "result": 2,
+        "sim_ns": 1794931064741464064,
+        "first": [
+          -1.913394338,
+          -1.149361875,
+          0.780959489
+        ],
+        "boundary_error": 0.000952849,
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom_ns": 1794931064519459328,
+        "solve_sim_s": 0.039000832
+      },
+      "solver_boundary_error_m": 0.0009528491451478059,
+      "output_to_goal_error_m": 5.133047110763833e-10,
+      "input_to_receiver_nearby_odom_m": 0.23790695230667935,
+      "goal_to_receiver_nearby_odom_m": 0.23851033886780115,
+      "nearest_odom_offset_ms": 4.695842,
+      "solver_input_odom_age_s": 0.183003904,
+      "response_lead_s": 0.692998784
+    },
+    {
+      "revision": 18,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 18,
+        "static": 1,
+        "sim_ns": 1794931064771464704,
+        "odom_ns": 1794931064519459328,
+        "start": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "vel": [
+          0.955604025,
+          -0.389588672,
+          0.016175549
+        ]
+      },
+      "end": {
+        "next": 18,
+        "result": 2,
+        "sim_ns": 1794931064813465600,
+        "first": [
+          -1.913394338,
+          -1.149361875,
+          0.780959489
+        ],
+        "boundary_error": 0.000952849,
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom_ns": 1794931064519459328,
+        "solve_sim_s": 0.042000896
+      },
+      "solver_boundary_error_m": 0.0009528491451478059,
+      "output_to_goal_error_m": 5.133047110763833e-10,
+      "input_to_receiver_nearby_odom_m": 0.2878365913227007,
+      "goal_to_receiver_nearby_odom_m": 0.28843648620662693,
+      "nearest_odom_offset_ms": -2.57764,
+      "solver_input_odom_age_s": 0.252005376,
+      "response_lead_s": 0.707999104
+    },
+    {
+      "revision": 19,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 19,
+        "static": 1,
+        "sim_ns": 1794931064834466048,
+        "odom_ns": 1794931064519459328,
+        "start": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "vel": [
+          0.955604025,
+          -0.389588672,
+          0.016175549
+        ]
+      },
+      "end": {
+        "next": 19,
+        "result": 2,
+        "sim_ns": 1794931064870466816,
+        "first": [
+          -1.913394338,
+          -1.149361875,
+          0.780959489
+        ],
+        "boundary_error": 0.000952849,
+        "odom": [
+          -1.912788906,
+          -1.149425602,
+          0.781692505
+        ],
+        "odom_ns": 1794931064519459328,
+        "solve_sim_s": 0.036000768
+      },
+      "solver_boundary_error_m": 0.0009528491451478059,
+      "output_to_goal_error_m": 5.133047110763833e-10,
+      "input_to_receiver_nearby_odom_m": 0.32112083565270816,
+      "goal_to_receiver_nearby_odom_m": 0.3217182990091556,
+      "nearest_odom_offset_ms": -10.10415,
+      "solver_input_odom_age_s": 0.31500672,
+      "response_lead_s": 0.713999232
+    },
+    {
+      "revision": 20,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 20,
+        "static": 1,
+        "sim_ns": 1794931064882467072,
+        "odom_ns": 1794931064741464064,
+        "start": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "odom": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "vel": [
+          0.761061482,
+          -0.23221444,
+          0.015147652
+        ]
+      },
+      "end": {
+        "next": 20,
+        "result": 2,
+        "sim_ns": 1794931064942468352,
+        "first": [
+          -1.706932459,
+          -1.161505544,
+          0.782082265
+        ],
+        "boundary_error": 0.003092791,
+        "odom": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "odom_ns": 1794931064741464064,
+        "solve_sim_s": 0.06000128
+      },
+      "solver_boundary_error_m": 0.0030927908123848905,
+      "output_to_goal_error_m": 4.843063134820672e-10,
+      "input_to_receiver_nearby_odom_m": 0.16268237966539248,
+      "goal_to_receiver_nearby_odom_m": 0.1643432133083583,
+      "nearest_odom_offset_ms": -15.357249,
+      "solver_input_odom_age_s": 0.141003008,
+      "response_lead_s": 0.668998272
+    },
+    {
+      "revision": 21,
+      "outcome": "rejected",
+      "initial": true,
+      "static": 1,
+      "begin": {
+        "next": 21,
+        "static": 1,
+        "sim_ns": 1794931065032470272,
+        "odom_ns": 1794931064741464064,
+        "start": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "odom": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "vel": [
+          0.761061482,
+          -0.23221444,
+          0.015147652
+        ]
+      },
+      "end": {
+        "next": 21,
+        "result": 2,
+        "sim_ns": 1794931065071471104,
+        "first": [
+          -1.706932459,
+          -1.161505544,
+          0.782082265
+        ],
+        "boundary_error": 0.003092791,
+        "odom": [
+          -1.705338039,
+          -1.159272647,
+          0.780654907
+        ],
+        "odom_ns": 1794931064741464064,
+        "solve_sim_s": 0.039000832
+      },
+      "solver_boundary_error_m": 0.0030927908123848905,
+      "output_to_goal_error_m": 4.843063134820672e-10,
+      "input_to_receiver_nearby_odom_m": 0.23579688992531778,
+      "goal_to_receiver_nearby_odom_m": 0.23742855457419274,
+      "nearest_odom_offset_ms": 0.980545,
+      "solver_input_odom_age_s": 0.291006208,
+      "response_lead_s": 0.710999168
+    }
+  ],
+  "cleanup": {
+    "count": 16,
+    "all_stopped_exit_zero": true
+  },
+  "finding": "Moving, delayed state snapshot after confirmed stop dominates first-point mismatch in these six requests; solver boundary error is millimetric.",
+  "limits": [
+    "exact AS2 callback pose unavailable",
+    "cannot infer all historical 34 rejects share this cause",
+    "no corrective behavior verified"
+  ],
+  "raw_run": "20261117-start-point-diag-01",
+  "build_recovery": "Native JobEnded rc=0 and final executable checksums verified; interrupted host orchestration resumed with interfaces build and manifest finalization."
+}

@@ -1,0 +1,150 @@
+{
+  "status": "entry-solidified-clean-session-rerun-failed",
+  "cases": {
+    "20261117-dual-solid-01": {
+      "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+      "pass": false,
+      "checks": {
+        "drone0": false,
+        "drone1": false,
+        "cleanup": true,
+        "flow": false,
+        "native_cooperation": true
+      },
+      "metrics": {
+        "drone0": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 565,
+          "tracking_px4_references": 636,
+          "tracking_shared_trajectories": 202,
+          "tracking_wall_s": 14.768252817,
+          "sampled_tracking_min_separation_m": 2.6216224798234107,
+          "horizontal_displacement_m": null
+        },
+        "drone1": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 310,
+          "tracking_px4_references": 635,
+          "tracking_shared_trajectories": 202,
+          "tracking_wall_s": 14.768930792,
+          "sampled_tracking_min_separation_m": 2.6216224798234107,
+          "horizontal_displacement_m": null
+        }
+      },
+      "artifacts_sha256": {
+        "ulog/drone0.ulg": "578dd548bb49ea9e237866876dd4753bd86a6e0bbef4157372a1966b5f895dc1",
+        "mission/drone0/result.json": "5ca555c5fc336725301d944558b6968f874d61ae15f9818a63dc901c04675fd8",
+        "adapter/drone0/adapter-events.jsonl": "606ba37a785229a245dd5692aa4be671f281648aabd6aae5ab2dcdcbb6708d74",
+        "ulog/drone1.ulg": "901250dc0870424081b2dbdf26e08b86892b66236cd50f0320bfdff035566ae8",
+        "mission/drone1/result.json": "bd69d78ae846f57551ae4c93e65196fe453afb23deeff99670d856c2fce9cfb9",
+        "adapter/drone1/adapter-events.jsonl": "b4ad70d08796768ca0d02061a53b86c84cde1b0a410de25bdad75645d790d63f",
+        "flow-result.json": "0749bb9ee20e603484100e4920b26064617eacbad957277d6e037d2b0e173ba6",
+        "runtime-source.json": "d4e71005b81c60529c2935d6f0eb9fcf636a60f294558e1ccd5bffd8397b2555",
+        "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+        "configuration/flight.json": "5ea3ef2f973829a82913668b66f579c3ae611d0c0212a936ba3931f52475bdf6",
+        "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+      }
+    },
+    "20261117-dual-solid-02": {
+      "scope": "two-UAV PC bounded native exploration; not complete RACER reproduction",
+      "pass": false,
+      "checks": {
+        "drone0": true,
+        "drone1": false,
+        "cleanup": true,
+        "flow": false,
+        "native_cooperation": true
+      },
+      "metrics": {
+        "drone0": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            5,
+            7,
+            8,
+            9,
+            10,
+            13,
+            16,
+            17,
+            18
+          ],
+          "rejected_count": 1,
+          "tracking_as2_references": 456,
+          "tracking_px4_references": 843,
+          "tracking_shared_trajectories": 290,
+          "tracking_wall_s": 20.023496401,
+          "sampled_tracking_min_separation_m": 2.267541027032346,
+          "horizontal_displacement_m": 3.819707949514271
+        },
+        "drone1": {
+          "active_revisions": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "rejected_count": 0,
+          "tracking_as2_references": 702,
+          "tracking_px4_references": 874,
+          "tracking_shared_trajectories": 289,
+          "tracking_wall_s": 19.998306409,
+          "sampled_tracking_min_separation_m": 2.267541027032346,
+          "horizontal_displacement_m": 1.8098956427601338
+        }
+      },
+      "artifacts_sha256": {
+        "ulog/drone0.ulg": "5fb9e6859778044758ec47956edabc2fc37087fb82a5a54a60631348257bd1ff",
+        "mission/drone0/result.json": "51d5d77b96e54e65471b51dd964575b2feead2b72517025cbba681866d5ea6b5",
+        "adapter/drone0/adapter-events.jsonl": "0898819fa55e539d78efd184f9eb7e4ae43311ed1a33432a4510df4c861cf937",
+        "ulog/drone1.ulg": "c8a3318c7a67854a535980a8cb809f347c9436a423f59ed5746613cb9414c916",
+        "mission/drone1/result.json": "86ba7f81fc3a3781ccecf13879933453a85051f42c4d8d53014c5087219a8082",
+        "adapter/drone1/adapter-events.jsonl": "1951334142f2812cc606112b74a5c2b8d67d4f9b5b68e10df60da07163aa3947",
+        "flow-result.json": "777da9b837b544130ef2182c3ef50e75c48d6901b4f0a1307e4c66581311a4e9",
+        "runtime-source.json": "ee9662b882b3e2e6ccfe6a1ad6199790461e621697ae19c2da8de74108367576",
+        "build-manifest.json": "4d61e51215696454c1a50aff05898998aec6059a20ea8313d323514d2c3282e2",
+        "configuration/flight.json": "b903e5ea105dd9906a5c20cd80335f0e8cbc598a44dd9d4fded8121d9227eaa3",
+        "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09"
+      }
+    }
+  },
+  "unresolved": "Drone1 native Land timeout; PX4 ground_contact delayed; cause not established",
+  "prior_pass": "20261117-dual-explore-02 uses earlier physical-radius configuration; not overwritten"
+}

@@ -1,0 +1,83 @@
+{
+  "case": "20261118-window-visibility",
+  "scope": "offline asset and recorded real depth comparison",
+  "conclusion": "Window render mesh has openings; its simple collision is a closed convex envelope. Recorded depth agrees with mesh openings.",
+  "material": "Opaque parent, no blend override, no component material override",
+  "ue_trace_crosscheck_count": 7,
+  "ue_trace_max_impact_error_cm": 3.009494979242479e-05,
+  "representative_frame_stamp_ns": 1794987651046635776,
+  "rendered_proxy_counts": {
+    "window_collision_rays": 5335,
+    "also_hit_render_mesh": 1673,
+    "collision_only_no_render_hit": 3662,
+    "raw_over_8m": 3662,
+    "far_and_no_render_hit": 3662,
+    "far_but_render_hit": 0,
+    "render_hit_and_depth_within_0_1m": 1673,
+    "no_render_hit_but_raw_within_8m": 0
+  },
+  "wall_local_probes": [
+    {
+      "point_xz_cm": [
+        150,
+        225
+      ],
+      "label": "window opening center",
+      "segment_hits": {
+        "render": false,
+        "simple": false
+      }
+    },
+    {
+      "point_xz_cm": [
+        20,
+        225
+      ],
+      "label": "left surrounding wall",
+      "segment_hits": {
+        "render": true,
+        "simple": true
+      }
+    },
+    {
+      "point_xz_cm": [
+        280,
+        225
+      ],
+      "label": "right surrounding wall",
+      "segment_hits": {
+        "render": true,
+        "simple": true
+      }
+    },
+    {
+      "point_xz_cm": [
+        150,
+        30
+      ],
+      "label": "below window",
+      "segment_hits": {
+        "render": true,
+        "simple": true
+      }
+    },
+    {
+      "point_xz_cm": [
+        150,
+        380
+      ],
+      "label": "above window",
+      "segment_hits": {
+        "render": true,
+        "simple": true
+      }
+    }
+  ],
+  "limits": [
+    "nearest observer is not exposure-exact ground truth",
+    "no complete FREE/UNKNOWN native map state",
+    "not a dynamic reproduction or unique explanation of prior landing failure",
+    "no asset fix or new flight performed"
+  ],
+  "report": "log/racer-ros2/20261118-window-visibility/report.md"
+}

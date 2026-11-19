@@ -1,0 +1,230 @@
+{
+  "scope": "PC two-UAV 20-second native exploration; not full reproduction",
+  "task": {
+    "mode": "explore",
+    "pass": true,
+    "pairwise_consumption": true,
+    "vehicles": {
+      "drone0": {
+        "vehicle": "drone0",
+        "mode": "explore",
+        "motion_requested": true,
+        "takeoff_success": true,
+        "active_revisions": [
+          1,
+          2,
+          6,
+          7,
+          8,
+          10
+        ],
+        "horizontal_displacement_m": 1.6993202524450395,
+        "px4_references": 856,
+        "as2_references": 187,
+        "stop_confirmed": true,
+        "native_land_success": true,
+        "landed_disarmed": true,
+        "cooperation": {
+          "matched_accepted_pairs": {
+            "1:2:1794916173.4142497": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916173.4142497
+            },
+            "1:2:1794916174.3562698": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916174.3562698
+            },
+            "1:2:1794916175.2382886": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916175.2382886
+            },
+            "1:2:1794916176.1143074": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916176.1143074
+            },
+            "1:2:1794916177.1043284": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916177.1043284
+            },
+            "1:2:1794916178.0283482": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916178.0283482
+            },
+            "1:2:1794916178.9493678": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916178.9493678
+            },
+            "1:2:1794916183.1104565": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916183.1104565
+            },
+            "1:2:1794916184.070477": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916184.070477
+            },
+            "1:2:1794916185.099499": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916185.099499
+            },
+            "1:2:1794916187.1425426": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916187.1425426
+            }
+          },
+          "native_pair_responses_consumed": 21,
+          "shared_trajectory_ids": {
+            "2": 23,
+            "1": 10
+          }
+        },
+        "pass": true
+      },
+      "drone1": {
+        "vehicle": "drone1",
+        "mode": "explore",
+        "motion_requested": true,
+        "takeoff_success": true,
+        "active_revisions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23
+        ],
+        "horizontal_displacement_m": 1.3568681048619207,
+        "px4_references": 879,
+        "as2_references": 897,
+        "stop_confirmed": true,
+        "native_land_success": true,
+        "landed_disarmed": true,
+        "cooperation": {
+          "matched_accepted_pairs": {
+            "1:2:1794916174.3562698": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916174.3562698
+            },
+            "1:2:1794916175.2382886": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916175.2382886
+            },
+            "1:2:1794916176.1143074": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916176.1143074
+            },
+            "1:2:1794916177.1043284": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916177.1043284
+            },
+            "1:2:1794916178.0283482": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916178.0283482
+            },
+            "1:2:1794916178.9493678": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916178.9493678
+            },
+            "1:2:1794916183.1104565": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916183.1104565
+            },
+            "1:2:1794916184.070477": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916184.070477
+            },
+            "1:2:1794916185.099499": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916185.099499
+            },
+            "1:2:1794916187.1425426": {
+              "from_drone_id": 2,
+              "to_drone_id": 1,
+              "status": 1,
+              "stamp": 1794916187.1425426
+            }
+          },
+          "native_pair_responses_consumed": 0,
+          "shared_trajectory_ids": {
+            "2": 23,
+            "1": 10
+          }
+        },
+        "pass": true
+      }
+    }
+  },
+  "analysis": {
+    "drone0": {
+      "active_count": 6,
+      "rejected_count": 2,
+      "tracking_wall_s": 20.003473017,
+      "minimum_observed_tracking_separation_m": 1.7552702823767834,
+      "tracking_as2_reference_samples": 187,
+      "tracking_px4_reference_samples": 856,
+      "tracking_shared_trajectory_messages": 298
+    },
+    "drone1": {
+      "active_count": 16,
+      "rejected_count": 7,
+      "tracking_wall_s": 20.000029685,
+      "minimum_observed_tracking_separation_m": 1.7552702823767834,
+      "tracking_as2_reference_samples": 897,
+      "tracking_px4_reference_samples": 879,
+      "tracking_shared_trajectory_messages": 298
+    }
+  },
+  "cleanup_pass": true,
+  "source_manifest_sha256": "68cedc56991a4f3559c07b0947b2ff33e25de0df04b2c7afe591a9e3844c0e54",
+  "evidence_run": "20261117-dual-explore-02",
+  "previous_failed_run": "20261117-dual-explore-01"
+}

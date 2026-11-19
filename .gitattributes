@@ -9,3 +9,11 @@ deployment/oh-ros-build/*.sh text eol=lf
 src/tool/navigation/planner/ego_planner_v2/ros2_adapter/native/** -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol
 src/tool/navigation/planner/ego_planner_v2/ros2_adapter/bridge/** -text
 deployment/airsim/demos/ego_planner_v2/evidence/** -text whitespace=cr-at-eol
+
+# Preserve RACER fixed-case source and configuration checksums across Git checkouts.
+src/tool/navigation/planner/racer/** -text
+deployment/airsim/demos/racer_single/** -text
+deployment/airsim/demos/racer_multi_ground/** -text
+deployment/airsim/demos/racer_multi_flight/** -text
+cards/planner/racer-single.yaml -text
+cards/planner/racer-dual.yaml -text

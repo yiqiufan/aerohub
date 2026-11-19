@@ -1,0 +1,100 @@
+{
+  "schema": 1,
+  "case": "20261117-dual-ground-01",
+  "scope": "2-UAV PC ground shadow, no motion or execution acceptance",
+  "status": "failed",
+  "checks": {
+    "mission_pass": false,
+    "ground_confirmed": true,
+    "role_containers_stopped": true,
+    "role_containers_exit_zero": false,
+    "core_containers_stopped": true,
+    "core_containers_exit_zero": true,
+    "native_children_normal_exit": false,
+    "independent_per_vehicle_workers": true,
+    "initial_startup_without_failure": false
+  },
+  "mission_checks": {
+    "all_native_candidates": false,
+    "all_native_states": true,
+    "all_stationary_swarm_trajectories": true,
+    "pairwise_exchange_reaches_all_vehicles": true,
+    "native_initiator_consumed_response": true,
+    "each_map_integrates_foreign_chunks": true,
+    "all_input_frames": true,
+    "all_shadow_targets_ready": true,
+    "no_arming": true
+  },
+  "native_stop_confirmed": false,
+  "pair_requests": 1,
+  "matched_accepted_pairs": 1,
+  "candidate_ids": {
+    "drone0": [],
+    "drone1": [
+      1
+    ]
+  },
+  "native_child_cleanup": {
+    "drone0": [
+      {
+        "name": "exploration",
+        "pid": 97,
+        "exit": -6,
+        "escalated": true
+      },
+      {
+        "name": "solver-2",
+        "pid": 95,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-1",
+        "pid": 93,
+        "exit": 0,
+        "escalated": false
+      }
+    ],
+    "drone1": [
+      {
+        "name": "exploration",
+        "pid": 91,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-2",
+        "pid": 89,
+        "exit": 0,
+        "escalated": false
+      },
+      {
+        "name": "solver-1",
+        "pid": 87,
+        "exit": 0,
+        "escalated": false
+      }
+    ]
+  },
+  "images": {
+    "flight": "sha256:1eff3190ca7870d0267ddb1531365dd7c68d85c6e52ade3d25b17b84b4758843",
+    "onboard": "sha256:ba618faf22ece6a76ffb8a0fb625b741894ef9f8f1c086a552737156a769086d",
+    "algorithm": "sha256:964048afd46a9d394aa771d801d48b57de8a2b2665979b1ba6f2b5e273f9adb9",
+    "workstation": "sha256:592f97da6b871a438fdb97f86b422ab9f80657e80efa7b98d258894738c8a0c0"
+  },
+  "limitations": [
+    "no motion Action sent",
+    "no flight or coverage acceptance",
+    "no RoboPi deployment",
+    "four-UAV failures remain unresolved"
+  ],
+  "evidence_files": {
+    "build-manifest.json": "c2000f1971ec5efdacb29be07a45f8a177663051ed3982bae1ceaecd8c092069",
+    "cleanup-result.json": "50802f807226c87a64d903ae4a4357bc08d23c5addf48ff874ba892cd7dbc4e2",
+    "configuration/fleet.json": "c97b6a501dd895b3fd72e57cccf0be2ad0ac6ea88909244e6e2cb7386c30fa09",
+    "core-final.json": "d9cde7f7d3c8f062cac2640d123d9c6ea5be1a5622a10ca53a07f728f3cd608c",
+    "mission/result.json": "0bc72ba0accec9e72cc90c30ce030515c4ba34bb38422d5a7ab692629cb8f0c6",
+    "platform/platform.json": "0d9a6b546a1dfccd570b46c0446a540f97bc9a5b1bf3c4bf597e038b4d4ef3d3",
+    "runtime-source.json": "f51bee9f3407d85d284d592a14a00f441f34c90b757fa327c2760c7c6dd45082"
+  }
+}

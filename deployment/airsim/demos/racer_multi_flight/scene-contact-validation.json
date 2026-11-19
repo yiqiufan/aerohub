@@ -1,0 +1,122 @@
+{
+  "source_run": "20261118-state-sampling-01",
+  "inspection_type": "static geometry queries in reset PIE session; no flight",
+  "settings_match_failed_run": true,
+  "sources_unchanged": {
+    "20261118-state-sampling-01/settings.json": true,
+    "20261118-state-sampling-01/observer/observation.jsonl": true,
+    "20261118-state-sampling-01/mission/drone1/flight-events.jsonl": true,
+    "<UE-project>/Content/RacerDemo/Maps/WarehouseObstacleDemo.umap": true,
+    "<UE-project>/settings_racer_px4.json": true
+  },
+  "scene": "/Game/RacerDemo/Maps/UEDPIE_0_WarehouseObstacleDemo.WarehouseObstacleDemo",
+  "origin_agreement_cm": 2.384185791015625e-07,
+  "root_transform_unchanged": true,
+  "rendered_position_hold": {
+    "first": {
+      "wall_ns": 1794934958948676879,
+      "since_land_s": -1.595141475,
+      "local_ned": [
+        0.2123025506734848,
+        1.3490869998931885,
+        -0.6874605417251587
+      ],
+      "world_ned": [
+        -2.787697449326515,
+        1.3490869998931885,
+        -0.6874605417251587
+      ],
+      "physics_ned": [
+        0.4509178400039673,
+        1.3367919921875,
+        -0.7516745328903198
+      ],
+      "orientation": {
+        "w_val": 0.9980462789535522,
+        "x_val": 0.04663437232375145,
+        "y_val": 0.013302271254360676,
+        "z_val": -0.03939224034547806
+      }
+    },
+    "last": {
+      "wall_ns": 1794934971548573527,
+      "since_land_s": 11.004755173,
+      "local_ned": [
+        0.2123025506734848,
+        1.3490869998931885,
+        -0.6874605417251587
+      ],
+      "world_ned": [
+        -2.787697449326515,
+        1.3490869998931885,
+        -0.6874605417251587
+      ],
+      "physics_ned": [
+        0.23216237127780914,
+        1.3472009897232056,
+        -0.44796010851860046
+      ],
+      "orientation": {
+        "w_val": 0.974006175994873,
+        "x_val": 0.001904141972772777,
+        "y_val": 0.0010598300723358989,
+        "z_val": -0.22651086747646332
+      }
+    },
+    "samples": 64,
+    "duration_s": 12.599896648
+  },
+  "points_ue_cm": {
+    "initial": [
+      -299.591064453125,
+      0.063232421875,
+      -83.37033200263977
+    ],
+    "before_block": [
+      -252.64227390289307,
+      142.5234236717224,
+      61.470975399017334
+    ],
+    "block": [
+      -278.3608093857765,
+      134.97193241119385,
+      54.58999466896057
+    ],
+    "land": [
+      -278.3608093857765,
+      134.97193241119385,
+      54.58999466896057
+    ],
+    "final": [
+      -275.32321214675903,
+      134.73567152023315,
+      10.161050081253052
+    ]
+  },
+  "overlaps_at_named_points": {
+    "initial": [],
+    "before_block": [
+      "Window_Tall_56"
+    ],
+    "block": [
+      "Wall_Window_Tall_51"
+    ],
+    "land": [
+      "Window_Tall_56"
+    ],
+    "final": [
+      "Window_Tall_56",
+      "Wall_Window_Tall_51"
+    ]
+  },
+  "line_queries": 90,
+  "overlap_queries": 265,
+  "prior_flight_acceptance": "failed, unchanged",
+  "limitations": [
+    "Current static geometry is not the lost prior contact-event stream.",
+    "Component overlap is geometric plausibility, not a dynamic collision replay or cause of AS2 Land timeout.",
+    "Simple/complex trace difference does not alone establish an erroneous collision asset.",
+    "Current map and mesh hashes are recorded; full prior-flight asset hashes were not available.",
+    "Physics-pose overlaps do not prove those positions were rendered."
+  ]
+}

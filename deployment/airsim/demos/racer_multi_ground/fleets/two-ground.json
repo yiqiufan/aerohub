@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "scope": "PC two-UAV ground shadow; no arming or flight; four-UAV evidence retained separately",
+  "vehicles": [
+    {
+      "index": 0,
+      "racer_id": 1,
+      "namespace": "drone0",
+      "airsim": "Drone0",
+      "px4_instance": 0,
+      "px4_system_id": 135,
+      "xrce_port": 8888,
+      "spawn_ned": [
+        0,
+        0,
+        0
+      ],
+      "world_ground_enu": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "index": 1,
+      "racer_id": 2,
+      "namespace": "drone1",
+      "airsim": "Drone1",
+      "px4_instance": 1,
+      "px4_system_id": 136,
+      "xrce_port": 8889,
+      "spawn_ned": [
+        -3,
+        0,
+        0
+      ],
+      "world_ground_enu": [
+        0,
+        -3,
+        0
+      ]
+    }
+  ],
+  "native_slots": 3,
+  "common_frame": "racer_world",
+  "planning_box_enu": [
+    [
+      -6.0,
+      4.0
+    ],
+    [
+      -6.0,
+      4.0
+    ],
+    [
+      0.25,
+      1.5
+    ]
+  ],
+  "readiness_timeout_s": 90.0,
+  "observation_seconds": 35.0,
+  "stop_timeout_s": 8.0,
+  "coordinate_registration": "stationary AS2 ground anchor + configured surveyed spawn; translation only; aligned ENU axes",
+  "camera_rate_hz": 1.0
+}

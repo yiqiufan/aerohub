@@ -1,0 +1,42 @@
+schema_version: '0.1'
+id: aerohub.planner.racer-single
+version: '0.1.0-candidate.1'
+source:
+  upstream: https://github.com/ldg810/RACER-ROS2.git
+  revision: f8265e091b11cc856c1334f8260850b9006b1953
+  source_lock: src/tool/navigation/planner/racer/upstream.lock.json
+  native: src/tool/navigation/planner/racer/ros2_adapter/native
+  adapter: src/tool/navigation/planner/racer/ros2_adapter/bridge
+  license: package-and-vendored-notices-preserved; no-root-LICENSE-at-pinned-revision
+provides: [planner.racer-single]
+cards: [cards/planner/racer-single.yaml]
+roles:
+  simulator: [AirSim-Warehouse, raw-depth-camera, read-only-physics-observer, shared-overhead-view]
+  flight_controller: [PX4-SITL-Drone0, PX4-SITL-parked-Drone1, clock]
+  compute: [RACER-native-FSM, real-TSP-ACVRP-solvers, camera-pose-adapter, trajectory-adapter, AS2, FollowTimedPath]
+  workstation: [ROS-start-stop-task, acceptance-recording]
+runtime:
+  platform: linux-amd64-ROS2-Humble-in-Docker
+  images: deployment/airsim/demos/racer_single/images.lock.json
+  external_dependencies: [Docker-and-Compose, reviewed-AirSim-UE-scene, fixed-image-cache, pinned-NLopt-deb-cache]
+  build: deployment/airsim/demos/racer_single/build.py
+  launch: deployment/airsim/demos/racer_single/run.py
+  configuration: deployment/airsim/demos/racer_single/config
+  local_configuration: user-supplied-JSON-with-release-run_root-project-domain-airsim_host-settings
+  clock: AirSim-clock-bridge; use_sim_time
+  mapping: 'RACER drone_id 1 -> AS2 drone0 -> AirSim Drone0 -> PX4 sysid 135 instance 0'
+  parked_peer: 'Drone1 -> PX4 sysid 136 instance 1; present only for current scene and isolation observation'
+  interfaces: deployment/airsim/demos/racer_single/workstation_interfaces
+  persistence: unique-run-root-and-immutable-release-directories-selected-by-user
+  readiness: actual-fresh-depth-pose-odom-map-frontiers-AS2-actions-and-PX4-preflight
+  stop: native-operator-stop-and-Action-terminal-stop-service-PID-position-mode-then-Land-and-fresh-landed-disarmed
+  rollback: complete-stop-land-disarm-and-cleanup; select-previous-release-and-matching-runtime-source; refresh-map-scene-session
+resources:
+  motion: exclusive-drone0-FollowTimedPath-session
+  tf_authority: AS2-platform-localization-and-single-camera-static-transform
+  conflicts: other-motion-clients-and-state-publishers-for-drone0
+  enforcement: timed/native-FollowPath-mutual-exclusion; no-general-cross-Behavior-arbitrator
+validation:
+  stage: partial
+  evidence: deployment/airsim/demos/racer_single/validation.md
+  limitations: [bounded-single-UAV, no-full-map-coverage, no-four-UAV-integration, no-RoboPi, no-fault-injection, no-flight-collision-event-statistics]

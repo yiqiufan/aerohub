@@ -1,0 +1,53 @@
+schema_version: '0.1'
+id: aerohub.planner.racer-dual
+version: '0.2.1-pc-dual.20261119'
+source:
+  upstream: https://github.com/ldg810/RACER-ROS2.git
+  revision: f8265e091b11cc856c1334f8260850b9006b1953
+  lock: src/tool/navigation/planner/racer/upstream.lock.json
+  native: src/tool/navigation/planner/racer/ros2_adapter/native
+  adapter: src/tool/navigation/planner/racer/ros2_adapter/multi
+  license: package-and-vendored-notices-preserved; no-root-LICENSE-at-pinned-revision
+provides: [planner.racer-dual]
+cards: [cards/planner/racer-dual.yaml]
+roles:
+  simulator: AirSim UE scene, real depth, shared overhead view
+  flight_controller: two independent PX4 SITL instances
+  compute: per-UAV native FSM and solvers, adapters, AS2 FollowTimedPath; PC containers
+  workstation: ROS mission coordination and validation; no motion-reference forwarding
+runtime:
+  platform: linux-amd64-ROS2-Humble-in-Docker
+  images: deployment/airsim/demos/racer_single/images.lock.json
+  dependencies: deployment/airsim/demos/racer_single/dependencies.lock.json
+  build: deployment/airsim/demos/racer_single/build.py
+  launch: deployment/airsim/demos/racer_multi_flight/run.py
+  baseline_check: deployment/airsim/demos/racer_multi_flight/check_complete.py
+  baseline_check_arguments: [--pc-dual]
+  recording_check: deployment/airsim/demos/racer_multi_flight/readback.py
+  complete_case: deployment/airsim/demos/racer_multi_flight/full_flow.py
+  configuration: [deployment/airsim/demos/racer_multi_flight/forest-complete.fleet.json, deployment/airsim/demos/racer_multi_flight/forest-complete.flight.json]
+  local_example: deployment/airsim/demos/racer_multi_flight/forest-complete.local.example.json
+  selected_mode: explore-complete
+  completion: fresh native return-finished and confirmed FINISH from both vehicles before cleanup; explicit wall budget
+  mapping: explicit fleet mapping of namespace, RACER ID, PX4 instance/system ID, AirSim vehicle and surveyed ENU origin
+  limits: exactly two UAVs; shared aligned ENU axes with translation-only registration
+  persistence: unique local run_root plus immutable external release selected in local JSON
+  prerequisites: [Docker-Compose, reviewed-UE-scene-and-settings, fixed-images, manifest-verified-native-and-interface-install, locked-dependency-cache]
+  startup_order: clock and fleet PX4/Agent; actual landed/disarmed and DDS connected within bounded wait; then AS2/navigation
+  startup_evidence: deployment/airsim/demos/racer_multi_flight/startup-validation.json
+  readiness: actual ground status, fresh sensors, WAIT_TRIGGER/frontiers, AS2 actions and PX4 preflight
+  stop: each adapter operator stop and native FINISH; native Land; joint fresh landed/disarmed
+  rollback: stop and land both, clean owned resources, select previous runtime-source and matching release, refresh UE and map session; no hot rollback
+resources:
+  shared: clock, map geometry, native swarm communication, per-vehicle input/AS2/adapter processes
+  conflicts: any other motion clients or canonical state publishers for either vehicle
+  enforcement: timed/native FollowPath mutual exclusion and demo owner labels; no general cross-Behavior arbiter
+validation:
+  stage: partial
+  current_baseline: deployment/airsim/demos/racer_multi_flight/pc-dual.lock.json
+  pc_reliability: deployment/airsim/demos/racer_multi_flight/pc-dual-validation.json
+  complete_case_evidence: deployment/airsim/demos/racer_multi_flight/forest-complete-validation.json
+  reproduction_guide: deployment/airsim/demos/racer_multi_flight/PC_DUAL.md
+  short_case_evidence: deployment/airsim/demos/racer_multi_flight/forest-short-validation.json
+  evidence: deployment/airsim/demos/racer_multi_flight/validation.md
+  limitations: [bounded-two-UAV-PC-only, no-full-coverage, no-flight-collision-event-statistics, no-RoboPi, R2-R5-recovery-tested, no-hot-rollback-test, R5-Drone1-diagnostic-readback-incomplete, historical-input-exit-unresolved]
